@@ -15,6 +15,7 @@ export default defineConfig({
       "@engine": resolve(import.meta.dirname, "../kit/engine/ootss.mjs"),
     },
   },
-  server: { fs: { allow: [".."] } },
+  // polling: native file events are missed on some drives, which serves stale modules
+  server: { fs: { allow: [".."] }, watch: { usePolling: true, interval: 300 } },
   build: { target: "es2023", chunkSizeWarningLimit: 1200 },
 })

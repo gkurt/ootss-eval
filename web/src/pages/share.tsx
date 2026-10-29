@@ -4,8 +4,8 @@ import { useEffect, useRef } from "react"
 import { Logo } from "@/components/site-header"
 import { Board, cropFor } from "@/lib/board"
 import { loadLevel, replay } from "@/lib/engine"
-import { getIndex, getLevel, getRunFile, useData, type Index, type LevelFile, type RunFile } from "@/lib/data"
-import { byModel, dur, modelColor, modelName, TRACK, TRACKS } from "@/lib/format"
+import { getIndex, getLevel, getRunFile, useData, type Index, type LevelFile, type RunFile, type RunRecord } from "@/lib/data"
+import { byModel, dur, modelColor, modelName } from "@/lib/format"
 
 const FEATURED = "claude-opus-5-5"
 const OPEN = ["mirror_21", "surrounded", "worlds_collide_heroes_and_mirrors_v3", "walk_it_over"]
@@ -27,118 +27,113 @@ export function SharePage() {
     document.documentElement.classList.add("dark")
   }, [])
   return (
-    <div className="dark flex h-[900px] w-[1600px] overflow-hidden bg-stage text-foreground" style={{ fontFeatureSettings: '"ss01"' }}>
+    <div className="dark flex h-[900px] w-[1600px] overflow-hidden bg-stage text-foreground">
       {data ? <Card index={data.index} shots={data.shots} /> : null}
     </div>
   )
 }
 
 function Card({ index, shots }: { index: Index; shots: Shot[] }) {
-  const recs = index.runs.flatMap((run) => run.records.map((r) => ({ set: run.set, r })))
-  const models = [...new Set(recs.map((x) => x.r.model))].sort(byModel)
-  const sets = [
-    { key: "starter", name: "Starter set", sub: "12 levels, tiers 1–5" },
-    { key: "frontier", name: "Open levels", sub: "4 levels, no known solution" },
-  ]
-  const runs = recs.length
+  const recs = index.runs.flatMap((run) => run.records)
+  const models = [...new Set(recs.map((r) => r.model))].sort(byModel)
+  const levels = new Set(recs.map((r) => r.level)).size
+  const featured = recs.filter((r) => r.model === FEATURED && r.track === "reasoning")
+  const allByReasoning = featured.length === levels && featured.every((r) => r.won)
   return (
     <div
-      className="relative flex size-full gap-14 px-[72px] py-[64px]"
+      className="relative flex size-full gap-16 px-[80px] pt-[68px] pb-[88px]"
       style={{
         background:
-          "radial-gradient(60% 70% at 100% 0%, color-mix(in oklch, var(--primary) 16%, transparent), transparent 70%), radial-gradient(45% 60% at 0% 100%, color-mix(in oklch, var(--gold) 10%, transparent), transparent 70%)",
+          "radial-gradient(55% 70% at 100% 0%, color-mix(in oklch, var(--primary) 15%, transparent), transparent 70%), radial-gradient(45% 60% at 0% 100%, color-mix(in oklch, var(--gold) 9%, transparent), transparent 70%)",
       }}
     >
-      <div className="flex w-[760px] shrink-0 flex-col">
-        <div className="flex items-center gap-3 text-[20px] font-medium text-muted-foreground">
+      <div className="flex min-w-0 flex-1 flex-col">
+        <div className="flex items-center gap-3 text-[19px] font-medium text-muted-foreground">
           <Logo className="size-9" />
-          <span>
-            Claude <span className="text-foreground/40">×</span> Order of the Sinking Star
-          </span>
+          Order of the Sinking Star · Claude eval
         </div>
 
-        <h1 className="mt-10 text-[60px] leading-[1.05] font-semibold tracking-[-0.03em] text-balance">
-          <span style={{ color: modelColor(FEATURED) }}>Claude Opus 5.5</span> solved all 4 levels our solvers couldn't.
-        </h1>
-        <p className="mt-6 text-[22px] leading-snug text-pretty text-muted-foreground">
-          Puzzle levels from the game's demo. The model reads the rule book and a text map, then answers with a list of moves. A rules engine checks
-          every answer.
+        <h1 className="mt-9 text-[76px] leading-[1] font-semibold tracking-[-0.035em]">Can Claude solve Sinking Star?</h1>
+        <p className="mt-5 text-[32px] leading-tight font-medium tracking-[-0.01em]" style={{ color: modelColor(FEATURED) }}>
+          {allByReasoning ? `Opus 5.5 solved all ${levels} levels with reasoning alone.` : `Opus 5.5 solved ${featured.filter((r) => r.won).length} of ${levels} levels with reasoning alone.`}
+        </p>
+        <p className="mt-6 text-[21px] leading-snug text-pretty text-muted-foreground">
+          {levels} puzzle levels from the game's demo. The model gets the rule book and a text map, and answers with a list of moves, by reasoning
+          alone or with rule tools (40 calls, no brute force). A rules engine checks every answer.
         </p>
 
-        <div className="mt-auto">
-          <div className="mb-3 grid grid-cols-[150px_repeat(4,1fr)] gap-x-5 text-[15px] text-muted-foreground">
-            <span />
-            {sets.map((s) => (
-              <div key={s.key} className="col-span-2 border-b border-foreground/15 pb-2">
-                <span className="font-medium text-foreground">{s.name}</span> <span>· {s.sub}</span>
-              </div>
-            ))}
-            <span />
-            {sets.flatMap((s) =>
-              TRACKS.map((t) => (
-                <span key={s.key + t} className="pt-2">
-                  {TRACK[t].name}
-                </span>
-              )),
-            )}
-          </div>
-          <div className="grid grid-cols-[150px_repeat(4,1fr)] items-center gap-x-5 gap-y-4">
-            {models.map((m) => (
-              <Row key={m} model={m} cells={sets.flatMap((s) => TRACKS.map((t) => recs.filter((x) => x.set === s.key && x.r.model === m && x.r.track === t).map((x) => x.r.won)))} />
-            ))}
-          </div>
-        </div>
+        <Scoreboard models={models} recs={recs} levels={levels} />
       </div>
 
-      <div className="flex min-w-0 flex-1 flex-col">
-        <div className="grid min-h-0 flex-1 grid-cols-2 grid-rows-[repeat(2,minmax(0,1fr))] gap-4">
+      <div className="flex w-[520px] shrink-0 flex-col rounded-3xl bg-white/[0.03] p-7 ring-1 ring-white/10">
+        <div className="text-[13px] font-medium tracking-[0.12em] text-gold uppercase">The 4 hardest</div>
+        <h2 className="mt-2 text-[27px] leading-tight font-semibold tracking-[-0.01em]">Breadth-first search couldn't find a solution for these levels.</h2>
+        <p className="mt-2 text-[17px] leading-snug text-muted-foreground">
+          One search went through 140 million positions. Opus solved each level by reasoning alone, on its first answer.
+        </p>
+        <div className="mt-7 flex flex-1 flex-col justify-between">
           {shots.map((s) => (
-            <Shot key={s.level.meta.name} shot={s} />
+            <ShotRow key={s.level.meta.name} shot={s} />
           ))}
         </div>
-        <p className="mt-5 text-[17px] leading-snug text-muted-foreground">
-          <span className="text-foreground">mirror_21:</span> a breadth-first search went through 140 million positions and found no win. Opus found one in
-          73 moves, by reasoning alone, on its first try.
-        </p>
       </div>
 
-      <div className="absolute inset-x-[72px] bottom-[26px] flex justify-between text-[14px] text-muted-foreground/80">
-        <span>
-          {runs} runs via Claude Code · reasoning alone, or rule tools on a 40-call budget (no brute force)
-        </span>
-        <span>Open-level solutions also replayed in a second, independent simulator</span>
+      <div className="absolute inset-x-[80px] bottom-[32px] flex justify-between text-[15px] text-muted-foreground/80">
+        <span>{recs.length} runs via Claude Code at high effort · cost is Claude Code's estimate at list prices</span>
+        <span>Solutions to the 4 also replayed in an independent simulator</span>
       </div>
     </div>
   )
 }
 
-function Row({ model, cells }: { model: string; cells: boolean[][] }) {
+function Scoreboard({ models, recs, levels }: { models: string[]; recs: RunRecord[]; levels: number }) {
+  const cols = "grid-cols-[190px_1fr_1fr_130px_110px]"
   return (
-    <>
-      <span className="flex items-center gap-2.5 text-[20px] font-medium">
-        <span className="size-3 rounded-full" style={{ background: modelColor(model) }} />
-        {modelName(model)}
-      </span>
-      {cells.map((c, i) => {
-        const won = c.filter(Boolean).length
+    <div className="mt-auto">
+      <div className={`grid ${cols} gap-x-8 border-b border-foreground/15 pb-3 text-[16px] text-muted-foreground`}>
+        <span>Model</span>
+        <span>Reasoning alone</span>
+        <span>With tools</span>
+        <span className="text-right">Avg time</span>
+        <span className="text-right">Cost</span>
+      </div>
+      {models.map((m) => {
+        const rs = recs.filter((r) => r.model === m)
+        const solved = (t: string) => rs.filter((r) => r.track === t && r.won).length
         return (
-          <div key={i} className="space-y-1.5">
-            <div className="font-mono text-[22px] font-medium tabular-nums">
-              {won}
-              <span className="text-muted-foreground">/{c.length}</span>
-            </div>
-            <div className="h-2 overflow-hidden rounded-full bg-foreground/10">
-              <div className="h-full rounded-full" style={{ width: `${(100 * won) / Math.max(1, c.length)}%`, background: modelColor(model) }} />
-            </div>
+          <div key={m} className={`grid ${cols} items-center gap-x-8 border-b border-foreground/8 py-4 last:border-0`}>
+            <span className="flex items-center gap-3 text-[22px] font-medium">
+              <span className="size-3 rounded-full" style={{ background: modelColor(m) }} />
+              {modelName(m)}
+            </span>
+            {["reasoning", "coding"].map((t) => (
+              <Bar key={t} value={solved(t)} total={levels} color={modelColor(m)} />
+            ))}
+            <span className="text-right font-mono text-[22px] tabular-nums">{dur(rs.reduce((a, r) => a + r.seconds, 0) / rs.length).replace(/ \d+s$/, "")}</span>
+            <span className="text-right font-mono text-[22px] tabular-nums">${Math.round(rs.reduce((a, r) => a + r.cost, 0))}</span>
           </div>
         )
       })}
-    </>
+    </div>
   )
 }
 
-// The level at the moment the model's answer wins.
-function Shot({ shot }: { shot: Shot }) {
+function Bar({ value, total, color }: { value: number; total: number; color: string }) {
+  return (
+    <div className="flex items-center gap-4">
+      <span className="w-[72px] font-mono text-[24px] font-medium tabular-nums">
+        {value}
+        <span className="text-muted-foreground">/{total}</span>
+      </span>
+      <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-foreground/10">
+        <div className="h-full rounded-full" style={{ width: `${(100 * value) / total}%`, background: color }} />
+      </div>
+    </div>
+  )
+}
+
+// A small picture of the level at the moment the model's answer wins, and the result.
+function ShotRow({ shot }: { shot: Shot }) {
   const host = useRef<HTMLDivElement>(null)
   const { level, rec } = shot
   useEffect(() => {
@@ -146,25 +141,36 @@ function Shot({ shot }: { shot: Shot }) {
     const L = loadLevel(level.values)
     const R = replay(L, rec.answer)
     const crop = cropFor(L.rows, R.frames.map((f) => f.st), 1)
-    const b = new Board(host.current, L, { cell: 32, crop })
-    b.render(R.frames[R.frames.length - 1].st, { animate: false })
+    new Board(host.current, L, { cell: 24, crop }).render(R.frames[R.frames.length - 1].st, { animate: false })
   }, [level, rec])
   return (
-    <div className="relative flex min-h-0 flex-col overflow-hidden rounded-2xl bg-[#070a14] ring-1 ring-white/10">
-      <div className="min-h-0 flex-1 p-3">
-        {/* the tile is a size container, so the board fits it whatever its shape */}
+    <div className="flex items-center gap-4 rounded-xl bg-black/25 p-2.5 ring-1 ring-white/[0.07]">
+      <div className="h-[84px] w-[124px] shrink-0 overflow-hidden rounded-md bg-[#070a14]">
         <div className="flex size-full items-center justify-center [container-type:size]">
           <div ref={host} className="w-[min(100cqw,calc(100cqh*var(--ar)))]!" />
         </div>
       </div>
-      <div className="flex flex-col gap-0.5 border-t border-white/10 px-4 py-2.5 text-[15px]">
-        <span className="font-mono text-[13px] whitespace-nowrap text-white/85">{level.meta.name}</span>
-        <span className="text-white/60">
-          <span className="font-medium" style={{ color: "var(--win)" }}>
-            ✓ {rec.result.wonAt} moves
-          </span>{" "}
-          · {dur(rec.attempts.find((a) => a.won)?.t ?? rec.seconds)}
-        </span>
+      <div className="min-w-0 flex-1">
+        <div className="font-mono text-[13px] leading-snug text-white/85">
+          {/* long names break after an underscore */}
+          {level.meta.name.split("_").map((part, i, all) => (
+            <span key={i}>
+              {part}
+              {i < all.length - 1 && (
+                <>
+                  _<wbr />
+                </>
+              )}
+            </span>
+          ))}
+        </div>
+        <div className="mt-1 text-[15px] text-white/55">{level.meta.width} × {level.meta.height} map</div>
+      </div>
+      <div className="shrink-0 pr-2 text-right">
+        <div className="text-[19px] font-semibold" style={{ color: "var(--win)" }}>
+          ✓ {rec.result.wonAt} moves
+        </div>
+        <div className="text-[14px] text-white/55">in {dur(rec.attempts.find((a) => a.won)?.t ?? rec.seconds)}</div>
       </div>
     </div>
   )
