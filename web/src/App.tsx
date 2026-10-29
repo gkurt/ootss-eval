@@ -10,6 +10,7 @@ import { LevelsPage } from "@/pages/levels"
 import { LevelPage } from "@/pages/level"
 import { MethodPage } from "@/pages/method"
 import { RulesPage } from "@/pages/rules"
+import { SharePage } from "@/pages/share"
 import { NotFound } from "@/components/page"
 
 export function App() {
@@ -17,6 +18,8 @@ export function App() {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [pathname])
+  // the share card is a bare 1600×900 page, without the site's header and footer
+  if (pathname === "/share") return <SharePage />
   return (
     <div className="flex min-h-svh flex-col">
       <SiteHeader />
