@@ -1,0 +1,80 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-opus-5-5",
+ "track": "reasoning",
+ "level": "heroes1_11_v2",
+ "tier": 1,
+ "reference_length": 27,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T22:30:16.118Z",
+ "seconds": 56.3,
+ "api_seconds": 54.8,
+ "answer": "URRRCDRRRUCLLLDLLUCLLLULLDD",
+ "result": {
+  "won": true,
+  "wonAt": 27,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 27 moves"
+ },
+ "attempts": [
+  {
+   "moves": "URRRCDRRRUCLLLDLLUCLLLULLDD",
+   "won": true,
+   "wonAt": 27,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 27 moves",
+   "t": 55.8
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 2,
+  "output": 6145,
+  "cache_read": 7418,
+  "cache_write": 360,
+  "thinking": 5388
+ },
+ "cost": 0.1273,
+ "events": [
+  {
+   "t": 55.7,
+   "type": "text",
+   "text": "The plan is to swap the two heroes through the gate. The wizard ends on the top door and the warrior on the bottom door.\n\n**Key observations**\n- The bottom door (2,7) is easy for the warrior: walking from (2,8) north onto it does not touch the crystal at (2,6).\n- The top door (2,4) is easy for the wizard. From (2,2), moving D swaps it with the crystal at (2,3). Moving D again walks it onto (2,4), since the beam then reaches a wall.\n- The heroes start in the opposite halves, so they must trade places. The gate at (7,5) opens only while both plates, (7,3) and (7,7), are pressed.\n\n**Steps**\n1. **Warrior** (group 1): `U R R R` takes it (4,4) → (4,3) → (5,3) → (6,3) → (7,3), onto the top plate.\n2. `C` selects the wizard. **Wizard**: `D R R R` takes it (4,6) → (4,7) → (5,7) → (6,7) → (7,7), onto the bottom plate. Its beams find nothing to swap on the way, so it just walks. Both plates are now pressed, so the gate opens.\n3. **Wizard** `U`: the beam passes (7,6), the open gate (7,5) and (7,4), then reaches the warrior at (7,3). They swap: the wizard goes to (7,3) and the warrior to (7,7). Both plates stay pressed.\n4. `C` selects the warrior. **Warrior**: `L L L D L L U` takes it (6,7) → (5,7) → (4,7) → (4,8) → (3,8) → (2,8) → (2,7), the door. When it steps off the plate the gate closes, but the gate cell is empty, so nothing is crushed.\n5. `C` selects the wizard. **Wizard**: `L L L U L L` takes it (6,3) → (5,3) → (4,3) → (4,2) → (3,2) → (2,2). Then `D` swaps it with the crystal, putting the wizard on (2,3) and the crystal on (2,2). A final `D` walks it to (2,4), the door.\n\nBoth heroes are now on the two doors.\n\n<moves>URRR C DRRRU C LLLDLLU C LLLULLDD</moves>"
+  },
+  {
+   "t": 55.8,
+   "type": "answer",
+   "moves": "URRRCDRRRUCLLLDLLUCLLLULLDD",
+   "line": "WON after 27 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-opus-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 54959,
+   "api_ms": 54808,
+   "turns": 1,
+   "cost": 0.1272716
+  }
+ ]
+}

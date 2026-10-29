@@ -1,0 +1,63 @@
+{
+ "level": "mirror_pals",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 2,
+ "heroes": [
+  {
+   "id": 4,
+   "kind": "hero",
+   "role": "trader",
+   "group": 1,
+   "x": 15,
+   "y": 18,
+   "layer": 0
+  },
+  {
+   "id": 5,
+   "kind": "hero",
+   "role": "trader",
+   "group": 2,
+   "x": 17,
+   "y": 18,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 0,
+   "kind": "crystal",
+   "x": 17,
+   "y": 20,
+   "layer": 0
+  },
+  {
+   "id": 2,
+   "kind": "magic mirror",
+   "facing": "north",
+   "faces": [
+    "south",
+    "east"
+   ],
+   "x": 15,
+   "y": 20,
+   "layer": 0
+  }
+ ],
+ "gates": [],
+ "plates": [],
+ "doors": [
+  {
+   "x": 14,
+   "y": 29,
+   "occupied": false
+  },
+  {
+   "x": 15,
+   "y": 17,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

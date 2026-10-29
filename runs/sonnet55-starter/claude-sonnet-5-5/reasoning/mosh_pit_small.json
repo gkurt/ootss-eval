@@ -1,0 +1,80 @@
+{
+ "run": "sonnet55-starter",
+ "model": "claude-sonnet-5-5",
+ "track": "reasoning",
+ "level": "mosh_pit_small",
+ "tier": 2,
+ "reference_length": 45,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T16:37:22.898Z",
+ "seconds": 721,
+ "api_seconds": 719.6,
+ "answer": "UULLLLDRURDLURRDRDLUULLDDRRDLUULDRRDDLLURCDCLDRRULCRCDRR",
+ "result": {
+  "won": true,
+  "wonAt": 56,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 56 moves"
+ },
+ "attempts": [
+  {
+   "moves": "UULLLLDRURDLURRDRDLUULLDDRRDLUULDRRDDLLURCDCLDRRULCRCDRR",
+   "won": true,
+   "wonAt": 56,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 56 moves",
+   "t": 720.2
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 2,
+  "output": 102258,
+  "cache_read": 6800,
+  "cache_write": 1222,
+  "thinking": 101673
+ },
+ "cost": 1.0282,
+ "events": [
+  {
+   "t": 720.2,
+   "type": "text",
+   "text": "I worked this out by hand-simulating every move. I could not run it through the checker.\n\n**Key observations**\n- The room starts completely full of crystals. The wizard can only swap with an adjacent thing, so it moves one cell at a time.\n- Both monsters must die for the gates to open. The only way is a mutual kill: the dragon (facing west) is placed at (3,5), directly east of the goblin at (2,5). The dragon's breath kills the goblin and the goblin kills the dragon in the same check.\n- The goblin can't be moved. A wizard that swaps with it would stand next to it, and the cleric can't be adjacent to both cells at once. So the dragon has to be brought to (3,5).\n- Whenever the wizard stands directly west of the dragon, or next to the goblin, the cleric must be orthogonally adjacent to the wizard.\n\n**Plan**\n1. Move the dragon south once (to (6,3)). Pull the cleric east and south to (4,3) with swaps.\n2. Move the dragon west to (5,3), then south to (5,4). Next, west to (4,4), then south to (4,5).\n3. Move the cleric to (3,4). The wizard walks around the bottom to (3,6), steps up to (3,5) (protected by the cleric), then swaps with the dragon. The dragon lands on (3,5) and both monsters die.\n4. With the monsters dead, the cleric walks into the freed cell (3,5). The wizard swaps it east along row 5 to (5,5), and the cleric steps onto door (6,5). The wizard then walks to door (6,6).\n\n<moves>UULLLL DRU RDL URRDR DLU ULLDDRR DLU ULDR RDDLLUR CDCL DRRUL CR CDRR</moves>"
+  },
+  {
+   "t": 720.2,
+   "type": "answer",
+   "moves": "UULLLLDRURDLURRDRDLUULLDDRRDLUULDRRDDLLURCDCLDRRULCRCDRR",
+   "line": "WON after 56 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-sonnet-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 719793,
+   "api_ms": 719570,
+   "turns": 1,
+   "cost": 1.028152
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "run": "frontier",
+ "model": "claude-opus-5-5",
+ "track": "reasoning",
+ "level": "surrounded",
+ "tier": 6,
+ "reference_length": null,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 120
+ },
+ "started": "2026-10-29T00:39:55.045Z",
+ "seconds": 704.6,
+ "api_seconds": 703.2,
+ "answer": "RRRDDLDLUUDDDDLLLLDRRRDRUUUUUDDDLLLLUUULDDLDRRRRRRULLLLDLLURRRRRRRRDLLLLLLLLUUUURRRRRRRUULDDDDDDDDLLDDDD",
+ "result": {
+  "won": true,
+  "wonAt": 104,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 104 moves"
+ },
+ "attempts": [
+  {
+   "moves": "RRRDDLDLUUDDDDLLLLDRRRDRUUUUUDDDLLLLUUULDDLDRRRRRRULLLLDLLURRRRRRRRDLLLLLLLLUUUURRRRRRRUULDDDDDDDDLLDDDD",
+   "won": true,
+   "wonAt": 104,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 104 moves",
+   "t": 703.9
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 2,
+  "output": 73511,
+  "cache_read": 6800,
+  "cache_write": 1605,
+  "thinking": 72538
+ },
+ "cost": 1.4844,
+ "events": [
+  {
+   "t": 703.9,
+   "type": "text",
+   "text": "The key difficulty is that the north-facing and west-facing dragons cannot pass each other safely, so one dragon is used as a shield. The bridge only closes once every monster is dead, so all 14 goblins and all 4 dragons must die.\n\n**Which dragon kills which goblins**\n- **West-facing dragon (14,9):** it kills the west island goblins in rows 8, 10, 12 and 14.\n- **East-facing dragon (10,13):** it kills the east island goblins in rows 8, 10 and 12.\n- **North-facing dragon (10,11):** it kills the north island goblins in columns 8, 11 and 14.\n- **South-facing dragon (8,10):** it kills the south island goblins in columns 7, 9, 12 and 14.\n\n**The lock between two dragons**\nThe west-facing dragon starts north-east of the north-facing one. Neither can cross the other's breath line without one killing the other. Yet the north-facing dragon must reach column 14 and the west-facing one must reach rows 12 and 14.\n\nThe fix is a shield. I park the west-facing dragon at (13,7) and stop the east-facing dragon at (13,8), just below it. When the north-facing dragon moves into column 13, its breath kills the east-facing dragon instead. Its next push takes it to column 14. A dragon facing a line keeps breathing every turn, so each goblin dies the turn it comes into line. The warrior never pushes a dragon backwards, which would leave him standing in front of it.\n\n**Plan**\n1. **West-facing dragon:** push it west, then north to (13,7). Passing row 8 kills goblin #12.\n2. **East-facing dragon:** push it east to (13,13), then north to (13,8). This kills #5, #6 and #7.\n3. **South-facing dragon:** push it south to (8,12), then east to (14,12). This kills #4, #3 and #0.\n4. **North-facing dragon:**\n   - Push it west to (8,11), which kills #8.\n   - Push it east: column 11 kills #21, column 13 kills the shield dragon, and column 14 kills #13.\n   - Push it into the water at (16,11), where it drowns.\n5. **South-facing dragon again:** push it west to (7,12), which kills #14, then into the water at (6,12).\n6. **West-facing dragon again:**\n   - Push it south down column 13, which kills #9, #10 and #11.\n   - Push it into the water at (13,15).\n   - With no monsters left, the bridge gates close.\n7. **Warrior:** walk (12,14) → (11,14) → over the bridge → door (11,18).\n\n<moves>RRRDDLDLUU DDDDLLLLDRRRDRUUUUU DDDLLLLUUULDDLDRRRRRR ULLLLDLLURRRRRRRR DLLLLLLLL UUUURRRRRRRUULDDDDDDDDLLDDDD</moves>"
+  },
+  {
+   "t": 703.9,
+   "type": "answer",
+   "moves": "RRRDDLDLUUDDDDLLLLDRRRDRUUUUUDDDLLLLUUULDDLDRRRRRRULLLLDLLURRRRRRRRDLLLLLLLLUUUURRRRRRRUULDDDDDDDDLLDDDD",
+   "line": "WON after 104 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-opus-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 703428,
+   "api_ms": 703238,
+   "turns": 1,
+   "cost": 1.484428
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-opus-5-5",
+ "track": "reasoning",
+ "level": "one_vs_three",
+ "tier": 3,
+ "reference_length": 90,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T22:31:14.377Z",
+ "seconds": 632.2,
+ "api_seconds": 631.2,
+ "answer": "UUURRRRUUUCDRCUUUULUDDDDLLDDDCLURRRDRCUUUURRDRDCLLLLLDLCDDDLLLLDLRURRURURRDDLLUURDLURRDDLLUURRRR",
+ "result": {
+  "won": true,
+  "wonAt": 96,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 96 moves"
+ },
+ "attempts": [
+  {
+   "moves": "UUURRRRUUUCDRCUUUULUDDDDLLDDDCLURRRDRCUUUURRDRDCLLLLLDLCDDDLLLLDLRURRURURRDDLLUURDLURRDDLLUURRRR",
+   "won": true,
+   "wonAt": 96,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 96 moves",
+   "t": 631.7
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 2,
+  "output": 64408,
+  "cache_read": 6800,
+  "cache_write": 1184,
+  "thinking": 63532
+ },
+ "cost": 1.299,
+ "events": [
+  {
+   "t": 631.6,
+   "type": "text",
+   "text": "The two heroes start on separate islands. The only crystal is on the west island, but it has to end up sunk at (19,9) so that someone can reach the east door (20,9).\n\n**Why a hand-off is needed.** Each wizard swap moves two things across the water at once. If the bard rides a sunk crystal, that also moves two things. So something has to move the crystal across on its own. Only one water cell, (10,10), is within the bard's 2-cell charm range from both islands: from (8,8) on the west and from (12,12) on the east. The plan is to sink the crystal at (10,10) and then swap the bard over to the east side.\n\n**Plan**\n1. **Bard goes west.** The bard walks to (17,8) and the wizard walks to (8,8). The wizard looks R and swaps with the bard.\n2. **Bard brings the crystal down.** The bard walks up to (7,3) and picks up the charm with the crystal 2 cells above it. It then leads the crystal down to (5,8), ending at (5,10).\n3. **Wizard repositions the crystal.** The wizard looks L from (17,8) and swaps with the crystal, which sends the crystal to (17,8). The wizard then walks around to (8,8) and looks R, swapping the crystal back to (8,8) and itself to (17,8).\n4. **Bard sinks the crystal at (10,10).** The bard walks to (6,6), always staying out of the crystal's range on the way. Then:\n   - R sinks the crystal at (9,8).\n   - D, R, D slide it to (10,10), with the bard ending at (8,8).\n5. **Second swap.** The wizard looks L from (17,8) and swaps with the bard. The wizard now walks to the west door (3,9).\n6. **Bard carries the crystal east.** The bard walks to (12,12) and slides the crystal through the water.\n   - Twice, the crystal is blocked by land: at (16,8) and at (17,7). Each time the bard steps out of range, re-enters at a better angle, and gets the crystal to (19,7).\n   - D, D then brings the crystal to (19,9).\n7. **Bard reaches the east door.** The bard walks around to (16,9), staying out of range. Each R step tries to push the crystal into the door cell, which is land, so it stays put. The bard steps over the sunk crystal at (19,9) onto (20,9).\n\n<moves>UUURRRRUUU C DR C UUUULU DDDDLLDDD C L URRRDR C UUUUR RDRD C L LLLLDL C DDDLLLLDL RURRURURRDDLLUURDLURRDDLLUURRRR</moves>"
+  },
+  {
+   "t": 631.7,
+   "type": "answer",
+   "moves": "UUURRRRUUUCDRCUUUULUDDDDLLDDDCLURRRDRCUUUURRDRDCLLLLLDLCDDDLLLLDLRURRURURRDDLLUURDLURRDDLLUURRRR",
+   "line": "WON after 96 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-opus-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 631263,
+   "api_ms": 631169,
+   "turns": 1,
+   "cost": 1.2990000000000002
+  }
+ ]
+}

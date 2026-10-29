@@ -1,0 +1,80 @@
+{
+ "run": "sonnet55-starter",
+ "model": "claude-sonnet-5-5",
+ "track": "reasoning",
+ "level": "heroes1_11_v2",
+ "tier": 1,
+ "reference_length": 27,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T16:37:22.877Z",
+ "seconds": 38.7,
+ "api_seconds": 37.5,
+ "answer": "URRRCDRRRULLLULLDDCLLLDLLU",
+ "result": {
+  "won": true,
+  "wonAt": 26,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 26 moves"
+ },
+ "attempts": [
+  {
+   "moves": "URRRCDRRRULLLULLDDCLLLDLLU",
+   "won": true,
+   "wonAt": 26,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 26 moves",
+   "t": 38.2
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 2,
+  "output": 5113,
+  "cache_read": 6800,
+  "cache_write": 982,
+  "thinking": 4631
+ },
+ "cost": 0.0557,
+ "events": [
+  {
+   "t": 38.2,
+   "type": "text",
+   "text": "The plan is to use the wizard's swap to carry the heroes across the gate while both plates stay pressed.\n\n1. **Warrior onto the top plate.** The warrior (group 1) goes U, R, R, R to stand on the plate at (7,3).\n2. **Wizard onto the bottom plate.** C selects the wizard, who goes D, R, R, R to the plate at (7,7). Both plates are now pressed, so the gate at (7,5) opens.\n3. **Swap across the open gate.** The wizard moves U. His beam passes through the open gate and hits the warrior at (7,3), so they swap. Both heroes are still on plates, so the gate stays open. The wizard is now on top and the warrior on the bottom.\n4. **Wizard to door (2,4).**\n   - L, L, L takes him to (4,3).\n   - U takes him to (4,2).\n   - L, L takes him to (2,2).\n   - D swaps him with the crystal at (2,3), which lands on (2,2).\n   - D walks him onto the door at (2,4).\n   - The gate closes behind him, but nothing is standing in it.\n5. **Warrior to door (2,7).** C selects the warrior. He goes L, L, L to (4,7), D to (4,8), L, L to (2,8), then U onto the door at (2,7). The crystal at (2,6) is never touched.\n\n<moves>URRR C DRRR U LLLULLDD C LLLDLLU</moves>"
+  },
+  {
+   "t": 38.2,
+   "type": "answer",
+   "moves": "URRRCDRRRULLLULLDDCLLLDLLU",
+   "line": "WON after 26 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-sonnet-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 37751,
+   "api_ms": 37491,
+   "turns": 1,
+   "cost": 0.055742
+  }
+ ]
+}

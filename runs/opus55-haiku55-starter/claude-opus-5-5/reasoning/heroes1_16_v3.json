@@ -1,0 +1,114 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-opus-5-5",
+ "track": "reasoning",
+ "level": "heroes1_16_v3",
+ "tier": 2,
+ "reference_length": 80,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T22:30:30.569Z",
+ "seconds": 172.6,
+ "api_seconds": 171.6,
+ "answer": "RURRRDLULLRULDCCUUUDDCCUCCUDCCUUURRRRRRRLLLLLLLDCCUUULLLLLLLCDDCUDCRRRCUUURRRCLUL",
+ "result": {
+  "won": true,
+  "wonAt": 81,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 81 moves"
+ },
+ "attempts": [
+  {
+   "moves": "RURRRDLULLRULDCCUUUDDCCUCCUDCCUUURRRRRRRLLLLLLLDCCUUUULLLLLLLCDDCUDCRRRCUUURRRCLUL",
+   "won": false,
+   "wonAt": null,
+   "failedAt": 54,
+   "how": "refused",
+   "line": "FAILED at move 54 (U): refused: blocked: nothing can move that way",
+   "t": 142.6
+  },
+  {
+   "moves": "RURRRDLULLRULDCCUUUDDCCUCCUDCCUUURRRRRRRLLLLLLLDCCUUULLLLLLLCDDCUDCRRRCUUURRRCLUL",
+   "won": true,
+   "wonAt": 81,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 81 moves",
+   "t": 172.1
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 6,
+  "output": 18757,
+  "cache_read": 14652,
+  "cache_write": 16914,
+  "thinking": 17628
+ },
+ "cost": 0.5134,
+ "events": [
+  {
+   "t": 142.6,
+   "type": "text",
+   "text": "The level splits into three separate areas, one per hero. The wizard controls both gates from the middle room, and the thief and warrior use those gates to reach the top corridor.\n\n**Map layout**\n- **Middle room:** the wizard is here with crystal (8,6) and the plates (5,5) and (7,5). Doors (5,2) and (6,2) are in the top corridor, so the wizard must finish on door (4,4).\n- **Left column (x=2):** the thief, gate (2,4), and crystal (2,2) blocking the way up.\n- **Right column (x=10):** the warrior, crystal (10,5), gate (10,4), and crystal (10,2) in the corridor corner.\n- **Removing crystals:** both gates close sideways into a wall. A crystal left in an open gate is smashed when the gate closes.\n\n**1. Wizard opens the gates.** The wizard goes R, U, R, R, R to (8,5), then D swaps with the crystal, which ends at (8,5). It walks L, U, L, L back to (5,5). R swaps again, so the crystal sits on plate (5,5) and the wizard is at (8,5). U, L, D bring the wizard to (7,5). Both plates are now pressed, so both gates open. From then on, the wizard toggles the gates by stepping U (close) and D (open).\n\n**2. Remove the two lower crystals.**\n- The thief goes U, U, U to (2,3). It then goes D, D, pulling crystal (2,2) down into gate (2,4).\n- The warrior goes U, pushing crystal (10,5) into gate (10,4).\n- The wizard steps U and both gates close, smashing both crystals. The wizard steps D and the gates reopen.\n\n**3. Move crystal (10,2) out of the warrior's way.**\n- The thief climbs into the corridor and walks R to (9,2).\n- It walks L seven times, pulling the crystal behind it to (3,2), with the thief at (2,2). Then it steps D to (2,3).\n- The warrior goes up the right column and walks L along the corridor. Its last L pushes the crystal into corner (2,2).\n- The thief goes D, D, pulling that crystal into gate (2,4).\n- The wizard steps U to close the gates, which smashes the crystal, then D to reopen them.\n\n**4. Finish.**\n- The warrior walks R, R, R to door (6,2).\n- The thief goes U, U, U, R, R, R to door (5,2).\n- The wizard's L swaps it with the crystal on (5,5), so both plates stay pressed. U and L then bring it to door (4,4).\n\n<moves>RURRRDLULLRULD CCUUUDD CCU CCUD CCUUURRRRRRRLLLLLLLD CCUUUULLLLLLL CDD CUD CRRR CUUURRR CLUL</moves>"
+  },
+  {
+   "t": 142.6,
+   "type": "answer",
+   "moves": "RURRRDLULLRULDCCUUUDDCCUCCUDCCUUURRRRRRRLLLLLLLDCCUUUULLLLLLLCDDCUDCRRRCUUURRRCLUL",
+   "line": "FAILED at move 54 (U): refused: blocked: nothing can move that way",
+   "won": false
+  },
+  {
+   "t": 142.6,
+   "type": "feedback",
+   "text": "Checker: FAILED at move 54 (U): refused: blocked: nothing can move that way\nYou have 2 answers left."
+  },
+  {
+   "t": 172.1,
+   "type": "text",
+   "text": "Move 54 failed because I lost track of the warrior's position. Its push in step 2 already moved it to (10,5). So it needs only three U moves to reach (10,2), and the fourth U ran into the wall. The fix is to drop one U from the warrior's climb in step 3. Everything else stays the same.\n\n<moves>RURRRDLULLRULD CCUUUDD CCU CCUD CCUUURRRRRRRLLLLLLLD CCUUULLLLLLL CDD CUD CRRR CUUURRR CLUL</moves>"
+  },
+  {
+   "t": 172.1,
+   "type": "answer",
+   "moves": "RURRRDLULLRULDCCUUUDDCCUCCUDCCUUURRRRRRRLLLLLLLDCCUUULLLLLLLCDDCUDCRRRCUUURRRCLUL",
+   "line": "WON after 81 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-opus-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 142211,
+   "api_ms": 142082,
+   "turns": 1,
+   "cost": 0.32618400000000003
+  },
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 29500,
+   "api_ms": 171560,
+   "turns": 1,
+   "cost": 0.5134064
+  }
+ ]
+}

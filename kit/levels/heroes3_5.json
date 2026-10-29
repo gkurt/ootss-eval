@@ -1,0 +1,84 @@
+{
+ "level": "heroes3_5",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 2,
+ "heroes": [
+  {
+   "id": 1,
+   "kind": "hero",
+   "role": "warrior",
+   "group": 1,
+   "x": 11,
+   "y": 2,
+   "layer": 0
+  },
+  {
+   "id": 6,
+   "kind": "hero",
+   "role": "bard",
+   "group": 2,
+   "x": 11,
+   "y": 4,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 3,
+   "kind": "goblin",
+   "facing": "south",
+   "x": 8,
+   "y": 2,
+   "layer": 0
+  },
+  {
+   "id": 8,
+   "kind": "goblin",
+   "facing": "north",
+   "x": 8,
+   "y": 4,
+   "layer": 0
+  }
+ ],
+ "gates": [
+  {
+   "x": 15,
+   "y": 3,
+   "layer": 0,
+   "flavor": 0,
+   "inverted": false,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "down"
+  }
+ ],
+ "plates": [
+  {
+   "x": 11,
+   "y": 2,
+   "flavor": 0,
+   "pressed": true
+  },
+  {
+   "x": 11,
+   "y": 4,
+   "flavor": 0,
+   "pressed": true
+  }
+ ],
+ "doors": [
+  {
+   "x": 16,
+   "y": 2,
+   "occupied": false
+  },
+  {
+   "x": 16,
+   "y": 4,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

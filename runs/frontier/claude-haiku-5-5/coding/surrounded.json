@@ -1,0 +1,82 @@
+{
+ "run": "frontier",
+ "model": "claude-haiku-5-5",
+ "track": "coding",
+ "level": "surrounded",
+ "tier": 6,
+ "reference_length": null,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 1,
+  "budget": 40,
+  "sandbox": true,
+  "minutes": 120
+ },
+ "started": "2026-10-29T01:09:29.087Z",
+ "seconds": 2300.8,
+ "api_seconds": 2299.3,
+ "answer": null,
+ "result": {
+  "won": false,
+  "line": "No <moves> block found in your reply."
+ },
+ "attempts": [
+  {
+   "moves": null,
+   "won": false,
+   "line": "No <moves> block found in your reply.",
+   "t": 2300
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 4,
+ "stop_reason": "stop_sequence",
+ "usage": {
+  "input": 8,
+  "output": 512000,
+  "cache_read": 24357,
+  "cache_write": 15283,
+  "thinking": 512000
+ },
+ "cost": 0.2593,
+ "events": [
+  {
+   "t": 2300,
+   "type": "text",
+   "text": "API Error: Claude's response exceeded the 128000 output token maximum. To configure this behavior, set the CLAUDE_CODE_MAX_OUTPUT_TOKENS environment variable."
+  },
+  {
+   "t": 2300,
+   "type": "answer",
+   "moves": null,
+   "line": "No <moves> block found in your reply.",
+   "won": false
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-haiku-5-5",
+  "tools": [
+   "mcp__ootss__check",
+   "mcp__ootss__play",
+   "mcp__ootss__run_js",
+   "mcp__ootss__show",
+   "mcp__ootss__try"
+  ],
+  "mcp": [
+   "ootss:connected"
+  ]
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": true,
+   "ms": 2299488,
+   "api_ms": 2299322,
+   "turns": 4,
+   "cost": 0.25930097
+  }
+ ]
+}

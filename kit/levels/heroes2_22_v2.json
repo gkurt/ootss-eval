@@ -1,0 +1,185 @@
+{
+ "level": "heroes2_22_v2",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 4,
+ "heroes": [
+  {
+   "id": 0,
+   "kind": "hero",
+   "role": "warrior",
+   "group": 1,
+   "x": 3,
+   "y": 3,
+   "layer": 0
+  },
+  {
+   "id": 3,
+   "kind": "hero",
+   "role": "thief",
+   "group": 2,
+   "x": 11,
+   "y": 3,
+   "layer": 0
+  },
+  {
+   "id": 17,
+   "kind": "hero",
+   "role": "wizard",
+   "group": 3,
+   "x": 3,
+   "y": 11,
+   "layer": 0
+  },
+  {
+   "id": 20,
+   "kind": "hero",
+   "role": "cleric",
+   "group": 4,
+   "x": 11,
+   "y": 11,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 4,
+   "kind": "dragon",
+   "facing": "east",
+   "x": 2,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 5,
+   "kind": "crystal",
+   "x": 3,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 6,
+   "kind": "dragon",
+   "facing": "west",
+   "x": 4,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 7,
+   "kind": "dragon",
+   "facing": "east",
+   "x": 10,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 8,
+   "kind": "crystal",
+   "x": 11,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 9,
+   "kind": "dragon",
+   "facing": "west",
+   "x": 12,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 10,
+   "kind": "dragon",
+   "facing": "east",
+   "x": 2,
+   "y": 8,
+   "layer": 0
+  },
+  {
+   "id": 11,
+   "kind": "crystal",
+   "x": 3,
+   "y": 8,
+   "layer": 0
+  },
+  {
+   "id": 12,
+   "kind": "dragon",
+   "facing": "west",
+   "x": 4,
+   "y": 8,
+   "layer": 0
+  },
+  {
+   "id": 13,
+   "kind": "dragon",
+   "facing": "east",
+   "x": 10,
+   "y": 8,
+   "layer": 0
+  },
+  {
+   "id": 14,
+   "kind": "crystal",
+   "x": 11,
+   "y": 8,
+   "layer": 0
+  },
+  {
+   "id": 15,
+   "kind": "dragon",
+   "facing": "west",
+   "x": 12,
+   "y": 8,
+   "layer": 0
+  }
+ ],
+ "gates": [
+  {
+   "x": 7,
+   "y": 9,
+   "layer": 0,
+   "flavor": 2,
+   "inverted": false,
+   "monster_gate": true,
+   "open": false,
+   "closes_toward": "down"
+  },
+  {
+   "x": 7,
+   "y": 5,
+   "layer": 0,
+   "flavor": 2,
+   "inverted": false,
+   "monster_gate": true,
+   "open": false,
+   "closes_toward": "down"
+  }
+ ],
+ "plates": [],
+ "doors": [
+  {
+   "x": 6,
+   "y": 3,
+   "occupied": false
+  },
+  {
+   "x": 8,
+   "y": 3,
+   "occupied": false
+  },
+  {
+   "x": 6,
+   "y": 11,
+   "occupied": false
+  },
+  {
+   "x": 8,
+   "y": 11,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

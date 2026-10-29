@@ -1,0 +1,123 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-haiku-5-5",
+ "track": "coding",
+ "level": "mosh_pit_small",
+ "tier": 2,
+ "reference_length": 45,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 1,
+  "budget": 40,
+  "sandbox": true,
+  "minutes": 30
+ },
+ "started": "2026-10-28T23:16:02.444Z",
+ "seconds": 489.5,
+ "api_seconds": 488,
+ "answer": "LLLULURDLURRDLDRRRUULDRDLUULLDDRRDLUULDRRDDLLURLLRRCDRRCDCR",
+ "result": {
+  "won": true,
+  "wonAt": 59,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 59 moves"
+ },
+ "attempts": [
+  {
+   "moves": "LLLULURDLURRDLDRRRUULDRDLUULLDDRRDLUULDRRDDLLURLLRRCDRRCDCR",
+   "won": true,
+   "wonAt": 59,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 59 moves",
+   "t": 488.7
+  }
+ ],
+ "tool_calls": 1,
+ "js_runs": 2,
+ "requests": 4,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 8,
+  "output": 110941,
+  "cache_read": 236584,
+  "cache_write": 113058,
+  "thinking": 106619
+ },
+ "cost": 0.109,
+ "events": [
+  {
+   "t": 391.4,
+   "type": "tool",
+   "id": "toolu_01T4txNk9HLbej4tyPA28Uts",
+   "name": "run_js",
+   "n": null,
+   "code": "\n// Hand-built simulator for verifying a planned move list (not a search).\nconst DIRS = {U:[0,-1], D:[0,1], L:[-1,0], R:[1,0]};\nlet g = {}; // \"x,y\" -> token: S crystal, W, C, G, D, '.' empty\nconst init = {\n \"2,2\":\"C\",\"3,2\":\"S\",\"4,2\":\"S\",\"5,2\":\"S\",\"6,2\":\"D\",\n \"2,3\":\"S\",\"3,3\":\"S\",\"4,3\":\"S\",\"5,3\":\"S\",\"6,3\":\"S\",\n \"2,4\":\"S\",\"3,4\":\"S\",\"4,4\":\"S\",\"5,4\":\"S\",\"6,4\":\"W\",\n \"2,5\":\"G\",\"3,5\":\"S\",\"4,5\":\"S\",\"5,5\":\"S\",\n \"2,6\":\"S\",\"3,6\":\"S\",\"4,6\":\"S\",\"5,6\":\"S\"};\nlet gatesOpen = false;\nlet lost = null;\nfunction inInterior(x,y){ return x>=2 && x<=6 && y>=2 && y<=6; }\nfunction isGateCell(x,y){ return (x===6 && (y===5||y===6)); }\nfunction passable(x,y){ // for beams/walking: non-wall, not closed gate\n  if(!inInterior(x,y)) return false;\n  if(isGateCell(x,y)) return gatesOpen;\n  return true;\n}\nfunction get(x,y){ if(isGateCell(x,y)&&!gatesOpen) return '|'; return g[x+','+y]||'.'; }\nfunction set(x,y,t){ g[x+','+y]=t; }\nfunction findW(){ for(const k in g) if(g[k]==='W') return k.split(',').map(Number); }\nfunction find(t){ for(const k in g) if(g[k]===t) return k.split(',').map(Number); return null; }\nfunction adj(a,b){ return Math.abs(a[0]-b[0])+Math.abs(a[1]-b[1])===1; }\nfunction wMove(d){\n  const [dx,dy]=DIRS[d]; const [wx,wy]=findW();\n  let k=1;\n  while(true){\n    const x=wx+k*dx, y=wy+k*dy;\n    if(!passable(x,y)) return 'refused';\n    const t=get(x,y);\n    if(t==='S'||t==='C'||t==='G'||t==='D'){\n      set(wx,wy,t); set(x,y,'W'); return 'swap with '+t+' at '+x+','+y;\n    }\n    k++;\n  }\n}\nfunction settle(){\n  for(let iter=0;iter<10;iter++){\n    const G=find('G'), D=find('D');\n    if(!G && !D && !gatesOpen){ gatesOpen=true; continue; }\n    const deaths=new Set();\n    const C=find('C'); const W=findW();\n    const protectedW = W && C && adj(W,C);\n    if(G){\n      for(const [dx,dy] of Object.values(DIRS)){\n        const x=G[0]+dx,y=G[1]+dy; const t=get(x,y);\n        if(t==='W' && !(C&&adj([x,y],C))) deaths.add('W@'+x+','+y);\n        if(t==='D') deaths.add('D@'+x+','+y);\n      }\n    }\n    if(D){\n      let x=D[0]-1, y=D[1];\n      while(true){\n        if(!passable(x,y)) break;\n        const t=get(x,y);\n        if(t==='.'){ x--; continue; }\n        if(t==='W'){ if(!(C&&adj([x,y],C))) deaths.add('W@'+x+','+y); break; }\n        if(t==='C') break;\n        if(t==='G'){ deaths.add('G@'+x+','+y); break; }\n        break; // crystal\n      }\n    }\n    if(deaths.size===0) break;\n    for(const dd of deaths){\n      const [tk,pos]=dd.split('@'); const [x,y]=pos.split(',').map(Number);\n      if(tk==='W'){ lost=lost||('W dies at '+pos); }\n      set(x,y,'.');\n    }\n  }\n}\nfunction show(){\n  let out=[];\n  for(let y=2;y<=6;y++){\n    let row='';\n    for(let x=2;x<=6;x++){ const t=get(x,y); row+=(t==='.'?'_':t)+' '; }\n    out.push('y'+y+': '+row);\n  }\n  return out.join('\\n');\n}\nfunction run(seq){\n  g={...init}; gatesOpen=false; lost=null;\n  settle();\n  const log=[];\n  const moves=seq.replace(/\\s+/g,'').split('');\n  for(let i=0;i<moves.length;i++){\n    const m=moves[i];\n    const r=wMove(m);\n    if(r==='refused'){ log.push(i+1+' '+m+' REFUSED'); break; }\n    settle();\n    log.push(i+1+' '+m+' '+r+(lost?' LOST '+lost:''));\n    if(lost) break;\n  }\n  return log;\n}\nconst A=\"LLLUL U RDL URRDL\";\nconst B=\"DRRRUU LDR DLU ULLDDRR DLU\";\nconst Cc=\"ULDR RDDLLUR\";\nconst seq=A+\" \"+B+\" \"+Cc;\nconst log=run(seq);\nconsole.log(log.join('\\n'));\nconsole.log(show());\nconsole.log('gatesOpen',gatesOpen,'W',findW(),'C',find('C'),'D',find('D'),'G',find('G'),'lost',lost);\n",
+   "output": "1 L swap with S at 5,4\n2 L swap with S at 4,4\n3 L swap with S at 3,4\n4 U swap with S at 3,3\n5 L swap with S at 2,3\n6 U swap with C at 2,2\n7 R swap with S at 3,2\n8 D swap with S at 3,3\n9 L swap with C at 2,3\n10 U swap with S at 2,2\n11 R swap with S at 3,2\n12 R swap with S at 4,2\n13 D swap with S at 4,3\n14 L swap with C at 3,3\n15 D swap with S at 3,4\n16 R swap with S at 4,4\n17 R swap with S at 5,4\n18 R swap with S at 6,4\n19 U swap with S at 6,3\n20 U swap with D at 6,2\n21 L swap with S at 5,2\n22 D swap with S at 5,3\n23 R swap with D at 6,3\n24 D swap with S at 6,4\n25 L swap with S at 5,4\n26 U swap with D at 5,3\n27 U swap with S at 5,2\n28 L swap with S at 4,2\n29 L swap with S at 3,2\n30 D swap with S at 3,3\n31 D swap with S at 3,4\n32 R swap with S at 4,4\n33 R swap with D at 5,4\n34 D swap with S at 5,5\n35 L swap with S at 4,5\n36 U swap with D at 4,4\n37 U swap with C at 4,3\n38 L swap with S at 3,3\n39 D swap with S at 3,4\n40 R swap with C at 4,4\n41 R swap with S at 5,4\n42 D swap with S at 5,5\n43 D swap with S at 5,6\n44 L swap with S at 4,6\n45 L swap with S at 3,6\n46 U swap with S at 3,5\n47 R swap with D at 4,5\ny2: S S S S S \ny3: S S S S S \ny4: S C S S S \ny5: _ _ W S _ \ny6: S S S S _ \ngatesOpen true W [ 4, 5 ] C [ 3, 4 ] D null G null lost null\n",
+   "done": 391.5
+  },
+  {
+   "t": 484,
+   "type": "tool",
+   "id": "toolu_01SAtH17oSiN4h5TBe24ehd5",
+   "name": "run_js",
+   "n": null,
+   "code": "\n// Verification simulator (rule-following, not a search). Tracks W, C, G, D, crystals, holes.\nconst DIRS = {U:[0,-1], D:[0,1], L:[-1,0], R:[1,0]};\nlet g = {}, gatesOpen=false, lost=null, sel='W';\nconst init = {\n \"2,2\":\"C\",\"3,2\":\"S\",\"4,2\":\"S\",\"5,2\":\"S\",\"6,2\":\"D\",\n \"2,3\":\"S\",\"3,3\":\"S\",\"4,3\":\"S\",\"5,3\":\"S\",\"6,3\":\"S\",\n \"2,4\":\"S\",\"3,4\":\"S\",\"4,4\":\"S\",\"5,4\":\"S\",\"6,4\":\"W\",\n \"2,5\":\"G\",\"3,5\":\"S\",\"4,5\":\"S\",\"5,5\":\"S\",\n \"2,6\":\"S\",\"3,6\":\"S\",\"4,6\":\"S\",\"5,6\":\"S\"};\nfunction inInterior(x,y){ return x>=2 && x<=6 && y>=2 && y<=6; }\nfunction isGateCell(x,y){ return (x===6 && (y===5||y===6)); }\nfunction passable(x,y){ if(!inInterior(x,y)) return false; if(isGateCell(x,y)) return gatesOpen; return true; }\nfunction get(x,y){ if(isGateCell(x,y)&&!gatesOpen) return '|'; return g[x+','+y]||'.'; }\nfunction set(x,y,t){ g[x+','+y]=t; }\nfunction findT(t){ for(const k in g) if(g[k]===t) return k.split(',').map(Number); return null; }\nfunction adj(a,b){ return a&&b && Math.abs(a[0]-b[0])+Math.abs(a[1]-b[1])===1; }\nfunction wMove(d){\n  const [dx,dy]=DIRS[d]; const [wx,wy]=findT('W');\n  for(let k=1;;k++){\n    const x=wx+k*dx, y=wy+k*dy;\n    if(!passable(x,y)) break;\n    const t=get(x,y);\n    if(t==='.') continue;\n    set(wx,wy,t); set(x,y,'W'); return 'swap '+t+'@'+x+','+y;\n  }\n  const x=wx+dx,y=wy+dy;\n  if(passable(x,y) && get(x,y)==='.'){ set(wx,wy,'.'); set(x,y,'W'); return 'walk'; }\n  return 'REFUSED';\n}\nfunction cMove(d){\n  const [dx,dy]=DIRS[d]; const c=findT('C'); const x=c[0]+dx,y=c[1]+dy;\n  if(passable(x,y) && get(x,y)==='.'){ set(c[0],c[1],'.'); set(x,y,'C'); return 'walk'; }\n  return 'REFUSED';\n}\nfunction settle(){\n  for(let iter=0;iter<10;iter++){\n    const G=findT('G'), D=findT('D');\n    if(!G && !D && !gatesOpen){ gatesOpen=true; continue; }\n    const deaths=[];\n    const C=findT('C'), W=findT('W');\n    const prot = W && C && adj(W,C);\n    if(G){\n      for(const [dx,dy] of Object.values(DIRS)){\n        const x=G[0]+dx,y=G[1]+dy; const t=get(x,y);\n        if(t==='W' && !(C&&adj([x,y],C))) deaths.push(['W',x,y]);\n        if(t==='D') deaths.push(['D',x,y]);\n      }\n    }\n    if(D){\n      let x=D[0]-1, y=D[1];\n      while(passable(x,y)){\n        const t=get(x,y);\n        if(t==='.'){ x--; continue; }\n        if(t==='W'){ if(!(C&&adj([x,y],C))) deaths.push(['W',x,y]); break; }\n        if(t==='G'){ deaths.push(['G',x,y]); break; }\n        break;\n      }\n    }\n    if(deaths.length===0) break;\n    for(const [t,x,y] of deaths){ if(t==='W') lost=lost||('W dies at '+x+','+y); set(x,y,'.'); }\n  }\n}\nfunction show(){\n  let out=[];\n  for(let y=2;y<=6;y++){ let row=''; for(let x=2;x<=6;x++){ const t=get(x,y); row+=(t==='.'?'_':t)+' '; } out.push('y'+y+': '+row); }\n  return out.join('\\n');\n}\nfunction run(seq){\n  g={...init}; gatesOpen=false; lost=null; sel='W';\n  settle();\n  const log=[]; const moves=seq.replace(/\\s+/g,'').split('');\n  for(let i=0;i<moves.length;i++){\n    const m=moves[i]; let r;\n    if(m==='C'){ sel = sel==='W'?'C':'W'; r='select '+sel; }\n    else if(m==='X'){ r='X n/a'; }\n    else { r = sel==='W' ? wMove(m) : cMove(m); }\n    if(r==='REFUSED'){ log.push((i+1)+' '+m+' REFUSED ('+sel+')'); break; }\n    settle();\n    log.push((i+1)+' '+m+' '+sel+' '+r+(lost?' LOST '+lost:''));\n    if(lost) break;\n  }\n  return log;\n}\nconst A=\"LLLUL U RDL URRDL\";\nconst B=\"DRRRUU LDR DLU ULLDDRR DLU\";\nconst Cc=\"ULDR RDDLLUR\";\nconst E=\"LLRR C DRR C D C R\";\nconst seq=A+\" \"+B+\" \"+Cc+\" \"+E;\nconst log=run(seq);\nconsole.log(log.slice(-20).join('\\n'));\nconsole.log(show());\nconsole.log('gatesOpen',gatesOpen,'W',findT('W'),'C',findT('C'),'D',findT('D'),'G',findT('G'),'lost',lost);\n",
+   "output": "40 R W swap C@4,4\n41 R W swap S@5,4\n42 D W swap S@5,5\n43 D W swap S@5,6\n44 L W swap S@4,6\n45 L W swap S@3,6\n46 U W swap S@3,5\n47 R W swap D@4,5\n48 L W walk\n49 L W walk\n50 R W swap S@5,5\n51 R W walk\n52 C C select C\n53 D C walk\n54 R C walk\n55 R C walk\n56 C W select W\n57 D W walk\n58 C C select C\n59 R C walk\ny2: S S S S S \ny3: S S S S S \ny4: S _ S S S \ny5: S _ _ _ C \ny6: S S S S W \ngatesOpen true W [ 6, 6 ] C [ 6, 5 ] D null G null lost null\n",
+   "done": 484
+  },
+  {
+   "t": 486.8,
+   "type": "tool",
+   "id": "toolu_01TC1wCHgNLajYm6rGS3TtRj",
+   "name": "check",
+   "n": 1,
+   "moves": "LLLULURDLURRDLDRRRUULDRDLUULLDDRRDLUULDRRDDLLURLLRRCDRRCDCR",
+   "output": "WON after 59 moves\n(rule-tool calls left: 39)",
+   "done": 486.9,
+   "check": {
+    "won": true,
+    "failedAt": null,
+    "how": null
+   }
+  },
+  {
+   "t": 488.7,
+   "type": "text",
+   "text": "The level is solved. The checker reports WON after 59 moves.\n\nThe idea: the goblin at (2,5) can't be moved safely, so the dragon has to be brought to (3,5), directly east of the goblin. Then the goblin kills the dragon and the dragon's breath kills the goblin in the same turn. The cleric is needed to protect the wizard at each step where the wizard stands next to the goblin or directly west of the dragon. After both monsters die, the gates open and the wizard and cleric walk onto the two doors.\n\n<moves>LLLULU RDLURRDL DRRRUU LDR DLU ULLDDRR DLU ULDR RDDLLUR LLRR C DRR C D C R</moves>"
+  },
+  {
+   "t": 488.7,
+   "type": "answer",
+   "moves": "LLLULURDLURRDLDRRRUULDRDLUULLDDRRDLUULDRRDDLLURLLRRCDRRCDCR",
+   "line": "WON after 59 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-haiku-5-5",
+  "tools": [
+   "mcp__ootss__check",
+   "mcp__ootss__play",
+   "mcp__ootss__run_js",
+   "mcp__ootss__show",
+   "mcp__ootss__try"
+  ],
+  "mcp": [
+   "ootss:connected"
+  ]
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 488235,
+   "api_ms": 487998,
+   "turns": 4,
+   "cost": 0.10899809999999999
+  }
+ ]
+}

@@ -1,0 +1,159 @@
+{
+ "level": "heroes1_10_inv_v4_b",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 1,
+ "heroes": [
+  {
+   "id": 16,
+   "kind": "hero",
+   "role": "wizard",
+   "group": 1,
+   "x": 9,
+   "y": 14,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 2,
+   "kind": "crystal",
+   "x": 4,
+   "y": 14,
+   "layer": 0
+  },
+  {
+   "id": 3,
+   "kind": "crystal",
+   "x": 8,
+   "y": 19,
+   "layer": 0
+  },
+  {
+   "id": 12,
+   "kind": "crystal",
+   "x": 8,
+   "y": 14,
+   "layer": 0
+  },
+  {
+   "id": 13,
+   "kind": "crystal",
+   "x": 6,
+   "y": 10,
+   "layer": 0
+  },
+  {
+   "id": 14,
+   "kind": "crystal",
+   "x": 8,
+   "y": 10,
+   "layer": 0
+  },
+  {
+   "id": 15,
+   "kind": "crystal",
+   "x": 6,
+   "y": 14,
+   "layer": 0
+  },
+  {
+   "id": 17,
+   "kind": "crystal",
+   "x": 8,
+   "y": 12,
+   "layer": 0
+  },
+  {
+   "id": 18,
+   "kind": "crystal",
+   "x": 4,
+   "y": 12,
+   "layer": 0
+  },
+  {
+   "id": 19,
+   "kind": "crystal",
+   "x": 6,
+   "y": 12,
+   "layer": 0
+  }
+ ],
+ "gates": [
+  {
+   "x": 8,
+   "y": 16,
+   "layer": 0,
+   "flavor": 0,
+   "inverted": false,
+   "monster_gate": false,
+   "open": false,
+   "closes_toward": "down"
+  }
+ ],
+ "plates": [
+  {
+   "x": 6,
+   "y": 12,
+   "flavor": 0,
+   "pressed": true
+  },
+  {
+   "x": 6,
+   "y": 14,
+   "flavor": 0,
+   "pressed": true
+  },
+  {
+   "x": 4,
+   "y": 14,
+   "flavor": 0,
+   "pressed": true
+  },
+  {
+   "x": 4,
+   "y": 10,
+   "flavor": 0,
+   "pressed": false
+  },
+  {
+   "x": 4,
+   "y": 12,
+   "flavor": 0,
+   "pressed": true
+  },
+  {
+   "x": 6,
+   "y": 10,
+   "flavor": 0,
+   "pressed": true
+  },
+  {
+   "x": 8,
+   "y": 10,
+   "flavor": 0,
+   "pressed": true
+  },
+  {
+   "x": 8,
+   "y": 12,
+   "flavor": 0,
+   "pressed": true
+  },
+  {
+   "x": 8,
+   "y": 14,
+   "flavor": 0,
+   "pressed": true
+  }
+ ],
+ "doors": [
+  {
+   "x": 8,
+   "y": 18,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

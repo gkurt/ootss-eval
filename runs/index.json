@@ -1,0 +1,20 @@
+[
+  {
+    "id": "frontier",
+    "title": "Open levels",
+    "set": "frontier",
+    "description": "The four demo levels with no known solution. Earlier search runs gave up on all of them: mirror_21 after a complete breadth-first search of 140M states, the other three after 12M states each. Opus, Sonnet and Haiku 5.5, both tracks, two hours per run."
+  },
+  {
+    "id": "opus55-haiku55-starter",
+    "title": "Starter set: Opus and Haiku 5.5",
+    "set": "starter",
+    "description": "Twelve levels across tiers 1 to 5, both tracks, 30 minutes per run."
+  },
+  {
+    "id": "sonnet55-starter",
+    "title": "Starter set: Sonnet 5.5",
+    "set": "starter",
+    "description": "The first run: the same twelve levels, both tracks, 30 minutes per run."
+  }
+]

@@ -1,0 +1,72 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-haiku-5-5",
+ "track": "coding",
+ "level": "heroes2_22_v2",
+ "tier": 5,
+ "reference_length": 120,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 1,
+  "budget": 40,
+  "sandbox": true,
+  "minutes": 30
+ },
+ "started": "2026-10-28T23:38:07.351Z",
+ "seconds": 1800,
+ "api_seconds": 0,
+ "answer": null,
+ "result": {
+  "won": false,
+  "line": "Stopped: the 30-minute limit."
+ },
+ "attempts": [],
+ "tool_calls": 1,
+ "js_runs": 0,
+ "requests": 0,
+ "stop_reason": null,
+ "usage": {
+  "input": 0,
+  "output": 0,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "cost": 0,
+ "events": [
+  {
+   "t": 1451.4,
+   "type": "tool",
+   "id": "toolu_01RFwCE7ix48X9o9gyzcHCJm",
+   "name": "play",
+   "n": 1,
+   "moves": "CDDU",
+   "output": "   1 C (next group)  selected group 2\n   2 D (south)       thief#3 (11,3)->(11,4)\n   3 D (south)       thief#3 (11,4)->(11,5)\n   4 U (north)       thief#3 (11,5)->(11,4); crystal#8 (11,6)->(11,5); dragon#7 is gone; dragon#9 is gone\nnot won · heroes on doors 0/4 (heroes: 4) · selected group 2 of 4\n(rule-tool calls left: 39)",
+   "done": 1451.4,
+   "check": {
+    "won": false,
+    "failedAt": null,
+    "how": null
+   }
+  },
+  {
+   "t": 1800,
+   "type": "note",
+   "text": "Stopped: the 30-minute limit."
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-haiku-5-5",
+  "tools": [
+   "mcp__ootss__check",
+   "mcp__ootss__play",
+   "mcp__ootss__run_js",
+   "mcp__ootss__show",
+   "mcp__ootss__try"
+  ],
+  "mcp": [
+   "ootss:connected"
+  ]
+ }
+}

@@ -1,0 +1,70 @@
+{
+ "level": "mirror_6_alt",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 1,
+ "heroes": [
+  {
+   "id": 6,
+   "kind": "hero",
+   "role": "trader",
+   "group": 1,
+   "x": 28,
+   "y": 14,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 0,
+   "kind": "magic mirror",
+   "facing": "west",
+   "faces": [
+    "east",
+    "north"
+   ],
+   "x": 23,
+   "y": 20,
+   "layer": 0
+  },
+  {
+   "id": 1,
+   "kind": "boulder",
+   "x": 24,
+   "y": 19,
+   "layer": 0
+  },
+  {
+   "id": 2,
+   "kind": "boulder",
+   "x": 21,
+   "y": 21,
+   "layer": 0
+  },
+  {
+   "id": 4,
+   "kind": "boulder",
+   "x": 25,
+   "y": 12,
+   "layer": 0
+  },
+  {
+   "id": 5,
+   "kind": "boulder",
+   "x": 27,
+   "y": 13,
+   "layer": 0
+  }
+ ],
+ "gates": [],
+ "plates": [],
+ "doors": [
+  {
+   "x": 15,
+   "y": 11,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

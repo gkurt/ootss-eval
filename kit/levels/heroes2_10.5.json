@@ -1,0 +1,144 @@
+{
+ "level": "heroes2_10.5",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 1,
+ "heroes": [
+  {
+   "id": 12,
+   "kind": "hero",
+   "role": "wizard",
+   "group": 1,
+   "x": 8,
+   "y": 9,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 1,
+   "kind": "dragon",
+   "facing": "west",
+   "x": 16,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 2,
+   "kind": "goblin",
+   "facing": "west",
+   "x": 5,
+   "y": 3,
+   "layer": 0
+  },
+  {
+   "id": 3,
+   "kind": "goblin",
+   "facing": "east",
+   "x": 12,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 4,
+   "kind": "goblin",
+   "facing": "east",
+   "x": 14,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 11,
+   "kind": "goblin",
+   "facing": "south",
+   "x": 3,
+   "y": 2,
+   "layer": 0
+  },
+  {
+   "id": 13,
+   "kind": "goblin",
+   "facing": "east",
+   "x": 2,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 14,
+   "kind": "goblin",
+   "facing": "east",
+   "x": 10,
+   "y": 6,
+   "layer": 0
+  }
+ ],
+ "gates": [
+  {
+   "x": 15,
+   "y": 6,
+   "layer": 0,
+   "flavor": 2,
+   "inverted": false,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "up"
+  },
+  {
+   "x": 4,
+   "y": 7,
+   "layer": 0,
+   "flavor": 2,
+   "inverted": false,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "up"
+  },
+  {
+   "x": 5,
+   "y": 7,
+   "layer": 0,
+   "flavor": 2,
+   "inverted": false,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "up"
+  },
+  {
+   "x": 2,
+   "y": 7,
+   "layer": 0,
+   "flavor": 2,
+   "inverted": false,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "up"
+  },
+  {
+   "x": 3,
+   "y": 7,
+   "layer": 0,
+   "flavor": 2,
+   "inverted": false,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "up"
+  }
+ ],
+ "plates": [
+  {
+   "x": 3,
+   "y": 2,
+   "flavor": 2,
+   "pressed": true
+  }
+ ],
+ "doors": [
+  {
+   "x": 4,
+   "y": 9,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

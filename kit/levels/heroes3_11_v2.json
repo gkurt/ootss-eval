@@ -1,0 +1,144 @@
+{
+ "level": "heroes3_11_v2",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 2,
+ "heroes": [
+  {
+   "id": 0,
+   "kind": "hero",
+   "role": "druid",
+   "group": 1,
+   "x": 3,
+   "y": 4,
+   "layer": 0
+  },
+  {
+   "id": 4,
+   "kind": "hero",
+   "role": "warrior",
+   "group": 2,
+   "x": 3,
+   "y": 7,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 8,
+   "kind": "tree",
+   "x": 5,
+   "y": 3,
+   "layer": 0
+  },
+  {
+   "id": 9,
+   "kind": "tree",
+   "x": 6,
+   "y": 3,
+   "layer": 0
+  },
+  {
+   "id": 10,
+   "kind": "tree",
+   "x": 6,
+   "y": 4,
+   "layer": 0
+  },
+  {
+   "id": 11,
+   "kind": "tree",
+   "x": 5,
+   "y": 4,
+   "layer": 0
+  },
+  {
+   "id": 12,
+   "kind": "tree",
+   "x": 5,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 13,
+   "kind": "tree",
+   "x": 7,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 14,
+   "kind": "tree",
+   "x": 5,
+   "y": 8,
+   "layer": 0
+  },
+  {
+   "id": 15,
+   "kind": "tree",
+   "x": 5,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 16,
+   "kind": "tree",
+   "x": 5,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 17,
+   "kind": "tree",
+   "x": 6,
+   "y": 7,
+   "layer": 0
+  }
+ ],
+ "gates": [
+  {
+   "x": 8,
+   "y": 7,
+   "layer": 0,
+   "flavor": 0,
+   "inverted": false,
+   "monster_gate": false,
+   "open": false,
+   "closes_toward": "down"
+  }
+ ],
+ "plates": [
+  {
+   "x": 9,
+   "y": 3,
+   "flavor": 0,
+   "pressed": false
+  },
+  {
+   "x": 10,
+   "y": 3,
+   "flavor": 0,
+   "pressed": false
+  },
+  {
+   "x": 11,
+   "y": 3,
+   "flavor": 0,
+   "pressed": false
+  }
+ ],
+ "doors": [
+  {
+   "x": 10,
+   "y": 6,
+   "occupied": false
+  },
+  {
+   "x": 10,
+   "y": 8,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

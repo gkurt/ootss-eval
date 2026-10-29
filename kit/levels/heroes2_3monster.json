@@ -1,0 +1,79 @@
+{
+ "level": "heroes2_3monster",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 1,
+ "heroes": [
+  {
+   "id": 2,
+   "kind": "hero",
+   "role": "warrior",
+   "group": 1,
+   "x": 4,
+   "y": 7,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 0,
+   "kind": "goblin",
+   "facing": "west",
+   "x": 3,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 1,
+   "kind": "goblin",
+   "facing": "east",
+   "x": 2,
+   "y": 10,
+   "layer": 0
+  },
+  {
+   "id": 3,
+   "kind": "crystal",
+   "x": 8,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 4,
+   "kind": "crystal",
+   "x": 6,
+   "y": 9,
+   "layer": 0
+  },
+  {
+   "id": 5,
+   "kind": "goblin",
+   "facing": "west",
+   "x": 6,
+   "y": 7,
+   "layer": 0
+  }
+ ],
+ "gates": [
+  {
+   "x": 10,
+   "y": 7,
+   "layer": 0,
+   "flavor": 2,
+   "inverted": false,
+   "monster_gate": true,
+   "open": false,
+   "closes_toward": "down"
+  }
+ ],
+ "plates": [],
+ "doors": [
+  {
+   "x": 12,
+   "y": 7,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

@@ -1,0 +1,80 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-haiku-5-5",
+ "track": "reasoning",
+ "level": "mirror_factory_v2",
+ "tier": 5,
+ "reference_length": 281,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T23:13:48.225Z",
+ "seconds": 1074.2,
+ "api_seconds": 1069.7,
+ "answer": "DRRRULLRRRRXRURRDLLLLUURURDDRDLXUULLULLDRRRRDRUXXLLLULLDRRRRDRUUXXDLLLULLDRRRRDRUUUXDDLLLDDRRURRDDLUUUUUUURR",
+ "result": {
+  "won": true,
+  "wonAt": 108,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 108 moves"
+ },
+ "attempts": [
+  {
+   "moves": "DRRRULLRRRRXRURRDLLLLUURURDDRDLXUULLULLDRRRRDRUXXLLLULLDRRRRDRUUXXDLLLULLDRRRRDRUUUXDDLLLDDRRURRDDLUUUUUUURR",
+   "won": true,
+   "wonAt": 108,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 108 moves",
+   "t": 1073.4
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 2,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 4,
+  "output": 245368,
+  "cache_read": 13600,
+  "cache_write": 4104,
+  "thinking": 244978
+ },
+ "cost": 0.1236,
+ "events": [
+  {
+   "t": 1073.4,
+   "type": "text",
+   "text": "The solution sends the trader across the water with one mirror teleport, then uses mirror copies of the crystal to build a four-cell causeway to the door.\n\n1. Walk the trader around to (19,23) and push mirror #2 to (14,23). Fire `X`: the trader is reflected north onto (14,18).\n2. Push mirror #4 west to (12,18), then bring the crystal to (14,18).\n3. Fire `X` to copy the crystal to (12,16) and (19,23). Push the copy at (12,16) east to (16,16) and north into (16,15) to sink it. Fire `X` to bring the (19,23) copy back to (14,18). Repeat this cycle twice more so sinks land at (16,14), (16,13) and (16,12).\n4. Walk north up the causeway to (16,12), then east through (17,12) to the door at (18,12).\n\n<moves>DRRRULLRRRR X RURRDLLLL UURURDDRDL X UULLULLDRRRRDRU X X LLLULLDRRRRDRUU X X DLLLULLDRRRRDRUUU X DDLLLDDRRURRDDLUUUUUU URR</moves>"
+  },
+  {
+   "t": 1073.4,
+   "type": "answer",
+   "moves": "DRRRULLRRRRXRURRDLLLLUURURDDRDLXUULLULLDRRRRDRUXXLLLULLDRRRRDRUUXXDLLLULLDRRRRDRUUUXDDLLLDDRRURRDDLUUUUUUURR",
+   "line": "WON after 108 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-haiku-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 1072996,
+   "api_ms": 1069749,
+   "turns": 2,
+   "cost": 0.1236412
+  }
+ ]
+}

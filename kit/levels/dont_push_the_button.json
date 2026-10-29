@@ -1,0 +1,158 @@
+{
+ "level": "dont_push_the_button",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 1,
+ "heroes": [
+  {
+   "id": 5,
+   "kind": "hero",
+   "role": "warrior",
+   "group": 1,
+   "x": 5,
+   "y": 6,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 7,
+   "kind": "crystal",
+   "x": 3,
+   "y": 3,
+   "layer": 0
+  },
+  {
+   "id": 8,
+   "kind": "crystal",
+   "x": 3,
+   "y": 8,
+   "layer": 0
+  },
+  {
+   "id": 9,
+   "kind": "dragon",
+   "facing": "west",
+   "x": 15,
+   "y": 9,
+   "layer": 0
+  }
+ ],
+ "gates": [
+  {
+   "x": 15,
+   "y": 4,
+   "layer": 0,
+   "flavor": 1,
+   "inverted": true,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "down"
+  },
+  {
+   "x": 15,
+   "y": 6,
+   "layer": 0,
+   "flavor": 4,
+   "inverted": true,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "down"
+  },
+  {
+   "x": 15,
+   "y": 5,
+   "layer": 0,
+   "flavor": 2,
+   "inverted": true,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "down"
+  },
+  {
+   "x": 15,
+   "y": 7,
+   "layer": 0,
+   "flavor": 0,
+   "inverted": true,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "down"
+  },
+  {
+   "x": 14,
+   "y": 5,
+   "layer": -1,
+   "flavor": 2,
+   "inverted": true,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "east"
+  },
+  {
+   "x": 14,
+   "y": 4,
+   "layer": -1,
+   "flavor": 1,
+   "inverted": true,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "east"
+  },
+  {
+   "x": 14,
+   "y": 6,
+   "layer": -1,
+   "flavor": 4,
+   "inverted": true,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "east"
+  },
+  {
+   "x": 14,
+   "y": 7,
+   "layer": -1,
+   "flavor": 0,
+   "inverted": true,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "east"
+  }
+ ],
+ "plates": [
+  {
+   "x": 8,
+   "y": 5,
+   "flavor": 2,
+   "pressed": false
+  },
+  {
+   "x": 10,
+   "y": 5,
+   "flavor": 4,
+   "pressed": false
+  },
+  {
+   "x": 9,
+   "y": 5,
+   "flavor": 1,
+   "pressed": false
+  },
+  {
+   "x": 12,
+   "y": 6,
+   "flavor": 0,
+   "pressed": false
+  }
+ ],
+ "doors": [
+  {
+   "x": 18,
+   "y": 4,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

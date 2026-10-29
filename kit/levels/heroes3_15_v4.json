@@ -1,0 +1,177 @@
+{
+ "level": "heroes3_15_v4",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 2,
+ "heroes": [
+  {
+   "id": 11,
+   "kind": "hero",
+   "role": "wizard",
+   "group": 2,
+   "x": 6,
+   "y": 8,
+   "layer": 0
+  },
+  {
+   "id": 12,
+   "kind": "hero",
+   "role": "druid",
+   "group": 1,
+   "x": 4,
+   "y": 8,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 0,
+   "kind": "tree",
+   "x": 2,
+   "y": 3,
+   "layer": 0
+  },
+  {
+   "id": 1,
+   "kind": "tree",
+   "x": 3,
+   "y": 3,
+   "layer": 0
+  },
+  {
+   "id": 2,
+   "kind": "tree",
+   "x": 2,
+   "y": 8,
+   "layer": 0
+  },
+  {
+   "id": 3,
+   "kind": "tree",
+   "x": 2,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 4,
+   "kind": "tree",
+   "x": 3,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 5,
+   "kind": "tree",
+   "x": 3,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 6,
+   "kind": "tree",
+   "x": 2,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 7,
+   "kind": "tree",
+   "x": 2,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 8,
+   "kind": "tree",
+   "x": 3,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 9,
+   "kind": "tree",
+   "x": 3,
+   "y": 4,
+   "layer": 0
+  },
+  {
+   "id": 10,
+   "kind": "tree",
+   "x": 2,
+   "y": 4,
+   "layer": 0
+  },
+  {
+   "id": 15,
+   "kind": "tree",
+   "x": 4,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 16,
+   "kind": "tree",
+   "x": 5,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 17,
+   "kind": "tree",
+   "x": 6,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 18,
+   "kind": "tree",
+   "x": 5,
+   "y": 8,
+   "layer": 0
+  },
+  {
+   "id": 19,
+   "kind": "tree",
+   "x": 6,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 20,
+   "kind": "tree",
+   "x": 3,
+   "y": 8,
+   "layer": 0
+  },
+  {
+   "id": 21,
+   "kind": "tree",
+   "x": 7,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 22,
+   "kind": "tree",
+   "x": 7,
+   "y": 7,
+   "layer": 0
+  }
+ ],
+ "gates": [],
+ "plates": [],
+ "doors": [
+  {
+   "x": 8,
+   "y": 6,
+   "occupied": false
+  },
+  {
+   "x": 9,
+   "y": 6,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

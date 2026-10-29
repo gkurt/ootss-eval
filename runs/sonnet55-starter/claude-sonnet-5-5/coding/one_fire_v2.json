@@ -1,0 +1,103 @@
+{
+ "run": "sonnet55-starter",
+ "model": "claude-sonnet-5-5",
+ "track": "coding",
+ "level": "one_fire_v2",
+ "tier": 3,
+ "reference_length": 79,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 1,
+  "budget": 40,
+  "sandbox": true,
+  "minutes": 30
+ },
+ "started": "2026-10-28T17:01:30.957Z",
+ "seconds": 186.4,
+ "api_seconds": 184.9,
+ "answer": "LLCLUURDCURCDDCDDRRLUUURLDDLDCRULCRLCULUURLDDRDLCURRDRDLLLCRRDDDLLLLDDDCRRRDDLLLLDD",
+ "result": {
+  "won": true,
+  "wonAt": 83,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 83 moves"
+ },
+ "attempts": [
+  {
+   "moves": "LLCLUURDCURCDDCDDRRLUUURLDDLDCRULCRLCULUURLDDRDLCURRDRDLLLCRRDDDLLLLDDDCRRRDDLLLLDD",
+   "won": true,
+   "wonAt": 83,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 83 moves",
+   "t": 185.6
+  }
+ ],
+ "tool_calls": 1,
+ "js_runs": 0,
+ "requests": 2,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 4,
+  "output": 25424,
+  "cache_read": 17443,
+  "cache_write": 28548,
+  "thinking": 24853
+ },
+ "cost": 0.3702,
+ "events": [
+  {
+   "t": 181.7,
+   "type": "tool",
+   "id": "toolu_01Gc1n2icjUpoEDdWtbtvWDC",
+   "name": "play",
+   "n": 1,
+   "moves": "LLCLUURDCURCDDCDDRRLUUURLDDLDCRULCRLCULUURLDDRDLCURRDRDLLLCRRDDDLLLLDDDCRRRDDLLLLDD",
+   "output": "   1 L (west)        warrior#5 (4,4)->(3,4)\n   2 L (west)        warrior#5 (3,4)->(2,4)\n   3 C (next group)  selected group 2\n   4 L (west)        thief#4 (4,5)->(3,5)\n   5 U (north)       thief#4 (3,5)->(3,4)\n   6 U (north)       thief#4 (3,4)->(3,3)\n   7 R (east)        crystal#1 (2,3)->(3,3); thief#4 (3,3)->(4,3)\n   8 D (south)       thief#4 (4,3)->(4,4)\n   9 C (next group)  selected group 1\n  10 U (north)       warrior#5 (2,4)->(2,3)\n  11 R (east)        crystal#1 (3,3)->(4,3); warrior#5 (2,3)->(3,3)\n  12 C (next group)  selected group 2\n  13 D (south)       crystal#1 (4,3)->(4,4); thief#4 (4,4)->(4,5)\n  14 D (south)       crystal#1 (4,4)->(4,5); thief#4 (4,5)->(4,6)\n  15 C (next group)  selected group 1\n  16 D (south)       warrior#5 (3,3)->(3,4)\n  17 D (south)       warrior#5 (3,4)->(3,5)\n  18 R (east)        crystal#1 (4,5)->(5,5); warrior#5 (3,5)->(4,5)\n  19 R (east)        crystal#1 (5,5)->(6,5); warrior#5 (4,5)->(5,5)\n  20 L (west)        warrior#5 (5,5)->(4,5)\n  21 U (north)       warrior#5 (4,5)->(4,4)\n  22 U (north)       warrior#5 (4,4)->(4,3)\n  23 U (north)       warrior#5 (4,3)->(4,2)\n  24 R (east)        dragon#0 (5,2)->(6,2); warrior#5 (4,2)->(5,2)\n  25 L (west)        warrior#5 (5,2)->(4,2)\n  26 D (south)       warrior#5 (4,2)->(4,3)\n  27 D (south)       warrior#5 (4,3)->(4,4)\n  28 L (west)        warrior#5 (4,4)->(3,4)\n  29 D (south)       warrior#5 (3,4)->(3,5)\n  30 C (next group)  selected group 2\n  31 R (east)        thief#4 (4,6)->(5,6)\n  32 U (north)       thief#4 (5,6)->(5,5)\n  33 L (west)        crystal#1 (6,5)->(5,5); thief#4 (5,5)->(4,5); goblin#9 is gone\n  34 C (next group)  selected group 1\n  35 R (east)        crystal#1 (5,5)->(6,5); thief#4 (4,5)->(5,5); warrior#5 (3,5)->(4,5)\n  36 L (west)        warrior#5 (4,5)->(3,5)\n  37 C (next group)  selected group 2\n  38 U (north)       thief#4 (5,5)->(5,4)\n  39 L (west)        thief#4 (5,4)->(4,4)\n  40 U (north)       thief#4 (4,4)->(4,3)\n  41 U (north)       thief#4 (4,3)->(4,2)\n  42 R (east)        thief#4 (4,2)->(5,2)\n  43 L (west)        dragon#0 (6,2)->(5,2); thief#4 (5,2)->(4,2)\n  44 D (south)       thief#4 (4,2)->(4,3)\n  45 D (south)       thief#4 (4,3)->(4,4)\n  46 R (east)        thief#4 (4,4)->(5,4)\n  47 D (south)       thief#4 (5,4)->(5,5)\n  48 L (west)        crystal#1 (6,5)->(5,5); thief#4 (5,5)->(4,5)\n  49 C (next group)  selected group 1\n  50 U (north)       warrior#5 (3,5)->(3,4)\n  51 R (east)        warrior#5 (3,4)->(4,4)\n  52 R (east)        warrior#5 (4,4)->(5,4)\n  53 D (south)       crystal#1 (5,5)->(5,6); warrior#5 (5,4)->(5,5)\n  54 R (east)        warrior#5 (5,5)->(6,5)\n  55 D (south)       warrior#5 (6,5)->(6,6)\n  56 L (west)        crystal#1 (5,6)->(4,6); warrior#5 (6,6)->(5,6)\n  57 L (west)        crystal#1 (4,6)->(3,6); warrior#5 (5,6)->(4,6)\n  58 L (west)        crystal#1 (3,6)->(2,6); warrior#5 (4,6)->(3,6); gate at (3,8) opens\n  59 C (next group)  selected group 2\n  60 R (east)        thief#4 (4,5)->(5,5)\n  61 R (east)        thief#4 (5,5)->(6,5)\n  62 D (south)       thief#4 (6,5)->(6,6)\n  63 D (south)       thief#4 (6,6)->(6,7)\n  64 D (south)       thief#4 (6,7)->(6,8)\n  65 L (west)        thief#4 (6,8)->(5,8)\n  66 L (west)        thief#4 (5,8)->(4,8)\n  67 L (west)        thief#4 (4,8)->(3,8)\n  68 L (west)        thief#4 (3,8)->(2,8)\n  69 D (south)       thief#4 (2,8)->(2,9)\n  70 D (south)       thief#4 (2,9)->(2,10)\n  71 D (south)       thief#4 (2,10)->(2,11)\n  72 C (next group)  selected group 1\n  73 R (east)        warrior#5 (3,6)->(4,6)\n  74 R (east)        warrior#5 (4,6)->(5,6)\n  75 R (east)        warrior#5 (5,6)->(6,6)\n  76 D (south)       warrior#5 (6,6)->(6,7)\n  77 D (south)       warrior#5 (6,7)->(6,8)\n  78 L (west)        warrior#5 (6,8)->(5,8)\n  79 L (west)        warrior#5 (5,8)->(4,8)\n  80 L (west)        warrior#5 (4,8)->(3,8)\n  81 L (west)        warrior#5 (3,8)->(2,8)\n  82 D (south)       warrior#5 (2,8)->(2,9)\n  83 D (south)       warrior#5 (2,9)->(2,10)\nWON · heroes on doors 2/2 (heroes: 2) · selected group 1 of 2\n(rule-tool calls left: 39)",
+   "done": 181.7,
+   "check": {
+    "won": true,
+    "failedAt": null,
+    "how": null
+   }
+  },
+  {
+   "t": 185.6,
+   "type": "text",
+   "text": "The move sequence below wins the level: the `play` tool ran it and reported \"WON · heroes on doors 2/2\" after 83 moves.\n\nThe plan, in order:\n1. The thief pulls the crystal out of its corner and walks it down column 4 to (4,5), and the warrior pushes it east to (6,5). It now blocks the dragon's breath down column 6.\n2. The warrior pushes the dragon east to (6,2), so it faces down column 6.\n3. The thief pulls the crystal out of the line for one turn. The dragon kills the goblin at (6,9) and the crystal is pushed back. The other goblin, on plate 4, survives, so the gate at (5,8) stays open.\n4. The thief goes to (5,2) and pulls the dragon back to (5,2), where its breath hits the wall.\n5. The crystal is pulled and pushed to plate (2,6), which opens the gate at (3,8).\n6. The thief walks to door (2,11) and the warrior to door (2,10), both via (6,8), (5,8) and (3,8).\n\n<moves>LL C LUURD C UR C DD C DDRR LUUUR LDDLD C RUL C RL C ULUURL DDRDL C URRD RD LLL C RRDDD LLLL DDD C RRRDD LLLL DD</moves>"
+  },
+  {
+   "t": 185.6,
+   "type": "answer",
+   "moves": "LLCLUURDCURCDDCDDRRLUUURLDDLDCRULCRLCULUURLDDRDLCURRDRDLLLCRRDDDLLLLDDDCRRRDDLLLLDD",
+   "line": "WON after 83 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-sonnet-5-5",
+  "tools": [
+   "mcp__ootss__check",
+   "mcp__ootss__play",
+   "mcp__ootss__run_js",
+   "mcp__ootss__show",
+   "mcp__ootss__try"
+  ],
+  "mcp": [
+   "ootss:connected"
+  ]
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 185122,
+   "api_ms": 184932,
+   "turns": 2,
+   "cost": 0.37018429999999997
+  }
+ ]
+}

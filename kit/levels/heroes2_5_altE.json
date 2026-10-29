@@ -1,0 +1,61 @@
+{
+ "level": "heroes2_5_altE",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 1,
+ "heroes": [
+  {
+   "id": 2,
+   "kind": "hero",
+   "role": "warrior",
+   "group": 1,
+   "x": 12,
+   "y": 9,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 0,
+   "kind": "dragon",
+   "facing": "north",
+   "x": 5,
+   "y": 9,
+   "layer": 0
+  },
+  {
+   "id": 1,
+   "kind": "crystal",
+   "x": 10,
+   "y": 8,
+   "layer": 0
+  },
+  {
+   "id": 3,
+   "kind": "dragon",
+   "facing": "east",
+   "x": 2,
+   "y": 4,
+   "layer": 0
+  },
+  {
+   "id": 5,
+   "kind": "goblin",
+   "facing": "south",
+   "x": 10,
+   "y": 7,
+   "layer": 0
+  }
+ ],
+ "gates": [],
+ "plates": [],
+ "doors": [
+  {
+   "x": 3,
+   "y": 2,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

@@ -1,0 +1,66 @@
+{
+ "level": "mirror_13",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 1,
+ "heroes": [
+  {
+   "id": 3,
+   "kind": "hero",
+   "role": "trader",
+   "group": 1,
+   "x": 13,
+   "y": 12,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 0,
+   "kind": "boulder",
+   "x": 21,
+   "y": 14,
+   "layer": 0
+  },
+  {
+   "id": 1,
+   "kind": "magic mirror",
+   "facing": "north",
+   "faces": [
+    "south",
+    "east"
+   ],
+   "x": 15,
+   "y": 13,
+   "layer": 0
+  },
+  {
+   "id": 2,
+   "kind": "magic mirror",
+   "facing": "east",
+   "faces": [
+    "west",
+    "south"
+   ],
+   "x": 13,
+   "y": 14,
+   "layer": 0
+  }
+ ],
+ "gates": [],
+ "plates": [],
+ "doors": [
+  {
+   "x": 18,
+   "y": 9,
+   "occupied": false
+  },
+  {
+   "x": 21,
+   "y": 9,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

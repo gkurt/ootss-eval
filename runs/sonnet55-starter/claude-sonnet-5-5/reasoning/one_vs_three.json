@@ -1,0 +1,49 @@
+{
+ "run": "sonnet55-starter",
+ "model": "claude-sonnet-5-5",
+ "track": "reasoning",
+ "level": "one_vs_three",
+ "tier": 3,
+ "reference_length": 90,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T16:40:53.952Z",
+ "seconds": 1800,
+ "api_seconds": 0,
+ "answer": null,
+ "result": {
+  "won": false,
+  "line": "Stopped: the 30-minute limit."
+ },
+ "attempts": [],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 0,
+ "stop_reason": null,
+ "usage": {
+  "input": 0,
+  "output": 0,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "cost": 0,
+ "events": [
+  {
+   "t": 1800,
+   "type": "note",
+   "text": "Stopped: the 30-minute limit."
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-sonnet-5-5",
+  "tools": [],
+  "mcp": []
+ }
+}

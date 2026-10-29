@@ -1,0 +1,92 @@
+{
+ "level": "wizard_and_druid_alt_5",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 2,
+ "heroes": [
+  {
+   "id": 2,
+   "kind": "hero",
+   "role": "druid",
+   "group": 1,
+   "x": 9,
+   "y": 3,
+   "layer": 0
+  },
+  {
+   "id": 3,
+   "kind": "hero",
+   "role": "wizard",
+   "group": 2,
+   "x": 9,
+   "y": 5,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 8,
+   "kind": "tree",
+   "x": 6,
+   "y": 4,
+   "layer": 0
+  },
+  {
+   "id": 9,
+   "kind": "tree",
+   "x": 4,
+   "y": 7,
+   "layer": 0
+  }
+ ],
+ "gates": [
+  {
+   "x": 10,
+   "y": 4,
+   "layer": 0,
+   "flavor": 4,
+   "inverted": false,
+   "monster_gate": false,
+   "open": false,
+   "closes_toward": "down"
+  },
+  {
+   "x": 8,
+   "y": 6,
+   "layer": 0,
+   "flavor": 1,
+   "inverted": false,
+   "monster_gate": false,
+   "open": false,
+   "closes_toward": "down"
+  }
+ ],
+ "plates": [
+  {
+   "x": 6,
+   "y": 7,
+   "flavor": 4,
+   "pressed": false
+  },
+  {
+   "x": 2,
+   "y": 3,
+   "flavor": 1,
+   "pressed": false
+  }
+ ],
+ "doors": [
+  {
+   "x": 12,
+   "y": 5,
+   "occupied": false
+  },
+  {
+   "x": 12,
+   "y": 3,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

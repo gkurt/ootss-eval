@@ -1,0 +1,80 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-opus-5-5",
+ "track": "reasoning",
+ "level": "mosh_pit_small",
+ "tier": 2,
+ "reference_length": 45,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T22:30:16.138Z",
+ "seconds": 374.3,
+ "api_seconds": 372.7,
+ "answer": "ULLLULDRRULDRRURDLLURDDLUURDDDLUURDDDLLURULDRLUCRCRRDRDCRR",
+ "result": {
+  "won": true,
+  "wonAt": 58,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 58 moves"
+ },
+ "attempts": [
+  {
+   "moves": "ULLLULDRRULDRRURDLLURDDLUURDDDLUURDDDLLURULDRLUCRCRRDRDCRR",
+   "won": true,
+   "wonAt": 58,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 58 moves",
+   "t": 373.8
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 2,
+  "output": 41805,
+  "cache_read": 6800,
+  "cache_write": 1216,
+  "thinking": 40857
+ },
+ "cost": 0.8472,
+ "events": [
+  {
+   "t": 373.7,
+   "type": "text",
+   "text": "The wizard and the cleric get the dragon next to the goblin so the two kill each other. That opens both monster gates, and then both heroes walk onto the doors.\n\n**Key observations**\n\n- The level has 23 objects in 23 non-gate cells, so there are no empty cells until a monster dies. Every wizard move is therefore a swap with the neighbouring thing. The wizard acts like the blank in a sliding puzzle.\n- Swapping with the goblin is always fatal. The wizard would end up next to it, and it can never also be next to the cleric at that moment, because of grid parity.\n- So the goblin cannot be moved, and the dragon has to come to it. The dragon must end at (3,5), directly east of the goblin. There the goblin kills the dragon and the dragon's westward breath kills the goblin in the same check.\n- Moving the dragon west means the wizard must stand directly west of it, inside its breath. That is safe only when the cleric is next to the wizard.\n\n**Plan**\n\n1. **Moves 1–15:** Bring the cleric to (4,2) and put the wizard at (5,2), where the cleric protects it.\n2. **Move 16 (R):** The wizard swaps with the dragon, so the dragon goes to (5,2).\n3. **Moves 17–21:** The wizard comes up under the cleric and swaps with it (U), so the wizard is protected at (4,2). It then swaps the dragon (R), so the dragon goes to (4,2) and the cleric is at (4,3).\n4. **Moves 22–33:** Twice, the wizard circles below the cleric and swaps U with it, then U with the dragon. This pushes the dragon down to (4,4), with the cleric at (4,5).\n5. **Moves 34–45:**\n   - The wizard circles round to (3,6) and steps to (3,5); the cleric at (4,5) protects it.\n   - It swaps the cleric to (3,5), then swaps the dragon down to (4,5).\n   - It steps to (3,4), then swaps with the cleric, so the wizard is at (3,5) and protected by the cleric at (3,4).\n   - It swaps R with the dragon, which lands at (3,5). The dragon and goblin kill each other and both gates open.\n6. **Moves 46–58:**\n   - The wizard walks to (3,5) and swaps the cleric down to (3,5).\n   - The cleric walks to (4,5).\n   - The wizard works its way to (5,5), walks onto (6,5), then onto (6,6).\n   - The cleric walks R, R onto (6,5).\n\nAt every step the wizard is never next to the goblin unprotected, and never directly west of the dragon unprotected.\n\n<moves>ULLLU LDRRUL DRRUR DLLUR DDLUU RDDDLUU RDDDLLURULDR LUCRCRRDRDCRR</moves>"
+  },
+  {
+   "t": 373.8,
+   "type": "answer",
+   "moves": "ULLLULDRRULDRRURDLLURDDLUURDDDLUURDDDLLURULDRLUCRCRRDRDCRR",
+   "line": "WON after 58 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-opus-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 372963,
+   "api_ms": 372740,
+   "turns": 1,
+   "cost": 0.8471960000000001
+  }
+ ]
+}

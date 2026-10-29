@@ -1,0 +1,139 @@
+{
+ "level": "heroes2_21b",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 3,
+ "heroes": [
+  {
+   "id": 3,
+   "kind": "hero",
+   "role": "thief",
+   "group": 1,
+   "x": 2,
+   "y": 3,
+   "layer": 0
+  },
+  {
+   "id": 10,
+   "kind": "hero",
+   "role": "wizard",
+   "group": 2,
+   "x": 3,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 15,
+   "kind": "hero",
+   "role": "cleric",
+   "group": 3,
+   "x": 7,
+   "y": 6,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 0,
+   "kind": "goblin",
+   "facing": "south",
+   "x": 3,
+   "y": 2,
+   "layer": 0
+  },
+  {
+   "id": 1,
+   "kind": "goblin",
+   "facing": "south",
+   "x": 5,
+   "y": 2,
+   "layer": 0
+  },
+  {
+   "id": 2,
+   "kind": "goblin",
+   "facing": "south",
+   "x": 7,
+   "y": 2,
+   "layer": 0
+  },
+  {
+   "id": 12,
+   "kind": "crystal",
+   "x": 5,
+   "y": 6,
+   "layer": 0
+  }
+ ],
+ "gates": [
+  {
+   "x": 3,
+   "y": 3,
+   "layer": 0,
+   "flavor": 0,
+   "inverted": false,
+   "monster_gate": false,
+   "open": false,
+   "closes_toward": "down"
+  },
+  {
+   "x": 5,
+   "y": 3,
+   "layer": 0,
+   "flavor": 0,
+   "inverted": false,
+   "monster_gate": false,
+   "open": false,
+   "closes_toward": "down"
+  },
+  {
+   "x": 7,
+   "y": 3,
+   "layer": 0,
+   "flavor": 0,
+   "inverted": false,
+   "monster_gate": false,
+   "open": false,
+   "closes_toward": "down"
+  }
+ ],
+ "plates": [
+  {
+   "x": 3,
+   "y": 4,
+   "flavor": 0,
+   "pressed": false
+  },
+  {
+   "x": 5,
+   "y": 4,
+   "flavor": 0,
+   "pressed": false
+  },
+  {
+   "x": 7,
+   "y": 4,
+   "flavor": 0,
+   "pressed": false
+  }
+ ],
+ "doors": [
+  {
+   "x": 3,
+   "y": 7,
+   "occupied": false
+  },
+  {
+   "x": 5,
+   "y": 7,
+   "occupied": false
+  },
+  {
+   "x": 7,
+   "y": 7,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

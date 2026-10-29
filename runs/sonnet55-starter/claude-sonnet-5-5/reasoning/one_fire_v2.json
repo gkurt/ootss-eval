@@ -1,0 +1,80 @@
+{
+ "run": "sonnet55-starter",
+ "model": "claude-sonnet-5-5",
+ "track": "reasoning",
+ "level": "one_fire_v2",
+ "tier": 3,
+ "reference_length": 79,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T16:38:36.615Z",
+ "seconds": 347.4,
+ "api_seconds": 346.2,
+ "answer": "UCLLUDRURRRDCDRLUURLDLDCLULCRLDCDLUUURLDDRLUCRRRULLLULDDCDDDRRDDLLLLDDDCRRRRDDDLLLLDD",
+ "result": {
+  "won": true,
+  "wonAt": 85,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 85 moves"
+ },
+ "attempts": [
+  {
+   "moves": "UCLLUDRURRRDCDRLUURLDLDCLULCRLDCDLUUURLDDRLUCRRRULLLULDDCDDDRRDDLLLLDDDCRRRRDDDLLLLDD",
+   "won": true,
+   "wonAt": 85,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 85 moves",
+   "t": 346.9
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 2,
+  "output": 47628,
+  "cache_read": 6800,
+  "cache_write": 1135,
+  "thinking": 46659
+ },
+ "cost": 0.4815,
+ "events": [
+  {
+   "t": 346.8,
+   "type": "text",
+   "text": "The plan is to use the dragon's breath to kill goblin #9 for exactly one turn, keep goblin #8 alive, and park the crystal on plate 1. I traced every move by hand, but nothing here was run through the checker.\n\n**Why this plan**\n- Heroes must pass through gates (5,8) and (3,8) to reach the doors.\n- Gate (5,8) stays open only while goblin #8 presses plate 4, so that goblin must survive.\n- Gate (3,8) needs a lasting weight on plate 1 at (2,6). A hero can't hold it, because both heroes must end on doors, so the crystal has to do it.\n- Goblin #9 at (6,9) must die, because it guards the cell (6,8) that both heroes cross. The dragon can only be moved along row 2, so the one way to use its breath is to push it to (6,2), where it fires down column 6.\n- The breath kills only the first creature in line each turn. It would kill goblin #8 on the next turn, so the crystal has to block the column right after the first kill.\n\n**Moves, by stage**\n1. **Crystal to (6,4).** The thief pulls the crystal from (2,3) down to (2,4), then east along row 4. The warrior pushes the last step, putting it at (6,4) in column 6.\n2. **Dragon to (6,2).** The warrior goes to (4,2) and pushes the dragon east. The crystal at (6,4) blocks the breath, so nothing dies yet.\n3. **One breath.** The warrior parks at (3,4) and the thief stands at (5,4). The thief steps west, pulling the crystal out of column 6, and the breath kills goblin #9. Next turn the warrior pushes west: the line warrior, thief, crystal moves east and the crystal is back at (6,4), blocking the breath again before goblin #8 is hit.\n4. **Dragon back to (5,2).** The thief walks around via (5,5), (4,5) and (4,4) up to (5,2). It steps west to (4,2), pulling the dragon back to (5,2), where it faces a wall. The thief goes around because stepping west from (5,4) would pull the crystal out of column 6.\n5. **Crystal to plate 1.** The thief pulls the crystal west from (6,4) to (5,4). The warrior pushes it along row 4 to (2,4), then south twice onto plate 1. Gate (3,8) is now open.\n6. **Exit.** The thief goes (4,3) → (4,6) → (6,6) → (6,8) → along row 8 to (2,8) → (2,11). The warrior follows the same route and stops at (2,10). Both stand on doors.\n\n<moves>\nUC LLUDRURRRD C DR LUUR LDLD C LULC R LD C DLUUURL DDRLU C RRRULLLULDD C DDDRRDDLLLLDDD C RRRRDDDLLLLDD\n</moves>"
+  },
+  {
+   "t": 346.9,
+   "type": "answer",
+   "moves": "UCLLUDRURRRDCDRLUURLDLDCLULCRLDCDLUUURLDDRLUCRRRULLLULDDCDDDRRDDLLLLDDDCRRRRDDDLLLLDD",
+   "line": "WON after 85 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-sonnet-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 346432,
+   "api_ms": 346208,
+   "turns": 1,
+   "cost": 0.481504
+  }
+ ]
+}

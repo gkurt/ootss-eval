@@ -1,0 +1,35 @@
+{
+ "via": "cli",
+ "models": [
+  "claude-opus-5-5",
+  "claude-haiku-5-5"
+ ],
+ "tracks": [
+  "reasoning",
+  "coding"
+ ],
+ "levels": [
+  "heroes1_11_v2",
+  "heroes2_13",
+  "mosh_pit_small",
+  "mirror_2",
+  "heroes1_16_v3",
+  "one_fire_v2",
+  "one_vs_three",
+  "mirror_7",
+  "heroes1_18",
+  "mirror_3",
+  "heroes2_22_v2",
+  "mirror_factory_v2"
+ ],
+ "attempts": 3,
+ "budget": 40,
+ "sandbox": true,
+ "effort": "high",
+ "minutes": 30,
+ "jobs": 4,
+ "claude": "claude",
+ "id": "opus55-haiku55-starter",
+ "dry": false,
+ "started": "2026-10-28T22:30:16.115Z"
+}

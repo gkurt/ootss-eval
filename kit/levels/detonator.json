@@ -1,0 +1,171 @@
+{
+ "level": "detonator",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 2,
+ "heroes": [
+  {
+   "id": 16,
+   "kind": "hero",
+   "role": "warrior",
+   "group": 1,
+   "x": 13,
+   "y": 4,
+   "layer": 0
+  },
+  {
+   "id": 17,
+   "kind": "hero",
+   "role": "thief",
+   "group": 2,
+   "x": 3,
+   "y": 5,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 0,
+   "kind": "crystal",
+   "x": 10,
+   "y": 2,
+   "layer": 0
+  },
+  {
+   "id": 14,
+   "kind": "dragon",
+   "facing": "west",
+   "x": 11,
+   "y": 11,
+   "layer": 0
+  },
+  {
+   "id": 15,
+   "kind": "dragon",
+   "facing": "south",
+   "x": 19,
+   "y": 13,
+   "layer": 0
+  }
+ ],
+ "gates": [
+  {
+   "x": 6,
+   "y": 3,
+   "layer": -1,
+   "flavor": 1,
+   "inverted": false,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "down"
+  },
+  {
+   "x": 7,
+   "y": 3,
+   "layer": -1,
+   "flavor": 1,
+   "inverted": false,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "down"
+  },
+  {
+   "x": 8,
+   "y": 3,
+   "layer": -1,
+   "flavor": 1,
+   "inverted": false,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "down"
+  },
+  {
+   "x": 11,
+   "y": 6,
+   "layer": -1,
+   "flavor": 0,
+   "inverted": true,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "down"
+  },
+  {
+   "x": 11,
+   "y": 7,
+   "layer": -1,
+   "flavor": 0,
+   "inverted": true,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "down"
+  },
+  {
+   "x": 11,
+   "y": 8,
+   "layer": -1,
+   "flavor": 0,
+   "inverted": true,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "down"
+  },
+  {
+   "x": 16,
+   "y": 11,
+   "layer": -1,
+   "flavor": 0,
+   "inverted": false,
+   "monster_gate": false,
+   "open": false,
+   "closes_toward": "down"
+  },
+  {
+   "x": 15,
+   "y": 11,
+   "layer": -1,
+   "flavor": 0,
+   "inverted": false,
+   "monster_gate": false,
+   "open": false,
+   "closes_toward": "down"
+  },
+  {
+   "x": 14,
+   "y": 11,
+   "layer": -1,
+   "flavor": 0,
+   "inverted": false,
+   "monster_gate": false,
+   "open": false,
+   "closes_toward": "down"
+  }
+ ],
+ "plates": [
+  {
+   "x": 3,
+   "y": 3,
+   "flavor": 0,
+   "pressed": false
+  },
+  {
+   "x": 11,
+   "y": 11,
+   "flavor": 1,
+   "pressed": true
+  }
+ ],
+ "doors": [
+  {
+   "x": 18,
+   "y": 11,
+   "occupied": false
+  },
+  {
+   "x": 20,
+   "y": 11,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

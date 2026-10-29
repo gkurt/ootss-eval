@@ -1,0 +1,118 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-opus-5-5",
+ "track": "coding",
+ "level": "mosh_pit_small",
+ "tier": 2,
+ "reference_length": 45,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 1,
+  "budget": 40,
+  "sandbox": true,
+  "minutes": 30
+ },
+ "started": "2026-10-28T22:39:13.956Z",
+ "seconds": 379.2,
+ "api_seconds": 378,
+ "answer": "ULLLULDRRULDRRURDLLURDDLLURURDDLURDDLULURDRDDLLURLLCDRCURRDRDCRR",
+ "result": {
+  "won": true,
+  "wonAt": 64,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 64 moves"
+ },
+ "attempts": [
+  {
+   "moves": "ULLLULDRRULDRRURDLLURDDLLURURDDLURDDLULURDRDDLLURLLCDRCURRDRDCRR",
+   "won": true,
+   "wonAt": 64,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 64 moves",
+   "t": 378.7
+  }
+ ],
+ "tool_calls": 2,
+ "js_runs": 0,
+ "requests": 3,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 6,
+  "output": 41510,
+  "cache_read": 65027,
+  "cache_write": 44315,
+  "thinking": 40604
+ },
+ "cost": 1.1977,
+ "events": [
+  {
+   "t": 327.2,
+   "type": "tool",
+   "id": "toolu_01QfsG4wZqyT99H5RJKvkC7D",
+   "name": "play",
+   "n": 1,
+   "moves": "ULLLULDRRULDRRURDLLURDDLLURURDDLURDDLULURDRDDLLUR",
+   "output": "   1 U (north)       crystal#5 (6,3)->(6,4); wizard#17 (6,4)->(6,3)\n   2 L (west)        wizard#17 (6,3)->(5,3); crystal#23 (5,3)->(6,3)\n   3 L (west)        crystal#10 (4,3)->(5,3); wizard#17 (5,3)->(4,3)\n   4 L (west)        wizard#17 (4,3)->(3,3); crystal#25 (3,3)->(4,3)\n   5 U (north)       crystal#14 (3,2)->(3,3); wizard#17 (3,3)->(3,2)\n   6 L (west)        cleric#13 (2,2)->(3,2); wizard#17 (3,2)->(2,2)\n   7 D (south)       crystal#8 (2,3)->(2,2); wizard#17 (2,2)->(2,3)\n   8 R (east)        crystal#14 (3,3)->(2,3); wizard#17 (2,3)->(3,3)\n   9 R (east)        wizard#17 (3,3)->(4,3); crystal#25 (4,3)->(3,3)\n  10 U (north)       crystal#7 (4,2)->(4,3); wizard#17 (4,3)->(4,2)\n  11 L (west)        cleric#13 (3,2)->(4,2); wizard#17 (4,2)->(3,2)\n  12 D (south)       wizard#17 (3,2)->(3,3); crystal#25 (3,3)->(3,2)\n  13 R (east)        crystal#7 (4,3)->(3,3); wizard#17 (3,3)->(4,3)\n  14 R (east)        crystal#10 (5,3)->(4,3); wizard#17 (4,3)->(5,3)\n  15 U (north)       wizard#17 (5,3)->(5,2); crystal#22 (5,2)->(5,3)\n  16 R (east)        dragon#6 (6,2)->(5,2); wizard#17 (5,2)->(6,2)\n  17 D (south)       wizard#17 (6,2)->(6,3); crystal#23 (6,3)->(6,2)\n  18 L (west)        wizard#17 (6,3)->(5,3); crystal#22 (5,3)->(6,3)\n  19 L (west)        crystal#10 (4,3)->(5,3); wizard#17 (5,3)->(4,3)\n  20 U (north)       cleric#13 (4,2)->(4,3); wizard#17 (4,3)->(4,2)\n  21 R (east)        dragon#6 (5,2)->(4,2); wizard#17 (4,2)->(5,2)\n  22 D (south)       crystal#10 (5,3)->(5,2); wizard#17 (5,2)->(5,3)\n  23 D (south)       crystal#4 (5,4)->(5,3); wizard#17 (5,3)->(5,4)\n  24 L (west)        wizard#17 (5,4)->(4,4); crystal#24 (4,4)->(5,4)\n  25 L (west)        wizard#17 (4,4)->(3,4); crystal#26 (3,4)->(4,4)\n  26 U (north)       crystal#7 (3,3)->(3,4); wizard#17 (3,4)->(3,3)\n  27 R (east)        cleric#13 (4,3)->(3,3); wizard#17 (3,3)->(4,3)\n  28 U (north)       dragon#6 (4,2)->(4,3); wizard#17 (4,3)->(4,2)\n  29 R (east)        crystal#10 (5,2)->(4,2); wizard#17 (4,2)->(5,2)\n  30 D (south)       crystal#4 (5,3)->(5,2); wizard#17 (5,2)->(5,3)\n  31 D (south)       wizard#17 (5,3)->(5,4); crystal#24 (5,4)->(5,3)\n  32 L (west)        wizard#17 (5,4)->(4,4); crystal#26 (4,4)->(5,4)\n  33 U (north)       dragon#6 (4,3)->(4,4); wizard#17 (4,4)->(4,3)\n  34 R (east)        wizard#17 (4,3)->(5,3); crystal#24 (5,3)->(4,3)\n  35 D (south)       wizard#17 (5,3)->(5,4); crystal#26 (5,4)->(5,3)\n  36 D (south)       wizard#17 (5,4)->(5,5); crystal#21 (5,5)->(5,4)\n  37 L (west)        wizard#17 (5,5)->(4,5); crystal#19 (4,5)->(5,5)\n  38 U (north)       dragon#6 (4,4)->(4,5); wizard#17 (4,5)->(4,4)\n  39 L (west)        crystal#7 (3,4)->(4,4); wizard#17 (4,4)->(3,4)\n  40 U (north)       cleric#13 (3,3)->(3,4); wizard#17 (3,4)->(3,3)\n  41 R (east)        wizard#17 (3,3)->(4,3); crystal#24 (4,3)->(3,3)\n  42 D (south)       crystal#7 (4,4)->(4,3); wizard#17 (4,3)->(4,4)\n  43 R (east)        wizard#17 (4,4)->(5,4); crystal#21 (5,4)->(4,4)\n  44 D (south)       wizard#17 (5,4)->(5,5); crystal#19 (5,5)->(5,4)\n  45 D (south)       crystal#11 (5,6)->(5,5); wizard#17 (5,5)->(5,6)\n  46 L (west)        wizard#17 (5,6)->(4,6); crystal#20 (4,6)->(5,6)\n  47 L (west)        crystal#15 (3,6)->(4,6); wizard#17 (4,6)->(3,6)\n  48 U (north)       wizard#17 (3,6)->(3,5); crystal#18 (3,5)->(3,6)\n  49 R (east)        wizard#17 (3,5)->(4,5); dragon#6 is gone; goblin#16 is gone; gate at (6,5) opens; gate at (6,6) opens\nnot won · heroes on doors 0/2 (heroes: 2) · selected group 1 of 2\n(rule-tool calls left: 39)",
+   "done": 327.2,
+   "check": {
+    "won": false,
+    "failedAt": null,
+    "how": null
+   }
+  },
+  {
+   "t": 371.1,
+   "type": "tool",
+   "id": "toolu_01KWQdwM4eFVteP6DT6iSZ9k",
+   "name": "check",
+   "n": 2,
+   "moves": "ULLLULDRRULDRRURDLLURDDLLURURDDLURDDLULURDRDDLLURLLCDRCURRDRDCRR",
+   "output": "WON after 64 moves\n(rule-tool calls left: 38)",
+   "done": 371.1,
+   "check": {
+    "won": true,
+    "failedAt": null,
+    "how": null
+   }
+  },
+  {
+   "t": 378.7,
+   "type": "text",
+   "text": "I solved the level in 64 moves, and the checker confirms the full sequence below wins.\n\n**The goal:** both doors sit under the monster gates, so the goblin and the dragon both have to die. The board is completely full, so every wizard move is a swap with a neighbouring cell. That makes the wizard work like the blank in a sliding puzzle.\n\n**The key ideas:**\n- **The goblin can't be moved.** To swap with it, the wizard has to stand next to the goblin both before and after the swap. The cleric would then need to touch two adjacent cells at once, which can't happen on a grid.\n- **So the dragon goes to the goblin.** With the dragon at (3,5), right next to the goblin at (2,5), the dragon's breath kills the goblin and the goblin kills the dragon in the same turn.\n- **The cleric goes along.** Each time the dragon moves west, the wizard first has to stand just west of it, in its breath. That is only safe with the cleric next to the wizard. When the wizard swaps with the cleric, the two always end up side by side, so the wizard is never left unprotected.\n\n**The route:**\n1. **Moves 1–11:** the wizard moves the cleric from (2,2) to (4,2).\n2. **Moves 12–21:** two protected swaps move the dragon west from (6,2) to (4,2).\n3. **Moves 22–38:** the dragon goes down to (4,5), and the cleric is moved down beside it.\n4. **Moves 39–49:** the cleric goes to (3,4). The wizard circles round to (3,5), where the cleric protects it, then swaps the dragon onto (3,5). Both monsters die and both gates open.\n5. **Moves 50–64:** the wizard walks into the empty cells to make a path. The cleric walks to (4,5), the wizard reaches (6,6), and the cleric walks (5,5) → (6,5).\n\n<moves>ULLLULDRRUL DRRUR DLLUR DDLLURU RDDLU RDDLU LURDRDDLLUR LLCDRCURRDRDCRR</moves>"
+  },
+  {
+   "t": 378.7,
+   "type": "answer",
+   "moves": "ULLLULDRRULDRRURDLLURDDLLURURDDLURDDLULURDRDDLLURLLCDRCURRDRDCRR",
+   "line": "WON after 64 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-opus-5-5",
+  "tools": [
+   "mcp__ootss__check",
+   "mcp__ootss__play",
+   "mcp__ootss__run_js",
+   "mcp__ootss__show",
+   "mcp__ootss__try"
+  ],
+  "mcp": [
+   "ootss:connected"
+  ]
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 378179,
+   "api_ms": 378007,
+   "turns": 3,
+   "cost": 1.1977494
+  }
+ ]
+}

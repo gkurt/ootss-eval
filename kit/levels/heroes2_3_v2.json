@@ -1,0 +1,283 @@
+{
+ "level": "heroes2_3_v2",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 1,
+ "heroes": [
+  {
+   "id": 31,
+   "kind": "hero",
+   "role": "wizard",
+   "group": 1,
+   "x": 5,
+   "y": 5,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 0,
+   "kind": "goblin",
+   "facing": "west",
+   "x": 13,
+   "y": 15,
+   "layer": 0
+  },
+  {
+   "id": 2,
+   "kind": "crystal",
+   "x": 8,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 3,
+   "kind": "crystal",
+   "x": 8,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 4,
+   "kind": "crystal",
+   "x": 9,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 5,
+   "kind": "crystal",
+   "x": 9,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 6,
+   "kind": "crystal",
+   "x": 10,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 7,
+   "kind": "crystal",
+   "x": 10,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 8,
+   "kind": "crystal",
+   "x": 11,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 9,
+   "kind": "crystal",
+   "x": 11,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 10,
+   "kind": "crystal",
+   "x": 12,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 11,
+   "kind": "crystal",
+   "x": 12,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 12,
+   "kind": "goblin",
+   "facing": "south",
+   "x": 12,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 13,
+   "kind": "goblin",
+   "facing": "south",
+   "x": 8,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 14,
+   "kind": "goblin",
+   "facing": "north",
+   "x": 10,
+   "y": 8,
+   "layer": 0
+  },
+  {
+   "id": 15,
+   "kind": "crystal",
+   "x": 8,
+   "y": 10,
+   "layer": 0
+  },
+  {
+   "id": 16,
+   "kind": "crystal",
+   "x": 9,
+   "y": 10,
+   "layer": 0
+  },
+  {
+   "id": 17,
+   "kind": "crystal",
+   "x": 10,
+   "y": 10,
+   "layer": 0
+  },
+  {
+   "id": 18,
+   "kind": "crystal",
+   "x": 11,
+   "y": 11,
+   "layer": 0
+  },
+  {
+   "id": 19,
+   "kind": "crystal",
+   "x": 11,
+   "y": 10,
+   "layer": 0
+  },
+  {
+   "id": 20,
+   "kind": "crystal",
+   "x": 12,
+   "y": 10,
+   "layer": 0
+  },
+  {
+   "id": 21,
+   "kind": "crystal",
+   "x": 12,
+   "y": 11,
+   "layer": 0
+  },
+  {
+   "id": 22,
+   "kind": "crystal",
+   "x": 9,
+   "y": 11,
+   "layer": 0
+  },
+  {
+   "id": 23,
+   "kind": "crystal",
+   "x": 8,
+   "y": 11,
+   "layer": 0
+  },
+  {
+   "id": 24,
+   "kind": "goblin",
+   "facing": "north",
+   "x": 10,
+   "y": 12,
+   "layer": 0
+  },
+  {
+   "id": 25,
+   "kind": "goblin",
+   "facing": "south",
+   "x": 12,
+   "y": 9,
+   "layer": 0
+  },
+  {
+   "id": 26,
+   "kind": "goblin",
+   "facing": "south",
+   "x": 9,
+   "y": 9,
+   "layer": 0
+  },
+  {
+   "id": 27,
+   "kind": "goblin",
+   "facing": "north",
+   "x": 14,
+   "y": 8,
+   "layer": 0
+  },
+  {
+   "id": 28,
+   "kind": "goblin",
+   "facing": "west",
+   "x": 16,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 29,
+   "kind": "goblin",
+   "facing": "north",
+   "x": 7,
+   "y": 12,
+   "layer": 0
+  },
+  {
+   "id": 30,
+   "kind": "goblin",
+   "facing": "east",
+   "x": 5,
+   "y": 10,
+   "layer": 0
+  },
+  {
+   "id": 32,
+   "kind": "goblin",
+   "facing": "west",
+   "x": 11,
+   "y": 14,
+   "layer": 0
+  },
+  {
+   "id": 33,
+   "kind": "goblin",
+   "facing": "west",
+   "x": 10,
+   "y": 15,
+   "layer": 0
+  },
+  {
+   "id": 34,
+   "kind": "goblin",
+   "facing": "west",
+   "x": 8,
+   "y": 15,
+   "layer": 0
+  },
+  {
+   "id": 35,
+   "kind": "goblin",
+   "facing": "west",
+   "x": 9,
+   "y": 14,
+   "layer": 0
+  }
+ ],
+ "gates": [],
+ "plates": [],
+ "doors": [
+  {
+   "x": 16,
+   "y": 14,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

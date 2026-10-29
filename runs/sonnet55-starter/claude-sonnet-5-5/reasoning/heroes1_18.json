@@ -1,0 +1,80 @@
+{
+ "run": "sonnet55-starter",
+ "model": "claude-sonnet-5-5",
+ "track": "reasoning",
+ "level": "heroes1_18",
+ "tier": 4,
+ "reference_length": 86,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T16:46:04.451Z",
+ "seconds": 252.1,
+ "api_seconds": 250.7,
+ "answer": "CCRCDDRDDDRRRRCLDDDDDLLLLCLDDDDCCUCLLLULLDRRRRLLLCCDCDDDRDRRDRRURRURUUUCCRUUUUURCCLLLLUUULUU",
+ "result": {
+  "won": true,
+  "wonAt": 92,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 92 moves"
+ },
+ "attempts": [
+  {
+   "moves": "CCRCDDRDDDRRRRCLDDDDDLLLLCLDDDDCCUCLLLULLDRRRRLLLCCDCDDDRDRRDRRURRURUUUCCRUUUUURCCLLLLUUULUU",
+   "won": true,
+   "wonAt": 92,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 92 moves",
+   "t": 251.3
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 2,
+  "output": 34058,
+  "cache_read": 6800,
+  "cache_write": 1035,
+  "thinking": 33290
+ },
+ "cost": 0.3454,
+ "events": [
+  {
+   "t": 251.3,
+   "type": "text",
+   "text": "I traced this plan by hand against the rules; I have not run it through a checker.\n\n**The problem.** The door at (10,2) is only reachable through the gate at (10,4). That gate opens only while all three plates are pressed, and the crystal is locked in the upper-left room behind the other gate. Two heroes can hold two plates while one passes, but the third plate needs a fourth presser: the crystal.\n\n**Plan.**\n1. The warrior steps aside to (7,2). The thief walks to the plate at (10,6).\n2. The wizard goes to the plate at (2,6) and the warrior to the plate at (6,6). All plates are pressed and both gates open.\n3. The wizard swaps with the crystal. The crystal now sits on (2,6) and the wizard is inside the upper-left room.\n4. The warrior walks around and pushes the crystal east along row 6 onto the plate at (6,6). The warrior then steps onto (2,6) to reopen the gates.\n5. The wizard swaps with the warrior on (2,6). The warrior is now inside the room and walks out. The wizard holds plate (2,6), the crystal holds (6,6) and the thief holds (10,6), so the warrior is free to go through the gate to (10,2).\n6. The wizard swaps with the crystal on row 6 and walks to the door at (7,1). The thief walks back to the door at (5,1).\n\n<moves>\nCCR\nCDDRDDDRRRR\nCLDDDDDLLLL\nCLDDDD\nCCU\nCLLLULLDRRRR\nLLL\nCCD\nC DDD R D RR D RR U RR U R UUU\nCCRUUUUUR\nCCLLLLUUULUU\n</moves>\n\nWritten out without the spacing: the same sequence as one line, \"CCRCDDRDDDRRRRCLDDDDDLLLLCLDDDDCCUCLLLULLDRRRRLLLCCDCDDDRDRRDRRURRURUUUCCRUUUUURCCLLLLUUULUU\".\n\n<moves>CCRCDDRDDDRRRRCLDDDDDLLLLCLDDDDCCUCLLLULLDRRRRLLLCCDCDDDRDRRDRRURRURUUUCCRUUUUURCCLLLLUUULUU</moves>"
+  },
+  {
+   "t": 251.3,
+   "type": "answer",
+   "moves": "CCRCDDRDDDRRRRCLDDDDDLLLLCLDDDDCCUCLLLULLDRRRRLLLCCDCDDDRDRRDRRURRURUUUCCRUUUUURCCLLLLUUULUU",
+   "line": "WON after 92 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-sonnet-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 250939,
+   "api_ms": 250675,
+   "turns": 1,
+   "cost": 0.345404
+  }
+ ]
+}

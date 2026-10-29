@@ -1,0 +1,7 @@
+node_modules/
+dist/
+# trial runs (node kit/run.mjs --id test-...)
+runs/test-*/
+# built by web/scripts/build-data.mjs
+web/public/data/
+.DS_Store

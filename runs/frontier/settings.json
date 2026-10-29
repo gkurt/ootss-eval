@@ -1,0 +1,28 @@
+{
+ "via": "cli",
+ "models": [
+  "claude-opus-5-5",
+  "claude-sonnet-5-5",
+  "claude-haiku-5-5"
+ ],
+ "tracks": [
+  "reasoning",
+  "coding"
+ ],
+ "levels": [
+  "surrounded",
+  "mirror_21",
+  "walk_it_over",
+  "worlds_collide_heroes_and_mirrors_v3"
+ ],
+ "attempts": 3,
+ "budget": 40,
+ "sandbox": true,
+ "effort": "high",
+ "minutes": 120,
+ "jobs": 6,
+ "claude": "claude",
+ "id": "frontier",
+ "dry": false,
+ "started": "2026-10-29T00:39:55.041Z"
+}

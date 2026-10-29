@@ -1,0 +1,80 @@
+{
+ "run": "sonnet55-starter",
+ "model": "claude-sonnet-5-5",
+ "track": "reasoning",
+ "level": "heroes2_13",
+ "tier": 1,
+ "reference_length": 17,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T16:37:22.889Z",
+ "seconds": 11.8,
+ "api_seconds": 10.5,
+ "answer": "RRRRRRRDDDLLLLLLU",
+ "result": {
+  "won": true,
+  "wonAt": 17,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 17 moves"
+ },
+ "attempts": [
+  {
+   "moves": "RRRRRRRDDDLLLLLLU",
+   "won": true,
+   "wonAt": 17,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 17 moves",
+   "t": 11
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 2,
+  "output": 1503,
+  "cache_read": 7474,
+  "cache_write": 364,
+  "thinking": 1150
+ },
+ "cost": 0.0172,
+ "events": [
+  {
+   "t": 11,
+   "type": "text",
+   "text": "The cleric protects itself: goblins and dragon breath can't kill a living cleric. It can't push, so it has to walk around the crystals.\n\nThe door at (4,5) has crystals on its north (4,4), west (3,5) and east (5,5), so the only way in is from the south, at (4,6).\n\nThe cleric reaches (4,6) by going around the east side:\n\n1. From (3,3), go right 7 times along row 3 to (10,3).\n2. Go down 3 times along column 10 to (10,6).\n3. Go left 6 times along row 6 to (4,6).\n4. Go up once onto the door at (4,5).\n\nRow 3 is open from x=3 to x=10, and column 10 is clear at (10,4), (10,5) and (10,6). Row 6 is open from x=3 to x=10, and (4,6) is floor. The goblins along row 3 and the dragon's breath along row 6 can't hurt the cleric. The cleric is the only hero and there is one door, so standing on it wins.\n\n<moves>RRRRRRRDDDLLLLLLU</moves>"
+  },
+  {
+   "t": 11,
+   "type": "answer",
+   "moves": "RRRRRRRDDDLLLLLLU",
+   "line": "WON after 17 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-sonnet-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 10586,
+   "api_ms": 10508,
+   "turns": 1,
+   "cost": 0.0172374
+  }
+ ]
+}

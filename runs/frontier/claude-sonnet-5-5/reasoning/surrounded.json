@@ -1,0 +1,80 @@
+{
+ "run": "frontier",
+ "model": "claude-sonnet-5-5",
+ "track": "reasoning",
+ "level": "surrounded",
+ "tier": 6,
+ "reference_length": null,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 120
+ },
+ "started": "2026-10-29T00:50:12.642Z",
+ "seconds": 713.9,
+ "api_seconds": 712.6,
+ "answer": "RRRDDDLUURULDDDDDLLLLLDRRRDRUUUUUDDDLLLLUUULDDDDLDRRRRRRURRDLLLLLLLLRRRRUUULLDLLURRRRRRRRUUUUULLDDDDDDDDLLDDDD",
+ "result": {
+  "won": true,
+  "wonAt": 110,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 110 moves"
+ },
+ "attempts": [
+  {
+   "moves": "RRRDDDLUURULDDDDDLLLLLDRRRDRUUUUUDDDLLLLUUULDDDDLDRRRRRRURRDLLLLLLLLRRRRUUULLDLLURRRRRRRRUUUUULLDDDDDDDDLLDDDD",
+   "won": true,
+   "wonAt": 110,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 110 moves",
+   "t": 713.2
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 2,
+  "output": 95589,
+  "cache_read": 0,
+  "cache_write": 8409,
+  "thinking": 94881
+ },
+ "cost": 0.9895,
+ "events": [
+  {
+   "t": 713.2,
+   "type": "text",
+   "text": "This plan has not been run through the checker, only traced by hand. The gates over the water at (11,15) and (11,16) stay open while any monster lives, so every monster has to die before the warrior can cross to the door. The warrior can only push the four dragons around the central island, and each dragon's breath kills the goblins on the other islands:\n\n- **Dragon #19** faces west and clears the four goblins in column 3.\n- **Dragon #20** faces east and clears the three goblins at x=19.\n- **Dragon #1** faces south and clears the four goblins on row 18.\n- **Dragon #2** faces north and clears the three goblins on row 2.\n\nThe order matters, because dragons also kill each other and the warrior if he stands in a breath line:\n\n1. Push #19 up to row 7 and west to (13,7). This kills the goblin at (3,8) on the way and clears the other dragons' lines.\n2. Push #20 east to (13,13), then north to (13,8). This kills the goblins at (19,12), (19,10) and (19,8).\n3. Push #1 down to row 14 and east along it. This kills the goblins at (9,18), (12,18) and (14,18). Push it back west to kill the goblin at (7,18), then into the water.\n4. Push #2 west to (8,11) to kill the goblin at (8,2), then back east. At (11,11) it kills the goblin at (11,2). At (13,11) its breath hits #20 instead of #19, so #20 acts as a shield. At (14,11) it kills the goblin at (14,2). Then push it into the water.\n5. Push #19 south down column 13. This kills the goblins at (3,10), (3,12) and (3,14). Push it into the water.\n6. With no monsters left the gates close into bridges, so the warrior walks down column 11 to the door at (11,18).\n\n<moves>RRRDDDLUURUL DDDDDLLLLLDRRRDRUUUUU DDDLLLLUUULDDDD LDRRRRRR URRDLLLLLLLL RRRRUUULL DLLURRRRRRRR UUUUULLDDDDDDDD LLDDDD</moves>"
+  },
+  {
+   "t": 713.2,
+   "type": "answer",
+   "moves": "RRRDDDLUURULDDDDDLLLLLDRRRDRUUUUUDDDLLLLUUULDDDDLDRRRRRRURRDLLLLLLLLRRRRUUULLDLLURRRRRRRRUUUUULLDDDDDDDDLLDDDD",
+   "line": "WON after 110 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-sonnet-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 712798,
+   "api_ms": 712565,
+   "turns": 1,
+   "cost": 0.9895299999999999
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "run": "opus55-haiku55-starter",
+ "rows": [
+  {
+   "model": "claude-haiku-5-5",
+   "track": "reasoning",
+   "runs": 12,
+   "solved": 7,
+   "tiers": {
+    "1": [
+     2,
+     2
+    ],
+    "2": [
+     2,
+     3
+    ],
+    "3": [
+     1,
+     3
+    ],
+    "4": [
+     1,
+     2
+    ],
+    "5": [
+     1,
+     2
+    ]
+   },
+   "moves_vs_reference": 0.97,
+   "attempts": 2,
+   "wrong_answers": 17,
+   "first_right": 5,
+   "test_plays": null,
+   "failed_plays": null,
+   "tool_calls": 0,
+   "output_tokens": 1544160,
+   "input_tokens": 1288937,
+   "cost": 1.27,
+   "seconds": 6721,
+   "seconds_per_run": 560,
+   "seconds_to_solve": 390
+  },
+  {
+   "model": "claude-haiku-5-5",
+   "track": "coding",
+   "runs": 12,
+   "solved": 10,
+   "tiers": {
+    "1": [
+     2,
+     2
+    ],
+    "2": [
+     3,
+     3
+    ],
+    "3": [
+     2,
+     3
+    ],
+    "4": [
+     2,
+     2
+    ],
+    "5": [
+     1,
+     2
+    ]
+   },
+   "moves_vs_reference": 1.06,
+   "attempts": 0.92,
+   "wrong_answers": 1,
+   "first_right": 10,
+   "test_plays": 15,
+   "failed_plays": 5,
+   "tool_calls": 3.3,
+   "output_tokens": 872596,
+   "input_tokens": 3616059,
+   "cost": 1.18,
+   "seconds": 5659,
+   "seconds_per_run": 472,
+   "seconds_to_solve": 343
+  },
+  {
+   "model": "claude-opus-5-5",
+   "track": "reasoning",
+   "runs": 12,
+   "solved": 12,
+   "tiers": {
+    "1": [
+     2,
+     2
+    ],
+    "2": [
+     3,
+     3
+    ],
+    "3": [
+     3,
+     3
+    ],
+    "4": [
+     2,
+     2
+    ],
+    "5": [
+     2,
+     2
+    ]
+   },
+   "moves_vs_reference": 1.03,
+   "attempts": 1.08,
+   "wrong_answers": 1,
+   "first_right": 11,
+   "test_plays": null,
+   "failed_plays": null,
+   "tool_calls": 0,
+   "output_tokens": 349829,
+   "input_tokens": 122924,
+   "cost": 7.28,
+   "seconds": 3265,
+   "seconds_per_run": 272,
+   "seconds_to_solve": 271
+  },
+  {
+   "model": "claude-opus-5-5",
+   "track": "coding",
+   "runs": 12,
+   "solved": 12,
+   "tiers": {
+    "1": [
+     2,
+     2
+    ],
+    "2": [
+     3,
+     3
+    ],
+    "3": [
+     3,
+     3
+    ],
+    "4": [
+     2,
+     2
+    ],
+    "5": [
+     2,
+     2
+    ]
+   },
+   "moves_vs_reference": 1.08,
+   "attempts": 1,
+   "wrong_answers": 0,
+   "first_right": 12,
+   "test_plays": 18,
+   "failed_plays": 6,
+   "tool_calls": 1.7,
+   "output_tokens": 358219,
+   "input_tokens": 1012668,
+   "cost": 10.36,
+   "seconds": 3488,
+   "seconds_per_run": 291,
+   "seconds_to_solve": 290
+  }
+ ]
+}

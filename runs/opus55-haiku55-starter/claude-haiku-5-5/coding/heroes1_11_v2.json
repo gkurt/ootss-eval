@@ -1,0 +1,103 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-haiku-5-5",
+ "track": "coding",
+ "level": "heroes1_11_v2",
+ "tier": 1,
+ "reference_length": 27,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 1,
+  "budget": 40,
+  "sandbox": true,
+  "minutes": 30
+ },
+ "started": "2026-10-28T23:14:52.570Z",
+ "seconds": 42.2,
+ "api_seconds": 41.1,
+ "answer": "URRRCDRRRUCLLLDLLUCLLLULLDD",
+ "result": {
+  "won": true,
+  "wonAt": 27,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 27 moves"
+ },
+ "attempts": [
+  {
+   "moves": "URRRCDRRRUCLLLDLLUCLLLULLDD",
+   "won": true,
+   "wonAt": 27,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 27 moves",
+   "t": 41.7
+  }
+ ],
+ "tool_calls": 1,
+ "js_runs": 0,
+ "requests": 2,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 4,
+  "output": 9247,
+  "cache_read": 17999,
+  "cache_write": 9429,
+  "thinking": 8914
+ },
+ "cost": 0.0067,
+ "events": [
+  {
+   "t": 39.9,
+   "type": "tool",
+   "id": "toolu_0199yABZSmV5vsrotth1JTLq",
+   "name": "check",
+   "n": 1,
+   "moves": "URRRCDRRRUCLLLDLLUCLLLULLDD",
+   "output": "WON after 27 moves\n(rule-tool calls left: 39)",
+   "done": 39.9,
+   "check": {
+    "won": true,
+    "failedAt": null,
+    "how": null
+   }
+  },
+  {
+   "t": 41.6,
+   "type": "text",
+   "text": "The level is won in 27 moves, and the checker confirmed it.\n\nThe plan:\n1. The warrior steps onto the top plate (7,3).\n2. The wizard steps onto the bottom plate (7,7). Both plates are now pressed, so the gate at (7,5) opens.\n3. The wizard beams north through the open gate and swaps places with the warrior. The wizard is now on the top plate and the warrior on the bottom one, so the gate stays open.\n4. The warrior walks around to the bottom door (2,7).\n5. The wizard walks to (2,2) and beams south, swapping with the crystal at (2,3). It then steps south onto the top door (2,4).\n\n<moves>URRRCDRRRUCLLLDLLUCLLLULLDD</moves>"
+  },
+  {
+   "t": 41.7,
+   "type": "answer",
+   "moves": "URRRCDRRRUCLLLDLLUCLLLULLDD",
+   "line": "WON after 27 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-haiku-5-5",
+  "tools": [
+   "mcp__ootss__check",
+   "mcp__ootss__play",
+   "mcp__ootss__run_js",
+   "mcp__ootss__show",
+   "mcp__ootss__try"
+  ],
+  "mcp": [
+   "ootss:connected"
+  ]
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 41163,
+   "api_ms": 41111,
+   "turns": 2,
+   "cost": 0.00668969
+  }
+ ]
+}

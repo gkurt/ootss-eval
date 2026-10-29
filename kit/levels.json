@@ -1,0 +1,2218 @@
+{
+ "tiers": {
+  "1": "plain BFS wins within 1,000 states",
+  "2": "within 30,000 states",
+  "3": "within 1,000,000 states",
+  "4": "plain BFS needs more than 1M states",
+  "5": "plain BFS gave up; solved by heuristic search or by hand",
+  "6": "open: no solution known"
+ },
+ "levels": [
+  {
+   "name": "heroes1_1",
+   "set": "heroes1",
+   "order": 0,
+   "heroes": [
+    "warrior"
+   ],
+   "features": [],
+   "width": 15,
+   "height": 7,
+   "entities": 3,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 106,
+   "shortest_known": 12,
+   "tier": 1
+  },
+  {
+   "name": "heroes1_2_v2",
+   "set": "heroes1",
+   "order": 1,
+   "heroes": [
+    "warrior"
+   ],
+   "features": [],
+   "width": 15,
+   "height": 11,
+   "entities": 11,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 72155,
+   "shortest_known": 27,
+   "tier": 3
+  },
+  {
+   "name": "heroes1_3",
+   "set": "heroes1",
+   "order": 2,
+   "heroes": [
+    "warrior"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 15,
+   "height": 7,
+   "entities": 2,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 328,
+   "shortest_known": 21,
+   "tier": 1
+  },
+  {
+   "name": "heroes1_4",
+   "set": "heroes1",
+   "order": 3,
+   "heroes": [
+    "warrior"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 11,
+   "height": 10,
+   "entities": 6,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 231357,
+   "shortest_known": 34,
+   "tier": 3
+  },
+  {
+   "name": "heroes1_4.5",
+   "set": "heroes1",
+   "order": 4,
+   "heroes": [
+    "thief"
+   ],
+   "features": [],
+   "width": 15,
+   "height": 7,
+   "entities": 3,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 446,
+   "shortest_known": 24,
+   "tier": 1
+  },
+  {
+   "name": "heroes1_5_v2",
+   "set": "heroes1",
+   "order": 5,
+   "heroes": [
+    "thief"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 15,
+   "height": 11,
+   "entities": 8,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 510,
+   "shortest_known": 61,
+   "tier": 1
+  },
+  {
+   "name": "heroes1_7_v2",
+   "set": "heroes1",
+   "order": 6,
+   "heroes": [
+    "thief"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 22,
+   "height": 16,
+   "entities": 2,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 2692,
+   "shortest_known": 152,
+   "tier": 2
+  },
+  {
+   "name": "heroes1_6",
+   "set": "heroes1",
+   "order": 7,
+   "heroes": [
+    "thief"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 11,
+   "height": 10,
+   "entities": 7,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 20520,
+   "shortest_known": 56,
+   "tier": 2
+  },
+  {
+   "name": "heroes1_7.5",
+   "set": "heroes1",
+   "order": 8,
+   "heroes": [
+    "wizard"
+   ],
+   "features": [],
+   "width": 13,
+   "height": 5,
+   "entities": 3,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 109,
+   "shortest_known": 9,
+   "tier": 1
+  },
+  {
+   "name": "heroes1_8_v2",
+   "set": "heroes1",
+   "order": 9,
+   "heroes": [
+    "wizard"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 15,
+   "height": 11,
+   "entities": 2,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 2525,
+   "shortest_known": 54,
+   "tier": 2
+  },
+  {
+   "name": "heroes1_10_inv_v4_b",
+   "set": "heroes1",
+   "order": 10,
+   "heroes": [
+    "wizard"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 17,
+   "height": 24,
+   "entities": 10,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 3481954,
+   "shortest_known": 17,
+   "tier": 4
+  },
+  {
+   "name": "heroes1_9",
+   "set": "heroes1",
+   "order": 11,
+   "heroes": [
+    "wizard"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 11,
+   "height": 10,
+   "entities": 6,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 199329,
+   "shortest_known": 26,
+   "tier": 3
+  },
+  {
+   "name": "heroes1_11_v2",
+   "set": "heroes1",
+   "order": 12,
+   "heroes": [
+    "warrior",
+    "wizard"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 11,
+   "height": 11,
+   "entities": 4,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 992,
+   "shortest_known": 27,
+   "tier": 1
+  },
+  {
+   "name": "heroes1_13_v2",
+   "set": "heroes1",
+   "order": 13,
+   "heroes": [
+    "thief",
+    "warrior"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 14,
+   "height": 11,
+   "entities": 4,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 628465,
+   "shortest_known": 79,
+   "tier": 3
+  },
+  {
+   "name": "heroes1_12_v2_alt",
+   "set": "heroes1",
+   "order": 14,
+   "heroes": [
+    "thief",
+    "wizard"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 15,
+   "height": 11,
+   "entities": 4,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 601626,
+   "shortest_known": 78,
+   "tier": 3
+  },
+  {
+   "name": "heroes1_15",
+   "set": "heroes1",
+   "order": 15,
+   "heroes": [
+    "warrior",
+    "wizard"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 13,
+   "height": 5,
+   "entities": 3,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 2974,
+   "shortest_known": 20,
+   "tier": 2
+  },
+  {
+   "name": "heroes1_16_v3",
+   "set": "heroes1",
+   "order": 16,
+   "heroes": [
+    "thief",
+    "warrior",
+    "wizard"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 13,
+   "height": 9,
+   "entities": 7,
+   "doors": 3,
+   "solved_by": "bfs",
+   "bfs_states": 8484,
+   "shortest_known": 80,
+   "tier": 2
+  },
+  {
+   "name": "heroes1_17",
+   "set": "heroes1",
+   "order": 17,
+   "heroes": [
+    "thief",
+    "warrior",
+    "wizard"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 9,
+   "height": 10,
+   "entities": 4,
+   "doors": 3,
+   "solved_by": "bfs",
+   "bfs_states": 767678,
+   "shortest_known": 104,
+   "tier": 3
+  },
+  {
+   "name": "heroes1_18",
+   "set": "heroes1",
+   "order": 18,
+   "heroes": [
+    "thief",
+    "warrior",
+    "wizard"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 13,
+   "height": 9,
+   "entities": 4,
+   "doors": 3,
+   "solved_by": "bfs",
+   "bfs_states": 3689716,
+   "shortest_known": 86,
+   "tier": 4
+  },
+  {
+   "name": "heroes1_19_jail",
+   "set": "heroes1",
+   "order": 19,
+   "heroes": [
+    "thief",
+    "warrior",
+    "wizard"
+   ],
+   "features": [],
+   "width": 9,
+   "height": 9,
+   "entities": 5,
+   "doors": 3,
+   "solved_by": "bfs",
+   "bfs_states": 24346,
+   "shortest_known": 45,
+   "tier": 2
+  },
+  {
+   "name": "heroes1_21_v3",
+   "set": "heroes1",
+   "order": 20,
+   "heroes": [
+    "thief",
+    "warrior",
+    "wizard"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 17,
+   "height": 15,
+   "entities": 9,
+   "doors": 3,
+   "solved_by": "heuristic search",
+   "bfs_states": null,
+   "shortest_known": 124,
+   "tier": 5
+  },
+  {
+   "name": "heroes2_2b",
+   "set": "heroes2",
+   "order": 21,
+   "heroes": [
+    "warrior"
+   ],
+   "features": [
+    "goblins"
+   ],
+   "width": 15,
+   "height": 9,
+   "entities": 4,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 41,
+   "shortest_known": 14,
+   "tier": 1
+  },
+  {
+   "name": "heroes2_2",
+   "set": "heroes2",
+   "order": 22,
+   "heroes": [
+    "warrior"
+   ],
+   "features": [
+    "goblins"
+   ],
+   "width": 15,
+   "height": 13,
+   "entities": 11,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 41,
+   "shortest_known": 31,
+   "tier": 1
+  },
+  {
+   "name": "heroes2_thief_goblin",
+   "set": "heroes2",
+   "order": 23,
+   "heroes": [
+    "thief"
+   ],
+   "features": [
+    "goblins",
+    "gates"
+   ],
+   "width": 16,
+   "height": 17,
+   "entities": 10,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 3057,
+   "shortest_known": 87,
+   "tier": 2
+  },
+  {
+   "name": "heroes2_3_v2",
+   "set": "heroes2",
+   "order": 24,
+   "heroes": [
+    "wizard"
+   ],
+   "features": [
+    "goblins"
+   ],
+   "width": 22,
+   "height": 46,
+   "entities": 35,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 1515,
+   "shortest_known": 36,
+   "tier": 2
+  },
+  {
+   "name": "heroes2_5_altE",
+   "set": "heroes2",
+   "order": 25,
+   "heroes": [
+    "warrior"
+   ],
+   "features": [
+    "goblins",
+    "dragons"
+   ],
+   "width": 15,
+   "height": 12,
+   "entities": 5,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 330,
+   "shortest_known": 18,
+   "tier": 1
+  },
+  {
+   "name": "heroes2_5_no_crystal",
+   "set": "heroes2",
+   "order": 26,
+   "heroes": [
+    "thief"
+   ],
+   "features": [
+    "dragons"
+   ],
+   "width": 17,
+   "height": 14,
+   "entities": 4,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 394,
+   "shortest_known": 74,
+   "tier": 1
+  },
+  {
+   "name": "heroes2_5.5v5",
+   "set": "heroes2",
+   "order": 27,
+   "heroes": [
+    "thief"
+   ],
+   "features": [
+    "dragons"
+   ],
+   "width": 20,
+   "height": 14,
+   "entities": 6,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 527,
+   "shortest_known": 49,
+   "tier": 1
+  },
+  {
+   "name": "heroes2_6_v3",
+   "set": "heroes2",
+   "order": 28,
+   "heroes": [
+    "thief"
+   ],
+   "features": [
+    "dragons"
+   ],
+   "width": 17,
+   "height": 15,
+   "entities": 6,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 2367,
+   "shortest_known": 56,
+   "tier": 2
+  },
+  {
+   "name": "heroes2_9",
+   "set": "heroes2",
+   "order": 29,
+   "heroes": [
+    "thief",
+    "warrior",
+    "wizard"
+   ],
+   "features": [
+    "dragons"
+   ],
+   "width": 9,
+   "height": 13,
+   "entities": 6,
+   "doors": 3,
+   "solved_by": "bfs",
+   "bfs_states": 88919,
+   "shortest_known": 49,
+   "tier": 3
+  },
+  {
+   "name": "heroes2_10a_intro",
+   "set": "heroes2",
+   "order": 30,
+   "heroes": [
+    "warrior"
+   ],
+   "features": [
+    "goblins",
+    "gates"
+   ],
+   "width": 15,
+   "height": 12,
+   "entities": 6,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 106837,
+   "shortest_known": 86,
+   "tier": 3
+  },
+  {
+   "name": "heroes2_10a",
+   "set": "heroes2",
+   "order": 31,
+   "heroes": [
+    "warrior"
+   ],
+   "features": [
+    "goblins",
+    "gates"
+   ],
+   "width": 15,
+   "height": 9,
+   "entities": 5,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 41332,
+   "shortest_known": 43,
+   "tier": 3
+  },
+  {
+   "name": "heroes2_3monster",
+   "set": "heroes2",
+   "order": 32,
+   "heroes": [
+    "warrior"
+   ],
+   "features": [
+    "goblins",
+    "gates"
+   ],
+   "width": 16,
+   "height": 13,
+   "entities": 6,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 477759,
+   "shortest_known": 50,
+   "tier": 3
+  },
+  {
+   "name": "heroes2_10",
+   "set": "heroes2",
+   "order": 33,
+   "heroes": [
+    "thief"
+   ],
+   "features": [
+    "dragons",
+    "gates"
+   ],
+   "width": 13,
+   "height": 9,
+   "entities": 4,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 31825,
+   "shortest_known": 33,
+   "tier": 3
+  },
+  {
+   "name": "heroes2_11_v2_easier",
+   "set": "heroes2",
+   "order": 34,
+   "heroes": [
+    "warrior"
+   ],
+   "features": [
+    "goblins",
+    "dragons",
+    "gates"
+   ],
+   "width": 16,
+   "height": 11,
+   "entities": 5,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 734015,
+   "shortest_known": 44,
+   "tier": 3
+  },
+  {
+   "name": "heroes2_12_v2",
+   "set": "heroes2",
+   "order": 35,
+   "heroes": [
+    "wizard"
+   ],
+   "features": [
+    "goblins",
+    "gates"
+   ],
+   "width": 22,
+   "height": 15,
+   "entities": 4,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 1966907,
+   "shortest_known": 26,
+   "tier": 4
+  },
+  {
+   "name": "heroes2_11_v2",
+   "set": "heroes2",
+   "order": 36,
+   "heroes": [
+    "warrior"
+   ],
+   "features": [
+    "goblins",
+    "dragons",
+    "gates"
+   ],
+   "width": 16,
+   "height": 11,
+   "entities": 7,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 346391,
+   "shortest_known": 41,
+   "tier": 3
+  },
+  {
+   "name": "heroes2_10.5",
+   "set": "heroes2",
+   "order": 37,
+   "heroes": [
+    "wizard"
+   ],
+   "features": [
+    "goblins",
+    "dragons",
+    "gates"
+   ],
+   "width": 19,
+   "height": 12,
+   "entities": 8,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 3530812,
+   "shortest_known": 36,
+   "tier": 4
+  },
+  {
+   "name": "one_fire_v2",
+   "set": "heroes2",
+   "order": 38,
+   "heroes": [
+    "thief",
+    "warrior"
+   ],
+   "features": [
+    "goblins",
+    "dragons",
+    "gates"
+   ],
+   "width": 9,
+   "height": 14,
+   "entities": 6,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 87733,
+   "shortest_known": 79,
+   "tier": 3
+  },
+  {
+   "name": "heroes2_13",
+   "set": "heroes2",
+   "order": 39,
+   "heroes": [
+    "cleric"
+   ],
+   "features": [
+    "goblins",
+    "dragons"
+   ],
+   "width": 13,
+   "height": 9,
+   "entities": 13,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 24,
+   "shortest_known": 17,
+   "tier": 1
+  },
+  {
+   "name": "heroes2_14",
+   "set": "heroes2",
+   "order": 40,
+   "heroes": [
+    "cleric",
+    "wizard"
+   ],
+   "features": [
+    "goblins"
+   ],
+   "width": 13,
+   "height": 9,
+   "entities": 7,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 194,
+   "shortest_known": 30,
+   "tier": 1
+  },
+  {
+   "name": "heroes2_15",
+   "set": "heroes2",
+   "order": 41,
+   "heroes": [
+    "cleric",
+    "warrior"
+   ],
+   "features": [
+    "goblins"
+   ],
+   "width": 14,
+   "height": 9,
+   "entities": 8,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 465,
+   "shortest_known": 37,
+   "tier": 1
+  },
+  {
+   "name": "heroes2_reprise",
+   "set": "heroes2",
+   "order": 42,
+   "heroes": [
+    "cleric",
+    "warrior"
+   ],
+   "features": [
+    "goblins",
+    "gates"
+   ],
+   "width": 11,
+   "height": 10,
+   "entities": 5,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 6883501,
+   "shortest_known": 61,
+   "tier": 4
+  },
+  {
+   "name": "heroes2_16v4",
+   "set": "heroes2",
+   "order": 43,
+   "heroes": [
+    "cleric",
+    "thief"
+   ],
+   "features": [
+    "dragons",
+    "gates"
+   ],
+   "width": 14,
+   "height": 9,
+   "entities": 7,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 4660,
+   "shortest_known": 32,
+   "tier": 2
+  },
+  {
+   "name": "heroes2_18",
+   "set": "heroes2",
+   "order": 44,
+   "heroes": [
+    "cleric",
+    "thief"
+   ],
+   "features": [
+    "goblins"
+   ],
+   "width": 13,
+   "height": 13,
+   "entities": 12,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 894,
+   "shortest_known": 54,
+   "tier": 1
+  },
+  {
+   "name": "mosh_pit_small",
+   "set": "heroes2",
+   "order": 45,
+   "heroes": [
+    "cleric",
+    "wizard"
+   ],
+   "features": [
+    "goblins",
+    "dragons",
+    "gates"
+   ],
+   "width": 9,
+   "height": 9,
+   "entities": 23,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 6941,
+   "shortest_known": 45,
+   "tier": 2
+  },
+  {
+   "name": "heroes2_17_intro",
+   "set": "heroes2",
+   "order": 46,
+   "heroes": [
+    "cleric",
+    "wizard"
+   ],
+   "features": [
+    "goblins",
+    "gates"
+   ],
+   "width": 12,
+   "height": 12,
+   "entities": 6,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 2969880,
+   "shortest_known": 37,
+   "tier": 4
+  },
+  {
+   "name": "heroes2_17",
+   "set": "heroes2",
+   "order": 47,
+   "heroes": [
+    "cleric",
+    "wizard"
+   ],
+   "features": [
+    "goblins",
+    "gates"
+   ],
+   "width": 11,
+   "height": 9,
+   "entities": 5,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 1348933,
+   "shortest_known": 45,
+   "tier": 4
+  },
+  {
+   "name": "heroes2_20",
+   "set": "heroes2",
+   "order": 48,
+   "heroes": [
+    "cleric",
+    "thief",
+    "wizard"
+   ],
+   "features": [
+    "goblins"
+   ],
+   "width": 13,
+   "height": 10,
+   "entities": 10,
+   "doors": 3,
+   "solved_by": "bfs",
+   "bfs_states": 198361,
+   "shortest_known": 138,
+   "tier": 3
+  },
+  {
+   "name": "heroes2_21b",
+   "set": "heroes2",
+   "order": 49,
+   "heroes": [
+    "cleric",
+    "thief",
+    "wizard"
+   ],
+   "features": [
+    "goblins",
+    "gates"
+   ],
+   "width": 11,
+   "height": 10,
+   "entities": 7,
+   "doors": 3,
+   "solved_by": "bfs",
+   "bfs_states": 82316,
+   "shortest_known": 83,
+   "tier": 3
+  },
+  {
+   "name": "heroes2_22_v2",
+   "set": "heroes2",
+   "order": 50,
+   "heroes": [
+    "cleric",
+    "thief",
+    "warrior",
+    "wizard"
+   ],
+   "features": [
+    "dragons",
+    "gates"
+   ],
+   "width": 15,
+   "height": 15,
+   "entities": 16,
+   "doors": 4,
+   "solved_by": "heuristic search",
+   "bfs_states": null,
+   "shortest_known": 120,
+   "tier": 5
+  },
+  {
+   "name": "heroes3_10",
+   "set": "heroes3",
+   "order": 51,
+   "heroes": [
+    "druid",
+    "thief"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 16,
+   "height": 12,
+   "entities": 30,
+   "doors": 2,
+   "solved_by": "heuristic search",
+   "bfs_states": null,
+   "shortest_known": 48,
+   "tier": 5
+  },
+  {
+   "name": "heroes3_11_v2",
+   "set": "heroes3",
+   "order": 52,
+   "heroes": [
+    "druid",
+    "warrior"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 15,
+   "height": 11,
+   "entities": 12,
+   "doors": 2,
+   "solved_by": "heuristic search",
+   "bfs_states": null,
+   "shortest_known": 131,
+   "tier": 5
+  },
+  {
+   "name": "druid_and_dragon",
+   "set": "heroes3",
+   "order": 53,
+   "heroes": [
+    "druid",
+    "warrior"
+   ],
+   "features": [
+    "goblins",
+    "dragons",
+    "gates"
+   ],
+   "width": 14,
+   "height": 11,
+   "entities": 6,
+   "doors": 2,
+   "solved_by": "heuristic search",
+   "bfs_states": null,
+   "shortest_known": 119,
+   "tier": 5
+  },
+  {
+   "name": "wizard_and_druid_alt_5",
+   "set": "heroes3",
+   "order": 54,
+   "heroes": [
+    "druid",
+    "wizard"
+   ],
+   "features": [
+    "gates"
+   ],
+   "width": 15,
+   "height": 10,
+   "entities": 4,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 99938,
+   "shortest_known": 107,
+   "tier": 3
+  },
+  {
+   "name": "heroes3_15_v4",
+   "set": "heroes3",
+   "order": 55,
+   "heroes": [
+    "druid",
+    "wizard"
+   ],
+   "features": [],
+   "width": 12,
+   "height": 11,
+   "entities": 21,
+   "doors": 2,
+   "solved_by": "hand plan",
+   "bfs_states": null,
+   "shortest_known": 231,
+   "tier": 5
+  },
+  {
+   "name": "heroes3_1_v3",
+   "set": "heroes3",
+   "order": 56,
+   "heroes": [
+    "bard"
+   ],
+   "features": [
+    "goblins"
+   ],
+   "width": 20,
+   "height": 14,
+   "entities": 3,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 980,
+   "shortest_known": 51,
+   "tier": 1
+  },
+  {
+   "name": "heroes3_2_v4",
+   "set": "heroes3",
+   "order": 57,
+   "heroes": [
+    "bard"
+   ],
+   "features": [
+    "goblins",
+    "gates"
+   ],
+   "width": 14,
+   "height": 14,
+   "entities": 2,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 1481,
+   "shortest_known": 87,
+   "tier": 2
+  },
+  {
+   "name": "heroes3_3_v2",
+   "set": "heroes3",
+   "order": 58,
+   "heroes": [
+    "bard"
+   ],
+   "features": [],
+   "width": 16,
+   "height": 12,
+   "entities": 4,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 539,
+   "shortest_known": 59,
+   "tier": 1
+  },
+  {
+   "name": "heroes3_4",
+   "set": "heroes3",
+   "order": 59,
+   "heroes": [
+    "bard"
+   ],
+   "features": [
+    "goblins",
+    "gates"
+   ],
+   "width": 15,
+   "height": 9,
+   "entities": 3,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 1273,
+   "shortest_known": 18,
+   "tier": 2
+  },
+  {
+   "name": "heroes3_5",
+   "set": "heroes3",
+   "order": 60,
+   "heroes": [
+    "bard",
+    "warrior"
+   ],
+   "features": [
+    "goblins",
+    "gates"
+   ],
+   "width": 19,
+   "height": 7,
+   "entities": 4,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 1597,
+   "shortest_known": 19,
+   "tier": 2
+  },
+  {
+   "name": "dipping_your_toes_in",
+   "set": "heroes_and_water",
+   "order": 61,
+   "heroes": [
+    "warrior"
+   ],
+   "features": [
+    "gates",
+    "water"
+   ],
+   "width": 11,
+   "height": 19,
+   "entities": 3,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 10207,
+   "shortest_known": 62,
+   "tier": 2
+  },
+  {
+   "name": "crystal_bridges",
+   "set": "heroes_and_water",
+   "order": 62,
+   "heroes": [
+    "warrior"
+   ],
+   "features": [
+    "water"
+   ],
+   "width": 15,
+   "height": 20,
+   "entities": 8,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 1205346,
+   "shortest_known": 83,
+   "tier": 4
+  },
+  {
+   "name": "push_and_pull_zach",
+   "set": "heroes_and_water",
+   "order": 63,
+   "heroes": [
+    "thief",
+    "warrior"
+   ],
+   "features": [
+    "water"
+   ],
+   "width": 10,
+   "height": 14,
+   "entities": 7,
+   "doors": 2,
+   "solved_by": "hand plan",
+   "bfs_states": null,
+   "shortest_known": 216,
+   "tier": 5
+  },
+  {
+   "name": "quadrants_follow_up",
+   "set": "heroes_and_water",
+   "order": 64,
+   "heroes": [
+    "thief"
+   ],
+   "features": [
+    "gates",
+    "water"
+   ],
+   "width": 20,
+   "height": 8,
+   "entities": 5,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 7367680,
+   "shortest_known": 80,
+   "tier": 4
+  },
+  {
+   "name": "quadrants",
+   "set": "heroes_and_water",
+   "order": 65,
+   "heroes": [
+    "thief",
+    "wizard"
+   ],
+   "features": [
+    "gates",
+    "water"
+   ],
+   "width": 9,
+   "height": 9,
+   "entities": 3,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 38621,
+   "shortest_known": 49,
+   "tier": 3
+  },
+  {
+   "name": "drowner",
+   "set": "heroes_and_water",
+   "order": 66,
+   "heroes": [
+    "warrior"
+   ],
+   "features": [
+    "goblins",
+    "gates",
+    "water"
+   ],
+   "width": 17,
+   "height": 19,
+   "entities": 10,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 1905303,
+   "shortest_known": 44,
+   "tier": 4
+  },
+  {
+   "name": "surrounded",
+   "set": "heroes_and_water",
+   "order": 67,
+   "heroes": [
+    "warrior"
+   ],
+   "features": [
+    "goblins",
+    "dragons",
+    "gates",
+    "water"
+   ],
+   "width": 24,
+   "height": 21,
+   "entities": 19,
+   "doors": 1,
+   "solved_by": "open",
+   "bfs_states": null,
+   "shortest_known": null,
+   "tier": 6
+  },
+  {
+   "name": "dont_push_the_button",
+   "set": "heroes_and_water",
+   "order": 68,
+   "heroes": [
+    "warrior"
+   ],
+   "features": [
+    "dragons",
+    "gates",
+    "water"
+   ],
+   "width": 21,
+   "height": 12,
+   "entities": 4,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 45335,
+   "shortest_known": 131,
+   "tier": 3
+  },
+  {
+   "name": "detonator",
+   "set": "heroes_and_water",
+   "order": 69,
+   "heroes": [
+    "thief",
+    "warrior"
+   ],
+   "features": [
+    "dragons",
+    "gates",
+    "water"
+   ],
+   "width": 23,
+   "height": 15,
+   "entities": 5,
+   "doors": 2,
+   "solved_by": "hand plan",
+   "bfs_states": null,
+   "shortest_known": 212,
+   "tier": 5
+  },
+  {
+   "name": "a_wiz_out_of_water",
+   "set": "heroes_and_water",
+   "order": 70,
+   "heroes": [
+    "wizard"
+   ],
+   "features": [
+    "gates",
+    "water"
+   ],
+   "width": 19,
+   "height": 15,
+   "entities": 2,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 3560,
+   "shortest_known": 79,
+   "tier": 2
+  },
+  {
+   "name": "island_hopping",
+   "set": "heroes_and_water",
+   "order": 71,
+   "heroes": [
+    "warrior",
+    "wizard"
+   ],
+   "features": [
+    "water"
+   ],
+   "width": 30,
+   "height": 26,
+   "entities": 9,
+   "doors": 2,
+   "solved_by": "heuristic search",
+   "bfs_states": null,
+   "shortest_known": 124,
+   "tier": 5
+  },
+  {
+   "name": "dunk_tank_alt",
+   "set": "heroes_and_water",
+   "order": 72,
+   "heroes": [
+    "thief",
+    "wizard"
+   ],
+   "features": [
+    "dragons",
+    "gates",
+    "water"
+   ],
+   "width": 21,
+   "height": 8,
+   "entities": 3,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 55148,
+   "shortest_known": 67,
+   "tier": 3
+  },
+  {
+   "name": "gully_alt",
+   "set": "heroes_and_water",
+   "order": 73,
+   "heroes": [
+    "bard"
+   ],
+   "features": [
+    "water"
+   ],
+   "width": 17,
+   "height": 19,
+   "entities": 2,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 686,
+   "shortest_known": 141,
+   "tier": 1
+  },
+  {
+   "name": "easy_situation_v2",
+   "set": "heroes_and_water",
+   "order": 74,
+   "heroes": [
+    "bard",
+    "warrior"
+   ],
+   "features": [
+    "water"
+   ],
+   "width": 10,
+   "height": 10,
+   "entities": 4,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 1780723,
+   "shortest_known": 33,
+   "tier": 4
+  },
+  {
+   "name": "one_vs_three",
+   "set": "heroes_and_water",
+   "order": 75,
+   "heroes": [
+    "bard",
+    "wizard"
+   ],
+   "features": [
+    "water"
+   ],
+   "width": 22,
+   "height": 17,
+   "entities": 3,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 294685,
+   "shortest_known": 90,
+   "tier": 3
+  },
+  {
+   "name": "mirror_1",
+   "set": "mirror",
+   "order": 76,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 40,
+   "height": 30,
+   "entities": 2,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 62,
+   "shortest_known": 15,
+   "tier": 1
+  },
+  {
+   "name": "mirror_2",
+   "set": "mirror",
+   "order": 77,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 40,
+   "height": 30,
+   "entities": 3,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 8771,
+   "shortest_known": 27,
+   "tier": 2
+  },
+  {
+   "name": "mirror_3",
+   "set": "mirror",
+   "order": 78,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 48,
+   "height": 35,
+   "entities": 5,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 2058773,
+   "shortest_known": 96,
+   "tier": 4
+  },
+  {
+   "name": "mirror_4",
+   "set": "mirror",
+   "order": 79,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 38,
+   "height": 30,
+   "entities": 3,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 18004,
+   "shortest_known": 25,
+   "tier": 2
+  },
+  {
+   "name": "mirror_5",
+   "set": "mirror",
+   "order": 80,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 40,
+   "height": 30,
+   "entities": 5,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 2410534,
+   "shortest_known": 77,
+   "tier": 4
+  },
+  {
+   "name": "mirror_6_alt",
+   "set": "mirror",
+   "order": 81,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 48,
+   "height": 36,
+   "entities": 6,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 2454714,
+   "shortest_known": 80,
+   "tier": 4
+  },
+  {
+   "name": "mirror_7",
+   "set": "mirror",
+   "order": 82,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 36,
+   "height": 32,
+   "entities": 4,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 313668,
+   "shortest_known": 36,
+   "tier": 3
+  },
+  {
+   "name": "mirror_8_v5",
+   "set": "mirror",
+   "order": 83,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 36,
+   "height": 42,
+   "entities": 4,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 422316,
+   "shortest_known": 79,
+   "tier": 3
+  },
+  {
+   "name": "mirror_11",
+   "set": "mirror",
+   "order": 84,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 34,
+   "height": 26,
+   "entities": 3,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 206472,
+   "shortest_known": 18,
+   "tier": 3
+  },
+  {
+   "name": "mirror_12",
+   "set": "mirror",
+   "order": 85,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 35,
+   "height": 26,
+   "entities": 3,
+   "doors": 3,
+   "solved_by": "bfs",
+   "bfs_states": 121401,
+   "shortest_known": 22,
+   "tier": 3
+  },
+  {
+   "name": "mirror_13",
+   "set": "mirror",
+   "order": 86,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 36,
+   "height": 23,
+   "entities": 4,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 9835981,
+   "shortest_known": 35,
+   "tier": 4
+  },
+  {
+   "name": "mirror_14",
+   "set": "mirror",
+   "order": 87,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 33,
+   "height": 22,
+   "entities": 4,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 283812,
+   "shortest_known": 16,
+   "tier": 3
+  },
+  {
+   "name": "mirror_15",
+   "set": "mirror",
+   "order": 88,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 42,
+   "height": 38,
+   "entities": 4,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 220466,
+   "shortest_known": 73,
+   "tier": 3
+  },
+  {
+   "name": "mirror_19",
+   "set": "mirror",
+   "order": 89,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 40,
+   "height": 35,
+   "entities": 3,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 47133,
+   "shortest_known": 38,
+   "tier": 3
+  },
+  {
+   "name": "mirror_17",
+   "set": "mirror",
+   "order": 90,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 32,
+   "height": 22,
+   "entities": 3,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 204033,
+   "shortest_known": 34,
+   "tier": 3
+  },
+  {
+   "name": "mirror_sink",
+   "set": "mirror",
+   "order": 91,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 34,
+   "height": 21,
+   "entities": 3,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 103430,
+   "shortest_known": 32,
+   "tier": 3
+  },
+  {
+   "name": "mirror_20",
+   "set": "mirror",
+   "order": 92,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 37,
+   "height": 25,
+   "entities": 4,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 27213,
+   "shortest_known": 37,
+   "tier": 2
+  },
+  {
+   "name": "mirror_18",
+   "set": "mirror",
+   "order": 93,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 36,
+   "height": 23,
+   "entities": 5,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 367011,
+   "shortest_known": 79,
+   "tier": 3
+  },
+  {
+   "name": "mirror_21",
+   "set": "mirror",
+   "order": 94,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 39,
+   "height": 25,
+   "entities": 6,
+   "doors": 1,
+   "solved_by": "open",
+   "bfs_states": null,
+   "shortest_known": null,
+   "tier": 6
+  },
+  {
+   "name": "mirror_22_v2",
+   "set": "mirror",
+   "order": 95,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 40,
+   "height": 42,
+   "entities": 4,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 2749745,
+   "shortest_known": 93,
+   "tier": 4
+  },
+  {
+   "name": "mirror_factory_v2",
+   "set": "mirror",
+   "order": 96,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 28,
+   "height": 37,
+   "entities": 4,
+   "doors": 1,
+   "solved_by": "heuristic search",
+   "bfs_states": null,
+   "shortest_known": 281,
+   "tier": 5
+  },
+  {
+   "name": "mirror_pals",
+   "set": "mirror",
+   "order": 97,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 33,
+   "height": 44,
+   "entities": 4,
+   "doors": 2,
+   "solved_by": "bfs",
+   "bfs_states": 9259156,
+   "shortest_known": 30,
+   "tier": 4
+  },
+  {
+   "name": "walk_it_over",
+   "set": "mirror",
+   "order": 98,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 82,
+   "height": 60,
+   "entities": 7,
+   "doors": 2,
+   "solved_by": "open",
+   "bfs_states": null,
+   "shortest_known": null,
+   "tier": 6
+  },
+  {
+   "name": "mirror_10_alt2",
+   "set": "mirror",
+   "order": 99,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 43,
+   "height": 29,
+   "entities": 3,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 4229,
+   "shortest_known": 42,
+   "tier": 2
+  },
+  {
+   "name": "mundane_mirror",
+   "set": "mirror",
+   "order": 100,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 46,
+   "height": 34,
+   "entities": 6,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 901768,
+   "shortest_known": 106,
+   "tier": 3
+  },
+  {
+   "name": "mirror_10_b_v2",
+   "set": "mirror",
+   "order": 101,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 42,
+   "height": 43,
+   "entities": 3,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 468476,
+   "shortest_known": 51,
+   "tier": 3
+  },
+  {
+   "name": "mirror_10_d",
+   "set": "mirror",
+   "order": 102,
+   "heroes": [
+    "trader"
+   ],
+   "features": [
+    "mirrors",
+    "water"
+   ],
+   "width": 42,
+   "height": 42,
+   "entities": 4,
+   "doors": 1,
+   "solved_by": "bfs",
+   "bfs_states": 1266706,
+   "shortest_known": 61,
+   "tier": 4
+  },
+  {
+   "name": "worlds_collide_heroes_and_mirrors_v3",
+   "set": "worlds_collide",
+   "order": 104,
+   "heroes": [
+    "trader",
+    "wizard"
+   ],
+   "features": [
+    "goblins",
+    "mirrors",
+    "gates",
+    "water"
+   ],
+   "width": 37,
+   "height": 50,
+   "entities": 8,
+   "doors": 2,
+   "solved_by": "open",
+   "bfs_states": null,
+   "shortest_known": null,
+   "tier": 6
+  }
+ ],
+ "sets": {
+  "starter": [
+   "heroes1_11_v2",
+   "heroes2_13",
+   "mosh_pit_small",
+   "mirror_2",
+   "heroes1_16_v3",
+   "one_fire_v2",
+   "one_vs_three",
+   "mirror_7",
+   "heroes1_18",
+   "mirror_3",
+   "heroes2_22_v2",
+   "mirror_factory_v2"
+  ],
+  "all_solved": [
+   "heroes1_1",
+   "heroes1_2_v2",
+   "heroes1_3",
+   "heroes1_4",
+   "heroes1_4.5",
+   "heroes1_5_v2",
+   "heroes1_7_v2",
+   "heroes1_6",
+   "heroes1_7.5",
+   "heroes1_8_v2",
+   "heroes1_10_inv_v4_b",
+   "heroes1_9",
+   "heroes1_11_v2",
+   "heroes1_13_v2",
+   "heroes1_12_v2_alt",
+   "heroes1_15",
+   "heroes1_16_v3",
+   "heroes1_17",
+   "heroes1_18",
+   "heroes1_19_jail",
+   "heroes1_21_v3",
+   "heroes2_2b",
+   "heroes2_2",
+   "heroes2_thief_goblin",
+   "heroes2_3_v2",
+   "heroes2_5_altE",
+   "heroes2_5_no_crystal",
+   "heroes2_5.5v5",
+   "heroes2_6_v3",
+   "heroes2_9",
+   "heroes2_10a_intro",
+   "heroes2_10a",
+   "heroes2_3monster",
+   "heroes2_10",
+   "heroes2_11_v2_easier",
+   "heroes2_12_v2",
+   "heroes2_11_v2",
+   "heroes2_10.5",
+   "one_fire_v2",
+   "heroes2_13",
+   "heroes2_14",
+   "heroes2_15",
+   "heroes2_reprise",
+   "heroes2_16v4",
+   "heroes2_18",
+   "mosh_pit_small",
+   "heroes2_17_intro",
+   "heroes2_17",
+   "heroes2_20",
+   "heroes2_21b",
+   "heroes2_22_v2",
+   "heroes3_10",
+   "heroes3_11_v2",
+   "druid_and_dragon",
+   "wizard_and_druid_alt_5",
+   "heroes3_15_v4",
+   "heroes3_1_v3",
+   "heroes3_2_v4",
+   "heroes3_3_v2",
+   "heroes3_4",
+   "heroes3_5",
+   "dipping_your_toes_in",
+   "crystal_bridges",
+   "push_and_pull_zach",
+   "quadrants_follow_up",
+   "quadrants",
+   "drowner",
+   "dont_push_the_button",
+   "detonator",
+   "a_wiz_out_of_water",
+   "island_hopping",
+   "dunk_tank_alt",
+   "gully_alt",
+   "easy_situation_v2",
+   "one_vs_three",
+   "mirror_1",
+   "mirror_2",
+   "mirror_3",
+   "mirror_4",
+   "mirror_5",
+   "mirror_6_alt",
+   "mirror_7",
+   "mirror_8_v5",
+   "mirror_11",
+   "mirror_12",
+   "mirror_13",
+   "mirror_14",
+   "mirror_15",
+   "mirror_19",
+   "mirror_17",
+   "mirror_sink",
+   "mirror_20",
+   "mirror_18",
+   "mirror_22_v2",
+   "mirror_factory_v2",
+   "mirror_pals",
+   "mirror_10_alt2",
+   "mundane_mirror",
+   "mirror_10_b_v2",
+   "mirror_10_d"
+  ],
+  "frontier": [
+   "surrounded",
+   "mirror_21",
+   "walk_it_over",
+   "worlds_collide_heroes_and_mirrors_v3"
+  ]
+ }
+}

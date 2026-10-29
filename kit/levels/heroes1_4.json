@@ -1,0 +1,95 @@
+{
+ "level": "heroes1_4",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 1,
+ "heroes": [
+  {
+   "id": 4,
+   "kind": "hero",
+   "role": "warrior",
+   "group": 1,
+   "x": 3,
+   "y": 3,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 1,
+   "kind": "tree",
+   "x": 5,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 2,
+   "kind": "tree",
+   "x": 2,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 3,
+   "kind": "crystal",
+   "x": 4,
+   "y": 3,
+   "layer": 0
+  },
+  {
+   "id": 8,
+   "kind": "crystal",
+   "x": 4,
+   "y": 4,
+   "layer": 0
+  },
+  {
+   "id": 9,
+   "kind": "crystal",
+   "x": 3,
+   "y": 4,
+   "layer": 0
+  }
+ ],
+ "gates": [
+  {
+   "x": 8,
+   "y": 3,
+   "layer": 0,
+   "flavor": 0,
+   "inverted": false,
+   "monster_gate": false,
+   "open": false,
+   "closes_toward": "down"
+  }
+ ],
+ "plates": [
+  {
+   "x": 3,
+   "y": 6,
+   "flavor": 0,
+   "pressed": false
+  },
+  {
+   "x": 5,
+   "y": 6,
+   "flavor": 0,
+   "pressed": false
+  },
+  {
+   "x": 7,
+   "y": 6,
+   "flavor": 0,
+   "pressed": false
+  }
+ ],
+ "doors": [
+  {
+   "x": 8,
+   "y": 2,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

@@ -1,0 +1,80 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-opus-5-5",
+ "track": "reasoning",
+ "level": "one_fire_v2",
+ "tier": 3,
+ "reference_length": 79,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T22:31:12.399Z",
+ "seconds": 237,
+ "api_seconds": 235.6,
+ "answer": "UCLLUDRURRRDCDRLUURLDLDCLULCRDDRCDLUUURLDDRLLLDRRDCUULLULDDCRRDDLLLLDDDCRDRRRDDLLLLDD",
+ "result": {
+  "won": true,
+  "wonAt": 85,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 85 moves"
+ },
+ "attempts": [
+  {
+   "moves": "UCLLUDRURRRDCDRLUURLDLDCLULCRDDRCDLUUURLDDRLLLDRRDCUULLULDDCRRDDLLLLDDDCRDRRRDDLLLLDD",
+   "won": true,
+   "wonAt": 85,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 85 moves",
+   "t": 236.2
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 2,
+  "output": 25464,
+  "cache_read": 6800,
+  "cache_write": 1131,
+  "thinking": 24503
+ },
+ "cost": 0.5197,
+ "events": [
+  {
+   "t": 236.2,
+   "type": "text",
+   "text": "The plan is to use the dragon to kill the upper goblin, keep the lower goblin alive so its plate holds gate (5,8) open, and press plate (2,6) with the crystal so gate (3,8) opens.\n\n**The two problems**\n- The goblin at (6,9) kills any hero at (6,8), and every route to the doors passes (6,8).\n- The goblin at (6,11) must stay alive. It holds plate 4, which keeps gate (5,8) open.\n- The dragon at (5,2) breathes into a wall. If it is pushed to (6,2), its breath runs down column 6. It kills the (6,9) goblin on that turn and would kill the (6,11) goblin on the next turn.\n\n**Plan**\n1. **Crystal into column 6.** The warrior steps aside. The thief pulls the crystal down to (2,4), then east along row 4 to (5,4), and ends at (6,5). The warrior pushes the crystal to (6,4), where it will block the dragon's breath.\n2. **Dragon into column 6.** The warrior goes to (4,2) and pushes the dragon to (6,2). The breath stops at the crystal, and the thief at (6,5) is shielded by it.\n3. **Kill one goblin only.**\n   - The warrior waits at (3,4) and the thief goes to (5,4).\n   - The thief steps L to (4,4), pulling the crystal to (5,4). Column 6 is now clear, so the breath kills the goblin at (6,9).\n   - Next turn the warrior pushes R, moving the thief and the crystal back so the crystal is at (6,4) again. This blocks the breath before it reaches the (6,11) goblin.\n4. **Take the dragon out of column 6.**\n   - The warrior parks at (5,6).\n   - The thief goes round by (5,5), (4,5), up column 4 and to (5,2).\n   - The thief steps L to (4,2), pulling the dragon to (5,2). There it breathes into a wall again.\n5. **Crystal onto the plate.**\n   - The thief pulls the crystal west along row 4 to (3,4), then moves out of the way to (4,6).\n   - The warrior pushes the crystal to (2,4), goes round to (2,3) and pushes it down onto plate (2,6). Gate (3,8) opens.\n6. **Walk to the doors.** Both heroes go (6,6) → (6,8) → (5,8) → (4,8) → (3,8) → (2,8) and down column 2. The thief ends on (2,11) and the warrior on (2,10). The remaining goblin at (6,11) is not next to any cell on this route.\n\n<moves>U C LLUDRURRRD C DRLUURLDLD C LUL C RDDR C DLUUURLDDRLLLDRRD C UULLULDD C RRDDLLLLDDD C RDRRRDDLLLLDD</moves>"
+  },
+  {
+   "t": 236.2,
+   "type": "answer",
+   "moves": "UCLLUDRURRRDCDRLUURLDLDCLULCRDDRCDLUUURLDDRLLLDRRDCUULLULDDCRRDDLLLLDDDCRDRRRDDLLLLDD",
+   "line": "WON after 85 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-opus-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 235786,
+   "api_ms": 235565,
+   "turns": 1,
+   "cost": 0.5196959999999999
+  }
+ ]
+}

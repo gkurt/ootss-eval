@@ -1,0 +1,53 @@
+24 runs via cli -> runs/sonnet55-starter
+[1/24] claude-sonnet-5-5 reasoning heroes2_13: WON · WON after 17 moves · 12s · 1503 out tok · $0.0172
+[2/24] claude-sonnet-5-5 reasoning heroes1_11_v2: WON · WON after 26 moves · 39s · 5113 out tok · $0.0557
+[3/24] claude-sonnet-5-5 reasoning mirror_2: WON · WON after 32 moves · 1m02s · 8094 out tok · $0.0899
+[4/24] claude-sonnet-5-5 reasoning heroes1_16_v3: WON · WON after 78 moves · 2m52s · 23595 out tok · $0.2409
+[5/24] claude-sonnet-5-5 reasoning one_fire_v2: WON · WON after 85 moves · 5m47s · 47628 out tok · $0.4815
+[6/24] claude-sonnet-5-5 reasoning mirror_7: WON · WON after 41 moves · 1m41s · 13671 out tok · $0.1457
+[7/24] claude-sonnet-5-5 reasoning mosh_pit_small: WON · WON after 56 moves · 12m01s · 102258 out tok · $1.0282
+[8/24] claude-sonnet-5-5 reasoning heroes1_18: WON · WON after 92 moves · 4m12s · 34058 out tok · $0.3454
+[9/24] claude-sonnet-5-5 reasoning mirror_3: WON · WON after 104 moves · 3m00s · 25100 out tok · $0.2619
+[10/24] claude-sonnet-5-5 reasoning heroes2_22_v2: no · NOT WON after 1 moves · 2m24s · 18719 out tok · $0.2684
+[11/24] claude-sonnet-5-5 coding heroes1_11_v2: WON · WON after 26 moves · 36s · 4542 out tok · $0.0681
+[12/24] claude-sonnet-5-5 coding heroes2_13: WON · WON after 17 moves · 13s · 1489 out tok · $0.0235
+[13/24] claude-sonnet-5-5 reasoning mirror_factory_v2: WON · WON after 97 moves · 6m54s · 49522 out tok · $0.5039
+[14/24] claude-sonnet-5-5 coding mirror_2: WON · WON after 34 moves · 1m06s · 8429 out tok · $0.1272
+[15/24] claude-sonnet-5-5 coding mosh_pit_small: WON · WON after 55 moves · 8m02s · 68934 out tok · $1.0092
+[16/24] claude-sonnet-5-5 coding heroes1_16_v3: WON · WON after 78 moves · 2m13s · 17764 out tok · $0.2528
+[17/24] claude-sonnet-5-5 coding one_fire_v2: WON · WON after 83 moves · 3m06s · 25424 out tok · $0.3702
+[18/24] claude-sonnet-5-5 coding mirror_7: WON · WON after 41 moves · 1m29s · 11277 out tok · $0.1682
+[19/24] claude-sonnet-5-5 coding heroes1_18: WON · WON after 87 moves · 2m25s · 19669 out tok · $0.2798
+[20/24] claude-sonnet-5-5 reasoning one_vs_three: no · Stopped: the 30-minute limit. · 30m00s · 0 out tok · $0
+[21/24] claude-sonnet-5-5 coding mirror_3: WON · WON after 102 moves · 3m34s · 28432 out tok · $0.4327
+[22/24] claude-sonnet-5-5 coding mirror_factory_v2: WON · WON after 106 moves · 5m23s · 42432 out tok · $0.661
+[23/24] claude-sonnet-5-5 coding heroes2_22_v2: WON · WON after 144 moves · 17m43s · 147453 out tok · $2.1504
+[24/24] claude-sonnet-5-5 coding one_vs_three: no · Stopped: the 30-minute limit. · 30m00s · 0 out tok · $0
+
+# Eval run sonnet55-starter
+
+| Model | Track | Solved | Tier 1 | Tier 2 | Tier 3 | Tier 4 | Tier 5 | Moves / ref | Answers | Tool calls | Time / run | Time to solve | Output tok | Input tok | Est. $ |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| claude-sonnet-5-5 | reasoning | 10/12 | 2/2 | 3/3 | 2/3 | 2/2 | 1/2 | 1.01 | 1.08 | 0 | 5m54s | 3m49s | 329,261 | 138,621 | 3.44 |
+| claude-sonnet-5-5 | coding | 11/12 | 2/2 | 3/3 | 2/3 | 2/2 | 2/2 | 1.02 | 0.92 | 2.2 | 6m19s | 4m09s | 375,845 | 2,003,151 | 5.54 |
+
+Per level (✓ k = won after k moves; ✗ refused/lost @k = move k failed; then the run's time):
+
+| Level | Tier | Ref | claude-sonnet-5-5 reasoning | claude-sonnet-5-5 coding |
+|---|---|---|---|---|
+| heroes1_11_v2 | 1 | 27 | ✓ 26 · 39s | ✓ 26 · 36s |
+| heroes2_13 | 1 | 17 | ✓ 17 · 12s | ✓ 17 · 13s |
+| heroes1_16_v3 | 2 | 80 | ✓ 78 · 2m52s | ✓ 78 · 2m13s |
+| mirror_2 | 2 | 27 | ✓ 32 · 1m02s | ✓ 34 · 1m06s |
+| mosh_pit_small | 2 | 45 | ✓ 56 · 12m01s | ✓ 55 · 8m02s |
+| mirror_7 | 3 | 36 | ✓ 41 · 1m41s | ✓ 41 · 1m29s |
+| one_fire_v2 | 3 | 79 | ✓ 85 · 5m47s | ✓ 83 · 3m06s |
+| one_vs_three | 3 | 90 | ✗ no answer · 30m00s | ✗ no answer · 30m00s |
+| heroes1_18 | 4 | 86 | ✓ 92 · 4m12s | ✓ 87 · 2m25s |
+| mirror_3 | 4 | 96 | ✓ 104 · 3m00s | ✓ 102 · 3m34s |
+| heroes2_22_v2 | 5 | 120 | ✗ not won · 2m24s | ✓ 144 · 17m43s |
+| mirror_factory_v2 | 5 | 281 | ✓ 97 · 6m54s | ✓ 106 · 5m23s |
+
+Moves / ref: winning moves over the reference solution's length (below 1 is shorter). Answers: answers given per run. Time to solve: from the start of a run to its winning answer, over the solved runs. Est. $: from list prices (Claude Code's estimate for --via cli).
+
+55m13s

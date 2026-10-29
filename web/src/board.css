@@ -1,0 +1,212 @@
+/* The board: a terrain canvas with an SVG overlay (src/lib/board.ts). */
+.board {
+  position: relative;
+  width: min(100%, calc(70vh * var(--ar, 1)));
+  margin: 0 auto;
+}
+.board canvas,
+.board svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.board svg {
+  overflow: visible;
+}
+
+.ent {
+  transition: transform var(--ms, 180ms) cubic-bezier(0.3, 0.7, 0.3, 1), opacity 0.25s;
+  transform-box: view-box;
+}
+.ent.gone {
+  opacity: 0 !important;
+}
+.ent .shadow {
+  fill: rgba(0, 0, 0, 0.35);
+}
+.ent.high .shadow {
+  fill: rgba(0, 0, 0, 0.25);
+  transform: translateY(0.12px) scale(1.15);
+}
+.ent.sunk {
+  opacity: 0.55;
+}
+.ent.sunk .body {
+  filter: saturate(0.5) brightness(0.8);
+}
+.ent.sunk .shadow {
+  display: none;
+}
+.board .glyph {
+  font-family: "Segoe UI Symbol", "Noto Sans Symbols 2", "DejaVu Sans", sans-serif;
+  font-weight: 700;
+}
+.ent .badge {
+  font-family: system-ui, sans-serif;
+  font-weight: 700;
+}
+.ent .sel-ring {
+  fill: none;
+  stroke: #fde68a;
+  stroke-width: 0.06;
+  opacity: 0;
+}
+.ent.selected .sel-ring {
+  opacity: 1;
+  animation: ring 1.4s ease-in-out infinite;
+}
+@keyframes ring {
+  0%,
+  100% {
+    stroke-opacity: 1;
+    stroke-width: 0.06;
+  }
+  50% {
+    stroke-opacity: 0.35;
+    stroke-width: 0.11;
+  }
+}
+.ent .crystal {
+  filter: drop-shadow(0 0 3px rgba(103, 232, 249, 0.6));
+}
+.ent .glass.magic {
+  filter: drop-shadow(0 0 3px rgba(125, 211, 252, 0.9));
+}
+
+.mirage {
+  animation: ghost-in 0.35s ease-out;
+}
+.mirage .beam {
+  fill: none;
+  stroke: rgba(125, 211, 252, 0.6);
+  stroke-width: 2.5;
+  stroke-dasharray: 4 5;
+  stroke-linejoin: round;
+}
+.mirage.invalid .beam {
+  stroke: rgba(248, 113, 113, 0.5);
+}
+.mirage .body,
+.mirage .shadow {
+  opacity: 0.5;
+}
+.mirage .body {
+  filter: saturate(0.6) brightness(1.2);
+}
+.mirage .mirage-cell {
+  fill: rgba(125, 211, 252, 0.08);
+  stroke: rgba(125, 211, 252, 0.6);
+  stroke-width: 0.03;
+  stroke-dasharray: 0.08 0.06;
+}
+.mirage.invalid .mirage-cell {
+  fill: rgba(248, 113, 113, 0.08);
+  stroke: rgba(248, 113, 113, 0.7);
+}
+@keyframes ghost-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fence {
+  stroke: #7c2d12;
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+.gate .gate-fill {
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.gate .gate-bars {
+  transition: opacity 0.2s;
+}
+.gate .gate-mark {
+  fill: #0b1020;
+  font-weight: 800;
+}
+.gate.open .gate-fill {
+  opacity: 0.1;
+}
+.gate.open .gate-bars {
+  opacity: 0;
+}
+.gate.open .gate-edge {
+  stroke-dasharray: 5 5;
+  opacity: 0.8;
+}
+.gate.open .gate-mark {
+  fill: #e2e8f0;
+  opacity: 0.6;
+}
+.plate .plate-core {
+  transition: opacity 0.2s;
+  opacity: 0.55;
+}
+.plate.pressed .plate-core {
+  opacity: 1;
+  filter: url(#glow);
+}
+.door.reached {
+  filter: url(#glow);
+}
+.door.reached path {
+  fill: rgba(251, 191, 36, 0.55);
+}
+
+.cell-mark {
+  fill: rgba(255, 255, 255, 0.08);
+  stroke: rgba(255, 255, 255, 0.85);
+  stroke-width: 2;
+  pointer-events: none;
+}
+.cell-tip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  width: max-content;
+  max-width: 260px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.12s;
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #e2e8f0;
+  background: rgba(11, 16, 32, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+}
+.cell-tip.show {
+  opacity: 1;
+}
+.cell-tip .tip-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.cell-tip .tip-name {
+  font-weight: 600;
+  font-size: 13px;
+}
+.cell-tip .tip-xy {
+  color: #94a3b8;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+.cell-tip .tip-detail {
+  color: #94a3b8;
+  margin-top: 2px;
+}
+.cell-tip ul {
+  margin: 6px 0 0;
+  padding-left: 14px;
+  list-style: disc;
+}

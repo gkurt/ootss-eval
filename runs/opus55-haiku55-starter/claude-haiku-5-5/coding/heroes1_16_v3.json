@@ -1,0 +1,103 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-haiku-5-5",
+ "track": "coding",
+ "level": "heroes1_16_v3",
+ "tier": 2,
+ "reference_length": 80,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 1,
+  "budget": 40,
+  "sandbox": true,
+  "minutes": 30
+ },
+ "started": "2026-10-28T23:26:50.930Z",
+ "seconds": 253,
+ "api_seconds": 251.6,
+ "answer": "RURRRDLULRULDLLCCUUUDDCUDCUCCUDCCUUURRRRRRRLLLLLLLDCCUUULLLLLLLCDDCUDCRRRCUUURRRCUL",
+ "result": {
+  "won": true,
+  "wonAt": 83,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 83 moves"
+ },
+ "attempts": [
+  {
+   "moves": "RURRRDLULRULDLLCCUUUDDCUDCUCCUDCCUUURRRRRRRLLLLLLLDCCUUULLLLLLLCDDCUDCRRRCUUURRRCUL",
+   "won": true,
+   "wonAt": 83,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 83 moves",
+   "t": 252.2
+  }
+ ],
+ "tool_calls": 1,
+ "js_runs": 0,
+ "requests": 2,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 4,
+  "output": 59817,
+  "cache_read": 17384,
+  "cache_write": 62971,
+  "thinking": 59187
+ },
+ "cost": 0.0427,
+ "events": [
+  {
+   "t": 249.3,
+   "type": "tool",
+   "id": "toolu_015pWpuqCzmKDSdLFniDiBHF",
+   "name": "play",
+   "n": 1,
+   "moves": "RURRRDLULRULDLLCCUUUDDCUDCUCCUDCCUUURRRRRRRLLLLLLLDCCUUULLLLLLLCDDCUDCRRRCUUURRRCUL",
+   "output": "   1 R (east)        wizard#0 (4,6)->(5,6)\n   2 U (north)       wizard#0 (5,6)->(5,5)\n   3 R (east)        wizard#0 (5,5)->(6,5)\n   4 R (east)        wizard#0 (6,5)->(7,5)\n   5 R (east)        wizard#0 (7,5)->(8,5)\n   6 D (south)       wizard#0 (8,5)->(8,6); crystal#4 (8,6)->(8,5)\n   7 L (west)        wizard#0 (8,6)->(7,6)\n   8 U (north)       wizard#0 (7,6)->(7,5)\n   9 L (west)        wizard#0 (7,5)->(6,5)\n  10 R (east)        wizard#0 (6,5)->(8,5); crystal#4 (8,5)->(6,5)\n  11 U (north)       wizard#0 (8,5)->(8,4)\n  12 L (west)        wizard#0 (8,4)->(7,4)\n  13 D (south)       wizard#0 (7,4)->(7,5)\n  14 L (west)        wizard#0 (7,5)->(6,5); crystal#4 (6,5)->(7,5)\n  15 L (west)        wizard#0 (6,5)->(5,5); gate at (10,4) opens; gate at (2,4) opens\n  16 C (next group)  selected group 2\n  17 C (next group)  selected group 3\n  18 U (north)       thief#2 (2,6)->(2,5)\n  19 U (north)       thief#2 (2,5)->(2,4)\n  20 U (north)       thief#2 (2,4)->(2,3)\n  21 D (south)       thief#2 (2,3)->(2,4); crystal#3 (2,2)->(2,3)\n  22 D (south)       thief#2 (2,4)->(2,5); crystal#3 (2,3)->(2,4)\n  23 C (next group)  selected group 1\n  24 U (north)       wizard#0 (5,5)->(5,4); crystal#3 is gone; gate at (10,4) closes; gate at (2,4) closes\n  25 D (south)       wizard#0 (5,4)->(5,5); gate at (10,4) opens; gate at (2,4) opens\n  26 C (next group)  selected group 2\n  27 U (north)       crystal#1 (10,5)->(10,4); warrior#8 (10,6)->(10,5)\n  28 C (next group)  selected group 3\n  29 C (next group)  selected group 1\n  30 U (north)       wizard#0 (5,5)->(5,4); crystal#1 is gone; gate at (10,4) closes; gate at (2,4) closes\n  31 D (south)       wizard#0 (5,4)->(5,5); gate at (10,4) opens; gate at (2,4) opens\n  32 C (next group)  selected group 2\n  33 C (next group)  selected group 3\n  34 U (north)       thief#2 (2,5)->(2,4)\n  35 U (north)       thief#2 (2,4)->(2,3)\n  36 U (north)       thief#2 (2,3)->(2,2)\n  37 R (east)        thief#2 (2,2)->(3,2)\n  38 R (east)        thief#2 (3,2)->(4,2)\n  39 R (east)        thief#2 (4,2)->(5,2)\n  40 R (east)        thief#2 (5,2)->(6,2)\n  41 R (east)        thief#2 (6,2)->(7,2)\n  42 R (east)        thief#2 (7,2)->(8,2)\n  43 R (east)        thief#2 (8,2)->(9,2)\n  44 L (west)        thief#2 (9,2)->(8,2); crystal#11 (10,2)->(9,2)\n  45 L (west)        thief#2 (8,2)->(7,2); crystal#11 (9,2)->(8,2)\n  46 L (west)        thief#2 (7,2)->(6,2); crystal#11 (8,2)->(7,2)\n  47 L (west)        thief#2 (6,2)->(5,2); crystal#11 (7,2)->(6,2)\n  48 L (west)        thief#2 (5,2)->(4,2); crystal#11 (6,2)->(5,2)\n  49 L (west)        thief#2 (4,2)->(3,2); crystal#11 (5,2)->(4,2)\n  50 L (west)        thief#2 (3,2)->(2,2); crystal#11 (4,2)->(3,2)\n  51 D (south)       thief#2 (2,2)->(2,3)\n  52 C (next group)  selected group 1\n  53 C (next group)  selected group 2\n  54 U (north)       warrior#8 (10,5)->(10,4)\n  55 U (north)       warrior#8 (10,4)->(10,3)\n  56 U (north)       warrior#8 (10,3)->(10,2)\n  57 L (west)        warrior#8 (10,2)->(9,2)\n  58 L (west)        warrior#8 (9,2)->(8,2)\n  59 L (west)        warrior#8 (8,2)->(7,2)\n  60 L (west)        warrior#8 (7,2)->(6,2)\n  61 L (west)        warrior#8 (6,2)->(5,2)\n  62 L (west)        warrior#8 (5,2)->(4,2)\n  63 L (west)        warrior#8 (4,2)->(3,2); crystal#11 (3,2)->(2,2)\n  64 C (next group)  selected group 3\n  65 D (south)       thief#2 (2,3)->(2,4); crystal#11 (2,2)->(2,3)\n  66 D (south)       thief#2 (2,4)->(2,5); crystal#11 (2,3)->(2,4)\n  67 C (next group)  selected group 1\n  68 U (north)       wizard#0 (5,5)->(5,4); crystal#11 is gone; gate at (10,4) closes; gate at (2,4) closes\n  69 D (south)       wizard#0 (5,4)->(5,5); gate at (10,4) opens; gate at (2,4) opens\n  70 C (next group)  selected group 2\n  71 R (east)        warrior#8 (3,2)->(4,2)\n  72 R (east)        warrior#8 (4,2)->(5,2)\n  73 R (east)        warrior#8 (5,2)->(6,2)\n  74 C (next group)  selected group 3\n  75 U (north)       thief#2 (2,5)->(2,4)\n  76 U (north)       thief#2 (2,4)->(2,3)\n  77 U (north)       thief#2 (2,3)->(2,2)\n  78 R (east)        thief#2 (2,2)->(3,2)\n  79 R (east)        thief#2 (3,2)->(4,2)\n  80 R (east)        thief#2 (4,2)->(5,2)\n  81 C (next group)  selected group 1\n  82 U (north)       wizard#0 (5,5)->(5,4); gate at (10,4) closes; gate at (2,4) closes\n  83 L (west)        wizard#0 (5,4)->(4,4)\nWON · heroes on doors 3/3 (heroes: 3) · selected group 1 of 3\n(rule-tool calls left: 39)",
+   "done": 249.3,
+   "check": {
+    "won": true,
+    "failedAt": null,
+    "how": null
+   }
+  },
+  {
+   "t": 252.2,
+   "type": "text",
+   "text": "The level is won: all three heroes end on doors, and the game reports \"WON · heroes on doors 3/3\".\n\nThe plan had three stages:\n\n1. **Open both gates.** The wizard is sealed in the middle room, so it can only press a plate. It swapped the crystal at (8,6) onto the (7,5) plate using beam swaps, then stepped onto (5,5). With both plates pressed, both gates opened.\n2. **Clear the blocking crystals.** The crystals at (2,2), (10,5), (10,2) and the one that was pushed into (2,4) and (10,4) sit where nothing can push them. The thief pulled the (2,2) crystal into the (2,4) gate cell, and the wizard released the plate to crush it. The warrior pushed the (10,5) crystal into the (10,4) gate and crushed it the same way. The thief dragged the (10,2) crystal west along row 2, and the warrior pushed it to (2,2), where the thief pulled it into the gate and crushed it.\n3. **Reach the doors.** The warrior walked to (6,2), the thief to (5,2), and the wizard stepped to (4,4) after releasing the plate.\n\nChecked with `play` on the full sequence: 83 moves, won on the last one.\n\n<moves>RURRRDLULRULDLL CCUUUDDCUD CUCCUD CCUUURRRRRRRLLLLLLLD CCUUULLLLLLL CDDCUD CRRR CUUURRR CUL</moves>"
+  },
+  {
+   "t": 252.2,
+   "type": "answer",
+   "moves": "RURRRDLULRULDLLCCUUUDDCUDCUCCUDCCUUURRRRRRRLLLLLLLDCCUUULLLLLLLCDDCUDCRRRCUUURRRCUL",
+   "line": "WON after 83 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-haiku-5-5",
+  "tools": [
+   "mcp__ootss__check",
+   "mcp__ootss__play",
+   "mcp__ootss__run_js",
+   "mcp__ootss__show",
+   "mcp__ootss__try"
+  ],
+  "mcp": [
+   "ootss:connected"
+  ]
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 251714,
+   "api_ms": 251568,
+   "turns": 2,
+   "cost": 0.04267694
+  }
+ ]
+}

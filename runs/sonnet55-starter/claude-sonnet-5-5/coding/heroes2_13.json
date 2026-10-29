@@ -1,0 +1,103 @@
+{
+ "run": "sonnet55-starter",
+ "model": "claude-sonnet-5-5",
+ "track": "coding",
+ "level": "heroes2_13",
+ "tier": 1,
+ "reference_length": 17,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 1,
+  "budget": 40,
+  "sandbox": true,
+  "minutes": 30
+ },
+ "started": "2026-10-28T16:53:16.313Z",
+ "seconds": 12.5,
+ "api_seconds": 11.1,
+ "answer": "RRRRRRRDDDLLLLLLU",
+ "result": {
+  "won": true,
+  "wonAt": 17,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 17 moves"
+ },
+ "attempts": [
+  {
+   "moves": "RRRRRRRDDDLLLLLLU",
+   "won": true,
+   "wonAt": 17,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 17 moves",
+   "t": 11.8
+  }
+ ],
+ "tool_calls": 1,
+ "js_runs": 0,
+ "requests": 2,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 4,
+  "output": 1489,
+  "cache_read": 18091,
+  "cache_write": 1692,
+  "thinking": 1229
+ },
+ "cost": 0.0235,
+ "events": [
+  {
+   "t": 9.6,
+   "type": "tool",
+   "id": "toolu_011NbhD5CbF9gwUq753LxGu8",
+   "name": "check",
+   "n": 1,
+   "moves": "RRRRRRRDDDLLLLLLU",
+   "output": "WON after 17 moves\n(rule-tool calls left: 39)",
+   "done": 9.7,
+   "check": {
+    "won": true,
+    "failedAt": null,
+    "how": null
+   }
+  },
+  {
+   "t": 11.8,
+   "type": "text",
+   "text": "The sequence wins: the checker reported WON after 17 moves.\n\nThe cleric can't be killed by goblins or the dragon, so it only has to find a route to the door at (4,5). The door is boxed in by crystals on three sides, and the cleric can't push them. The way in is from below, at (4,6). The route:\n\n1. Walk east along row 3 to (10,3).\n2. Go south down column 10 to (10,6).\n3. Walk west along row 6 to (4,6), then step north onto the door.\n\n<moves>RRRRRRRDDDLLLLLLU</moves>"
+  },
+  {
+   "t": 11.8,
+   "type": "answer",
+   "moves": "RRRRRRRDDDLLLLLLU",
+   "line": "WON after 17 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-sonnet-5-5",
+  "tools": [
+   "mcp__ootss__check",
+   "mcp__ootss__play",
+   "mcp__ootss__run_js",
+   "mcp__ootss__show",
+   "mcp__ootss__try"
+  ],
+  "mcp": [
+   "ootss:connected"
+  ]
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 11251,
+   "api_ms": 11105,
+   "turns": 2,
+   "cost": 0.0234751
+  }
+ ]
+}

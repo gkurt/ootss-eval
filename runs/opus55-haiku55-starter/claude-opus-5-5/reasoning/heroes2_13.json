@@ -1,0 +1,80 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-opus-5-5",
+ "track": "reasoning",
+ "level": "heroes2_13",
+ "tier": 1,
+ "reference_length": 17,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T22:30:16.129Z",
+ "seconds": 14.4,
+ "api_seconds": 12.8,
+ "answer": "RRRRRRRDDDLLLLLLU",
+ "result": {
+  "won": true,
+  "wonAt": 17,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 17 moves"
+ },
+ "attempts": [
+  {
+   "moves": "RRRRRRRDDDLLLLLLU",
+   "won": true,
+   "wonAt": 17,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 17 moves",
+   "t": 13.7
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 2,
+  "output": 1468,
+  "cache_read": 6800,
+  "cache_write": 1034,
+  "thinking": 1195
+ },
+ "cost": 0.039,
+ "events": [
+  {
+   "t": 13.7,
+   "type": "text",
+   "text": "The cleric is the only hero, and goblins and dragons cannot kill a living cleric. So the only thing to solve is reaching the door at (4,5).\n\nThree of the door's four neighbours hold crystals: (4,4), (3,5) and (5,5). The cleric cannot push, so the only way in is from (4,6) below the door.\n\nRoute from (3,3):\n1. **R ×7:** walk east along row 3 to (10,3).\n2. **D ×3:** walk south through (10,4) and (10,5) to (10,6).\n3. **L ×6:** walk west along row 6 to (4,6). The dragon's breath along row 6 and the goblins next to the path cannot harm the cleric.\n4. **U:** step onto the door at (4,5).\n\n<moves>RRRRRRRDDDLLLLLLU</moves>"
+  },
+  {
+   "t": 13.7,
+   "type": "answer",
+   "moves": "RRRRRRRDDDLLLLLLU",
+   "line": "WON after 17 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-opus-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 12958,
+   "api_ms": 12838,
+   "turns": 1,
+   "cost": 0.039
+  }
+ ]
+}

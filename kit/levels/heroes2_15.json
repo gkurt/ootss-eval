@@ -1,0 +1,92 @@
+{
+ "level": "heroes2_15",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 2,
+ "heroes": [
+  {
+   "id": 2,
+   "kind": "hero",
+   "role": "warrior",
+   "group": 1,
+   "x": 2,
+   "y": 2,
+   "layer": 0
+  },
+  {
+   "id": 4,
+   "kind": "hero",
+   "role": "cleric",
+   "group": 2,
+   "x": 4,
+   "y": 2,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 0,
+   "kind": "goblin",
+   "facing": "east",
+   "x": 7,
+   "y": 2,
+   "layer": 0
+  },
+  {
+   "id": 1,
+   "kind": "goblin",
+   "facing": "west",
+   "x": 9,
+   "y": 2,
+   "layer": 0
+  },
+  {
+   "id": 3,
+   "kind": "goblin",
+   "facing": "north",
+   "x": 9,
+   "y": 4,
+   "layer": 0
+  },
+  {
+   "id": 5,
+   "kind": "goblin",
+   "facing": "west",
+   "x": 7,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 8,
+   "kind": "goblin",
+   "facing": "north",
+   "x": 10,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 9,
+   "kind": "goblin",
+   "facing": "east",
+   "x": 2,
+   "y": 5,
+   "layer": 0
+  }
+ ],
+ "gates": [],
+ "plates": [],
+ "doors": [
+  {
+   "x": 9,
+   "y": 5,
+   "occupied": false
+  },
+  {
+   "x": 11,
+   "y": 5,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

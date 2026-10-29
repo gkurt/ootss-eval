@@ -1,0 +1,103 @@
+{
+ "run": "sonnet55-starter",
+ "model": "claude-sonnet-5-5",
+ "track": "coding",
+ "level": "heroes1_18",
+ "tier": 4,
+ "reference_length": 86,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 1,
+  "budget": 40,
+  "sandbox": true,
+  "minutes": 30
+ },
+ "started": "2026-10-28T17:06:05.987Z",
+ "seconds": 144.5,
+ "api_seconds": 143,
+ "answer": "CDDLDDLDLLLCCDDRDDDRRRRCCDCCUCLLLULLDRRRRLLLCCDCDDDRDRRURRDRRURUUUCCRUUUUULCCLLLLUUUURU",
+ "result": {
+  "won": true,
+  "wonAt": 87,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 87 moves"
+ },
+ "attempts": [
+  {
+   "moves": "CDDLDDLDLLLCCDDRDDDRRRRCCDCCUCLLLULLDRRRRLLLCCDCDDDRDRRURRDRRURUUUCCRUUUUULCCLLLLUUUURU",
+   "won": true,
+   "wonAt": 87,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 87 moves",
+   "t": 143.7
+  }
+ ],
+ "tool_calls": 1,
+ "js_runs": 0,
+ "requests": 2,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 4,
+  "output": 19669,
+  "cache_read": 17342,
+  "cache_write": 20340,
+  "thinking": 19073
+ },
+ "cost": 0.2798,
+ "events": [
+  {
+   "t": 139.6,
+   "type": "tool",
+   "id": "toolu_01Ezg6mhzzMj3hkynHMp25dk",
+   "name": "check",
+   "n": 1,
+   "moves": "CDDLDDLDLLLCCDDRDDDRRRRCCDCCUCLLLULLDRRRRLLLCCDCDDDRDRRURRDRRURUUUCCRUUUUULCCLLLLUUUURU",
+   "output": "WON after 87 moves\n(rule-tool calls left: 39)",
+   "done": 139.6,
+   "check": {
+    "won": true,
+    "failedAt": null,
+    "how": null
+   }
+  },
+  {
+   "t": 143.7,
+   "type": "text",
+   "text": "The level is won: the checker reported WON after 87 moves.\n\nThe idea is that the crystal has to end up on a plate so that all three plates stay pressed while the heroes move.\n\n1. The wizard walks to the plate at (2,6). The warrior and thief take the plates at (6,6) and (10,6). With all three plates pressed, both gates open.\n2. The wizard fires up column 2 and swaps with the crystal. The crystal now sits on (2,6), and the wizard is inside the closed-off top-left room.\n3. The warrior pushes the crystal east along row 6 onto (6,6), then walks back and stands on (2,6).\n4. The wizard fires down column 2 and swaps with the warrior. The warrior is now inside the top-left room and the wizard is on (2,6).\n5. The warrior walks out through the open gate, around the middle room and through the right gate to the door at (10,2). The wizard, crystal and thief keep all three plates pressed while he does this.\n6. The wizard swaps with the crystal, which stays on (2,6), then walks to the door at (5,1). The thief walks to the door at (7,1).\n\n<moves>CDDLDDLDLLL CCDDRDDDRRRR CCD CCU C LLLULLDRRRRLLL CCD C DDDRDRRURRDRRURUUU CCRUUUUULCCLLLLUUUURU</moves>"
+  },
+  {
+   "t": 143.7,
+   "type": "answer",
+   "moves": "CDDLDDLDLLLCCDDRDDDRRRRCCDCCUCLLLULLDRRRRLLLCCDCDDDRDRRURRDRRURUUUCCRUUUUULCCLLLLUUUURU",
+   "line": "WON after 87 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-sonnet-5-5",
+  "tools": [
+   "mcp__ootss__check",
+   "mcp__ootss__play",
+   "mcp__ootss__run_js",
+   "mcp__ootss__show",
+   "mcp__ootss__try"
+  ],
+  "mcp": [
+   "ootss:connected"
+  ]
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 143186,
+   "api_ms": 143024,
+   "turns": 2,
+   "cost": 0.27979220000000005
+  }
+ ]
+}

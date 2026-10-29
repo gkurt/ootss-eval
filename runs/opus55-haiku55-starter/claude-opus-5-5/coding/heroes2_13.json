@@ -1,0 +1,103 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-opus-5-5",
+ "track": "coding",
+ "level": "heroes2_13",
+ "tier": 1,
+ "reference_length": 17,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 1,
+  "budget": 40,
+  "sandbox": true,
+  "minutes": 30
+ },
+ "started": "2026-10-28T22:38:59.499Z",
+ "seconds": 14.5,
+ "api_seconds": 13,
+ "answer": "RRRRRRRDDDLLLLLLU",
+ "result": {
+  "won": true,
+  "wonAt": 17,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 17 moves"
+ },
+ "attempts": [
+  {
+   "moves": "RRRRRRRDDDLLLLLLU",
+   "won": true,
+   "wonAt": 17,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 17 moves",
+   "t": 13.7
+  }
+ ],
+ "tool_calls": 1,
+ "js_runs": 0,
+ "requests": 2,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 4,
+  "output": 1215,
+  "cache_read": 17342,
+  "cache_write": 2059,
+  "thinking": 857
+ },
+ "cost": 0.0443,
+ "events": [
+  {
+   "t": 10.1,
+   "type": "tool",
+   "id": "toolu_011HMszi4ZxhHuHCt82zz8AT",
+   "name": "check",
+   "n": 1,
+   "moves": "RRRRRRRDDDLLLLLLU",
+   "output": "WON after 17 moves\n(rule-tool calls left: 39)",
+   "done": 10.1,
+   "check": {
+    "won": true,
+    "failedAt": null,
+    "how": null
+   }
+  },
+  {
+   "t": 13.7,
+   "type": "text",
+   "text": "I checked this sequence with the level checker and it wins after 17 moves.\n\nThe cleric is the only hero, and goblins and dragons can't kill a living cleric, so the monsters don't matter here. The door at (4,5) has crystals on three sides: west (3,5), north (4,4) and east (5,5). The only way in is from the south, at (4,6).\n\nThe cleric can't reach it from the west: below the start, (3,4) is boxed in by crystals. So the cleric goes the long way:\n1. **East:** seven steps along row 3 to (10,3).\n2. **South:** three steps down the east column to (10,6).\n3. **West:** six steps along row 6 to (4,6). This walks into the dragon's line of fire, but the cleric is immune.\n4. **North:** one step up onto the door.\n\n<moves>RRRRRRR DDD LLLLLL U</moves>"
+  },
+  {
+   "t": 13.7,
+   "type": "answer",
+   "moves": "RRRRRRRDDDLLLLLLU",
+   "line": "WON after 17 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-opus-5-5",
+  "tools": [
+   "mcp__ootss__check",
+   "mcp__ootss__play",
+   "mcp__ootss__run_js",
+   "mcp__ootss__show",
+   "mcp__ootss__try"
+  ],
+  "mcp": [
+   "ootss:connected"
+  ]
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 13160,
+   "api_ms": 13019,
+   "turns": 2,
+   "cost": 0.0442564
+  }
+ ]
+}

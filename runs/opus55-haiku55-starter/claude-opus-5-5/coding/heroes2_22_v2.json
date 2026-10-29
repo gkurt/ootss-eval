@@ -1,0 +1,118 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-opus-5-5",
+ "track": "coding",
+ "level": "heroes2_22_v2",
+ "tier": 5,
+ "reference_length": 120,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 1,
+  "budget": 40,
+  "sandbox": true,
+  "minutes": 30
+ },
+ "started": "2026-10-28T22:49:49.675Z",
+ "seconds": 754.4,
+ "api_seconds": 753,
+ "answer": "CDDUUULDDRDDLDULDDRLLLULLDRUUCCUUULLULLLLLDCCCULCURRRRRDCCCRUURRDDUCCCLRRRCCULLLUCCDLLLLURDLDCCDRDDDDRCDDDRRRRUUULCRRRDDLDCLLLUUUR",
+ "result": {
+  "won": true,
+  "wonAt": 130,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 130 moves"
+ },
+ "attempts": [
+  {
+   "moves": "CDDUUULDDRDDLDULDDRLLLULLDRUUCCUUULLULLLLLDCCCULCURRRRRDCCCRUURRDDUCCCLRRRCCULLLUCCDLLLLURDLDCCDRDDDDRCDDDRRRRUUULCRRRDDLDCLLLUUUR",
+   "won": true,
+   "wonAt": 130,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 130 moves",
+   "t": 753.7
+  }
+ ],
+ "tool_calls": 2,
+ "js_runs": 0,
+ "requests": 3,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 6,
+  "output": 81233,
+  "cache_read": 109750,
+  "cache_write": 84548,
+  "thinking": 80037
+ },
+ "cost": 2.323,
+ "events": [
+  {
+   "t": 740.6,
+   "type": "tool",
+   "id": "toolu_017M2fMtgESLmA6j43xGTQvZ",
+   "name": "play",
+   "n": 1,
+   "moves": "CDDUUULDDRDDLDULDDRLLLULLDRUUCCUUULLULLLLLDCCCULCURRRRRDCCCRUURRDDUCCCLRRRCCULLLUCCCDLLLLURDLDCCDRDDDDRCDDDRRRRUUULCRRRDDLDCLLLUUUR",
+   "output": "   1 C (next group)  selected group 2\n   2 D (south)       thief#3 (11,3)->(11,4)\n   3 D (south)       thief#3 (11,4)->(11,5)\n   4 U (north)       thief#3 (11,5)->(11,4); crystal#8 (11,6)->(11,5); dragon#7 is gone; dragon#9 is gone\n   5 U (north)       thief#3 (11,4)->(11,3); crystal#8 (11,5)->(11,4)\n   6 U (north)       thief#3 (11,3)->(11,2); crystal#8 (11,4)->(11,3)\n   7 L (west)        thief#3 (11,2)->(10,2)\n   8 D (south)       thief#3 (10,2)->(10,3)\n   9 D (south)       thief#3 (10,3)->(10,4)\n  10 R (east)        thief#3 (10,4)->(11,4)\n  11 D (south)       thief#3 (11,4)->(11,5); crystal#8 (11,3)->(11,4)\n  12 D (south)       thief#3 (11,5)->(11,6); crystal#8 (11,4)->(11,5)\n  13 L (west)        thief#3 (11,6)->(10,6)\n  14 D (south)       thief#3 (10,6)->(10,7)\n  15 U (north)       thief#3 (10,7)->(10,6); dragon#13 (10,8)->(10,7)\n  16 L (west)        thief#3 (10,6)->(9,6)\n  17 D (south)       thief#3 (9,6)->(9,7)\n  18 D (south)       thief#3 (9,7)->(9,8)\n  19 R (east)        thief#3 (9,8)->(10,8)\n  20 L (west)        thief#3 (10,8)->(9,8); crystal#14 (11,8)->(10,8)\n  21 L (west)        thief#3 (9,8)->(8,8); crystal#14 (10,8)->(9,8)\n  22 L (west)        thief#3 (8,8)->(7,8); crystal#14 (9,8)->(8,8)\n  23 U (north)       thief#3 (7,8)->(7,7)\n  24 L (west)        thief#3 (7,7)->(6,7)\n  25 L (west)        thief#3 (6,7)->(5,7)\n  26 D (south)       thief#3 (5,7)->(5,8)\n  27 R (east)        thief#3 (5,8)->(6,8); dragon#12 (4,8)->(5,8)\n  28 U (north)       thief#3 (6,8)->(6,7)\n  29 U (north)       thief#3 (6,7)->(6,6)\n  30 C (next group)  selected group 3\n  31 C (next group)  selected group 4\n  32 U (north)       cleric#20 (11,11)->(11,10)\n  33 U (north)       cleric#20 (11,10)->(11,9)\n  34 U (north)       cleric#20 (11,9)->(11,8)\n  35 L (west)        cleric#20 (11,8)->(10,8)\n  36 L (west)        cleric#20 (10,8)->(9,8)\n  37 U (north)       cleric#20 (9,8)->(9,7)\n  38 L (west)        cleric#20 (9,7)->(8,7)\n  39 L (west)        cleric#20 (8,7)->(7,7)\n  40 L (west)        cleric#20 (7,7)->(6,7)\n  41 L (west)        cleric#20 (6,7)->(5,7)\n  42 L (west)        cleric#20 (5,7)->(4,7)\n  43 D (south)       cleric#20 (4,7)->(4,8)\n  44 C (next group)  selected group 1\n  45 C (next group)  selected group 2\n  46 C (next group)  selected group 3\n  47 U (north)       crystal#11 (3,8)->(3,11); wizard#17 (3,11)->(3,8)\n  48 L (west)        dragon#10 (2,8)->(3,8); wizard#17 (3,8)->(2,8)\n  49 C (next group)  selected group 4\n  50 U (north)       cleric#20 (4,8)->(4,7); dragon#10 is gone; dragon#12 is gone\n  51 R (east)        cleric#20 (4,7)->(5,7)\n  52 R (east)        cleric#20 (5,7)->(6,7)\n  53 R (east)        cleric#20 (6,7)->(7,7)\n  54 R (east)        cleric#20 (7,7)->(8,7)\n  55 R (east)        cleric#20 (8,7)->(9,7)\n  56 D (south)       cleric#20 (9,7)->(9,8)\n  57 C (next group)  selected group 1\n  58 C (next group)  selected group 2\n  59 C (next group)  selected group 3\n  60 R (east)        crystal#14 (8,8)->(2,8); wizard#17 (2,8)->(8,8)\n  61 U (north)       wizard#17 (8,8)->(8,7)\n  62 U (north)       wizard#17 (8,7)->(8,6)\n  63 R (east)        wizard#17 (8,6)->(9,6)\n  64 R (east)        wizard#17 (9,6)->(10,6)\n  65 D (south)       dragon#13 (10,7)->(10,6); wizard#17 (10,6)->(10,7)\n  66 D (south)       wizard#17 (10,7)->(10,8)\n  67 U (north)       wizard#17 (10,8)->(10,6); dragon#13 is gone; dragon#15 is gone\n  68 C (next group)  selected group 4\n  69 C (next group)  selected group 1\n  70 C (next group)  selected group 2\n  71 L (west)        thief#3 (6,6)->(5,6)\n  72 R (east)        thief#3 (5,6)->(6,6); dragon#6 (4,6)->(5,6)\n  73 R (east)        thief#3 (6,6)->(7,6); dragon#6 (5,6)->(6,6)\n  74 R (east)        thief#3 (7,6)->(8,6); dragon#6 (6,6)->(7,6)\n  75 C (next group)  selected group 3\n  76 C (next group)  selected group 4\n  77 U (north)       cleric#20 (9,8)->(9,7)\n  78 L (west)        cleric#20 (9,7)->(8,7)\n  79 L (west)        cleric#20 (8,7)->(7,7)\n  80 L (west)        cleric#20 (7,7)->(6,7)\n  81 U (north)       cleric#20 (6,7)->(6,6)\n  82 C (next group)  selected group 1\n  83 C (next group)  selected group 2\n  84 C (next group)  selected group 3\n  85 D (south)       wizard#17 (10,6)->(10,7)\n  86 L (west)        wizard#17 (10,7)->(9,7)\n  87 L (west)        wizard#17 (9,7)->(8,7)\n  88 L (west)        wizard#17 (8,7)->(7,7)\n  89 L (west)        wizard#17 (7,7)->(6,7)\n  90 U (north)       wizard#17 (6,7)->(6,6); cleric#20 (6,6)->(6,7)\n  91 R (east)        dragon#6 (7,6)->(6,6); wizard#17 (6,6)->(7,6)\n  92 D (south)       wizard#17 (7,6)->(7,7)\n  93 L (west)        wizard#17 (7,7)->(6,7); cleric#20 (6,7)->(7,7)\n  94 D (south)       wizard#17 (6,7)->(6,8)\n  95 C (next group)  selected group 4\n  96 C (next group)  selected group 1\n  97 D (south)       warrior#0 (3,3)->(3,4)\n  98 R (east)        warrior#0 (3,4)->(4,4)\n  99 D (south)       REFUSED: blocked: nothing can move that way\nnot won · heroes on doors 0/4 (heroes: 4) · selected group 1 of 4\n(rule-tool calls left: 39)",
+   "done": 740.6,
+   "check": {
+    "won": false,
+    "failedAt": 99,
+    "how": "refused"
+   }
+  },
+  {
+   "t": 745.6,
+   "type": "tool",
+   "id": "toolu_01S8ddNPLniwV1TrczK76Hax",
+   "name": "check",
+   "n": 2,
+   "moves": "CDDUUULDDRDDLDULDDRLLLULLDRUUCCUUULLULLLLLDCCCULCURRRRRDCCCRUURRDDUCCCLRRRCCULLLUCCDLLLLURDLDCCDRDDDDRCDDDRRRRUUULCRRRDDLDCLLLUUUR",
+   "output": "WON after 130 moves\n(rule-tool calls left: 38)",
+   "done": 745.6,
+   "check": {
+    "won": true,
+    "failedAt": null,
+    "how": null
+   }
+  },
+  {
+   "t": 753.7,
+   "type": "text",
+   "text": "I found a winning sequence and ran it through the checker, which confirmed the win (130 inputs, counting the `C` group switches).\n\nThe two gates only open once all eight dragons are dead. Each pair of dragons facing each other dies as soon as nothing stands between them, so the plan is to clear the line between every pair.\n\n1. **Thief:**\n   - It pulls the crystal at (11,6) up, so dragons 7 and 9 kill each other.\n   - It drags the crystal into its room and back out to free itself.\n   - It pulls dragon 13 up to (10,7).\n   - It moves the crystal at (11,8) west to (8,8), where it still blocks dragon 15's breath, which frees the cleric.\n   - It pulls dragon 12 east to (5,8).\n2. **Cleric:** it walks to (4,8). The cleric can't be killed, and it protects any hero next to it.\n3. **Wizard:**\n   - It swaps with the crystal at (3,8). It survives there because the cleric is beside it.\n   - It then swaps with dragon 10, which ends up at (3,8).\n   - When the cleric steps away, dragons 10 and 12 kill each other.\n4. **Wizard and cleric:**\n   - The cleric stands at (9,8), and the wizard swaps with the crystal at (8,8).\n   - The wizard then moves dragon 13 down to (10,6) and back up into (10,8). This puts it on row 8 facing dragon 15, and the two kill each other.\n5. **Thief and cleric:**\n   - The thief drags dragon 6 east to (7,6), and the cleric stands at (6,6) to block its breath.\n   - The thief pulls the crystal at (3,6) out of row 6 and down to (4,7).\n   - When the cleric steps off row 6, dragons 4 and 6 kill each other, and both gates open.\n6. **To the doors:**\n   - The warrior walks out through (3,6) and the top gate to door (6,3).\n   - The thief goes through the bottom gate to (6,11).\n   - The cleric goes to (8,11).\n   - The wizard goes to (8,3).\n\n<moves>C DDUUULDDRDD LDU LDDRLLL ULLDR UU CC UUULLULLLLLD CCC UL C U RRRRRD CCC RUURRDDU CCC LRRR CC ULLLU CC DLLLLURDLD CC D RDDDDR C DDDRRRRUUUL C RRRDDLD C LLLUUUR</moves>"
+  },
+  {
+   "t": 753.7,
+   "type": "answer",
+   "moves": "CDDUUULDDRDDLDULDDRLLLULLDRUUCCUUULLULLLLLDCCCULCURRRRRDCCCRUURRDDUCCCLRRRCCULLLUCCDLLLLURDLDCCDRDDDDRCDDDRRRRUUULCRRRDDLDCLLLUUUR",
+   "line": "WON after 130 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-opus-5-5",
+  "tools": [
+   "mcp__ootss__check",
+   "mcp__ootss__play",
+   "mcp__ootss__run_js",
+   "mcp__ootss__show",
+   "mcp__ootss__try"
+  ],
+  "mcp": [
+   "ootss:connected"
+  ]
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 753191,
+   "api_ms": 752987,
+   "turns": 3,
+   "cost": 2.3230180000000002
+  }
+ ]
+}

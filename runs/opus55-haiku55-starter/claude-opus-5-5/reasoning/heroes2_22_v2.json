@@ -1,0 +1,80 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-opus-5-5",
+ "track": "reasoning",
+ "level": "heroes2_22_v2",
+ "tier": 5,
+ "reference_length": 120,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T22:36:30.437Z",
+ "seconds": 957.2,
+ "api_seconds": 955.8,
+ "answer": "CDDUUULDDRDDLDULDDRLLLULLDRCCUUULLULLLLLDCCCURRCDURURRRRCCCLURDLCCCLUULRRDLDCCULLLCCCUDCRRRRDDRCCCUURRRRRDDRUULLLUURUCCCRRDDDLCCULLDDDRDCDDDRRRRUULU",
+ "result": {
+  "won": true,
+  "wonAt": 148,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 148 moves"
+ },
+ "attempts": [
+  {
+   "moves": "CDDUUULDDRDDLDULDDRLLLULLDRCCUUULLULLLLLDCCCURRCDURURRRRCCCLURDLCCCLUULRRDLDCCULLLCCCUDCRRRRDDRCCCUURRRRRDDRUULLLUURUCCCRRDDDLCCULLDDDRDCDDDRRRRUULU",
+   "won": true,
+   "wonAt": 148,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 148 moves",
+   "t": 956.4
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 2,
+  "output": 104826,
+  "cache_read": 6800,
+  "cache_write": 1282,
+  "thinking": 103696
+ },
+ "cost": 2.1081,
+ "events": [
+  {
+   "t": 956.4,
+   "type": "text",
+   "text": "The plan is to kill all eight dragons by making facing pairs see each other. That opens both monster gates, and then everyone walks to a door.\n\n**Phase A – thief kills the top-right pair.**\n1. The thief goes down to (11,5) and steps up. This pulls crystal (11,6) to (11,5), so dragons (10,6) and (12,6) kill each other.\n2. The thief drags the crystal back into its room and walks around it to reach (11,6).\n\n**Phase B – thief frees the cleric.**\n1. From (10,7) the thief steps up, pulling dragon (10,8) to (10,7). It faces a wall there and is harmless.\n2. From (10,8) the thief walks west, pulling crystal (11,8) along row 8 to (8,8). The crystal stays there as a shield against dragon (12,8).\n3. The thief goes round through row 7 to (5,8) and steps east. This pulls dragon (4,8) to (5,8).\n4. The cleric walks out: up through (11,8), along row 7, and down to (4,8).\n\n**Phase C – bottom-left pair (wizard and cleric).**\n1. The wizard looks up and swaps with crystal (3,8). It lands at (3,8), protected by the cleric next to it, and the crystal goes to (3,11).\n2. The wizard swaps east with the cleric, then east again with dragon (5,8). That dragon is now at (4,8), with the cleric at (3,8) between it and dragon (2,8).\n3. The cleric steps down to (3,9). Dragons (2,8) and (4,8) kill each other.\n\n**Phase D – top-left pair.**\n1. The cleric parks at (8,7).\n2. The wizard walks to (4,8) and looks up, swapping dragon (4,6) down to (4,8). The wizard then walks to (4,7).\n3. The thief enters (4,6), pulls crystal (3,6) east to (5,6), then pulls it down to (5,7). Row 6 is now clear.\n4. The cleric moves to (5,6).\n5. The wizard steps up to (4,6), protected by the cleric. It then looks down and swaps with dragon (4,8). That dragon lands at (4,6), and it and dragon (2,6) kill each other.\n\n**Phase E – bottom-right pair.**\n1. The cleric goes to (10,8). The wizard walks along row 6 and down column 9 to (9,8).\n2. The wizard swaps east with the cleric, landing at (10,8) protected by the cleric now at (9,8).\n3. The wizard looks up and swaps with dragon (10,7), putting it at (10,8). Dragons (10,8) and (12,8) kill each other, and both gates open.\n\n**Phase F – walk to the doors.**\n- Wizard to (8,3).\n- Thief to (6,11).\n- Cleric to (8,11).\n- Warrior out through (3,6) and the top gate to (6,3).\n\n<moves>\nC DDUUULDDRDD LDULDDRLLL ULLDR\nCC UUULLULLLLLD\nCCC URR\nC D\nURURRRR\nCCC LURDL\nCCC LUULRRDLD\nCC ULLL\nCCC UD\nC RRRRDDR\nCCC UURRRRRDDRU\nULLLUURU\nCCC RRDDDL\nCC ULLDDDRD\nC DDDRRRRUULU\n</moves>"
+  },
+  {
+   "t": 956.4,
+   "type": "answer",
+   "moves": "CDDUUULDDRDDLDULDDRLLLULLDRCCUUULLULLLLLDCCCURRCDURURRRRCCCLURDLCCCLUULRRDLDCCULLLCCCUDCRRRRDDRCCCUURRRRRDDRUULLLUURUCCCRRDDDLCCULLDDDRDCDDDRRRRUULU",
+   "line": "WON after 148 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-opus-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 956006,
+   "api_ms": 955772,
+   "turns": 1,
+   "cost": 2.108144
+  }
+ ]
+}

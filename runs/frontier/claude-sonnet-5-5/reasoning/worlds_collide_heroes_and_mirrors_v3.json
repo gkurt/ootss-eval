@@ -1,0 +1,84 @@
+{
+ "run": "frontier",
+ "model": "claude-sonnet-5-5",
+ "track": "reasoning",
+ "level": "worlds_collide_heroes_and_mirrors_v3",
+ "tier": 6,
+ "reference_length": null,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 120
+ },
+ "started": "2026-10-29T00:51:44.294Z",
+ "seconds": 7200.1,
+ "api_seconds": 3110.2,
+ "answer": null,
+ "result": {
+  "won": false,
+  "line": "No <moves> block found in your reply."
+ },
+ "attempts": [
+  {
+   "moves": null,
+   "won": false,
+   "line": "No <moves> block found in your reply.",
+   "t": 3110.7
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 3,
+ "stop_reason": "refusal",
+ "usage": {
+  "input": 6,
+  "output": 347670,
+  "cache_read": 20400,
+  "cache_write": 7235,
+  "thinking": 347670
+ },
+ "cost": 3.5077,
+ "events": [
+  {
+   "t": 3110.7,
+   "type": "text",
+   "text": "API Error: Sonnet 5.5's safeguards flagged this message (https://www.anthropic.com/legal/aup). This sometimes happens with safe, normal conversations. Claude Code can't respond to this message with Sonnet 5.5.\n\nTry rephrasing the request in a new session or change your model.\n\nLearn more: https://support.claude.com/en/articles/8106465\n\nDetails: `[reasoning_extraction]`\n\nRequest ID: req_011CgVf9GPZUEWU2BMjduHT6\n\nMessage ID: msg_011CgVf9GdhMRMpUErK8JXnF"
+  },
+  {
+   "t": 3110.7,
+   "type": "answer",
+   "moves": null,
+   "line": "No <moves> block found in your reply.",
+   "won": false
+  },
+  {
+   "t": 3110.7,
+   "type": "feedback",
+   "text": "Checker: No <moves> block found in your reply.\nYou have 2 answers left."
+  },
+  {
+   "t": 7200.1,
+   "type": "note",
+   "text": "Stopped: the 120-minute limit."
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-sonnet-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": true,
+   "ms": 3110346,
+   "api_ms": 3110227,
+   "turns": 3,
+   "cost": 3.507692
+  }
+ ]
+}

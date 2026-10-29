@@ -1,0 +1,103 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-opus-5-5",
+ "track": "coding",
+ "level": "one_fire_v2",
+ "tier": 3,
+ "reference_length": 79,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 1,
+  "budget": 40,
+  "sandbox": true,
+  "minutes": 30
+ },
+ "started": "2026-10-28T22:43:25.839Z",
+ "seconds": 244.8,
+ "api_seconds": 243.4,
+ "answer": "CLUURCDLLUCDLDCRRRLUURLDDLCRRULCRLUCDLUUURLDDRLLLCDDRDLRRRDDLLLLDDDCDRRDRRDDLLLLDD",
+ "result": {
+  "won": true,
+  "wonAt": 82,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 82 moves"
+ },
+ "attempts": [
+  {
+   "moves": "CLUURCDLLUCDLDCRRRLUURLDDLCRRULCRLUCDLUUURLDDRLLLCDDRDLRRRDDLLLLDDDCDRRDRRDDLLLLDD",
+   "won": true,
+   "wonAt": 82,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 82 moves",
+   "t": 244
+  }
+ ],
+ "tool_calls": 1,
+ "js_runs": 0,
+ "requests": 2,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 4,
+  "output": 25681,
+  "cache_read": 17439,
+  "cache_write": 26204,
+  "thinking": 24855
+ },
+ "cost": 0.7268,
+ "events": [
+  {
+   "t": 237.1,
+   "type": "tool",
+   "id": "toolu_013yrTFWw2Zhp5cLaiRQ9wDc",
+   "name": "check",
+   "n": 1,
+   "moves": "CLUURCDLLUCDLDCRRRLUURLDDLCRRULCRLUCDLUUURLDDRLLLCDDRDLRRRDDLLLLDDDCDRRDRRDDLLLLDD",
+   "output": "WON after 82 moves\n(rule-tool calls left: 39)",
+   "done": 237.1,
+   "check": {
+    "won": true,
+    "failedAt": null,
+    "how": null
+   }
+  },
+  {
+   "t": 244,
+   "type": "text",
+   "text": "I solved the level in 82 moves, and the rule checker confirmed the full sequence below as a win (\"WON after 82 moves\").\n\n**The problem:** The goblin at (6,9) sits next to (6,8), and every route to the doors passes through (6,8), so that goblin has to die. The goblin at (6,11) has to stay alive, because it keeps plate 4 pressed and holds gate (5,8) open. The crystal is the only thing that can press plate (2,6) and open gate (3,8). The dragon can only move along row 2. At (6,2) it breathes down column 6 and kills the first creature in line on each turn.\n\n**The plan:**\n1. **Build a shield.** The thief pulls the crystal from (2,3) to (3,4). The warrior then pushes it east to (6,4), where it sits in column 6.\n2. **Aim the dragon.** The warrior pushes the dragon from (5,2) to (6,2). Its breath stops at the crystal.\n3. **Kill one goblin only.** The thief steps west from (5,4) and pulls the crystal out of column 6. That turn's breath kills the goblin at (6,9). On the next move the warrior pushes the thief and crystal back east, so the crystal shields the goblin at (6,11) again.\n4. **Disarm the dragon.** The thief walks to (5,2) and steps west, pulling the dragon back to (5,2). There its breath hits a wall, so it can't hurt anything.\n5. **Open gate (3,8).** The thief pulls the crystal west to (3,4). The warrior pushes it down to (3,6) and then west onto the plate at (2,6).\n6. **Walk to the doors.** Both heroes go along row 6, down column 6, then west through both open gates. The warrior ends on door (2,11) and the thief on door (2,10).\n\n<moves>C LUUR C DLLU C DLD C RRR LUUR LDDL C RRU L C R LU C DLUUURL DDR LLL C DD RDL RRRDDLLLLDDD C DRRDRRDDLLLLDD</moves>"
+  },
+  {
+   "t": 244,
+   "type": "answer",
+   "moves": "CLUURCDLLUCDLDCRRRLUURLDDLCRRULCRLUCDLUUURLDDRLLLCDDRDLRRRDDLLLLDDDCDRRDRRDDLLLLDD",
+   "line": "WON after 82 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-opus-5-5",
+  "tools": [
+   "mcp__ootss__check",
+   "mcp__ootss__play",
+   "mcp__ootss__run_js",
+   "mcp__ootss__show",
+   "mcp__ootss__try"
+  ],
+  "mcp": [
+   "ootss:connected"
+  ]
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 243497,
+   "api_ms": 243441,
+   "turns": 2,
+   "cost": 0.7267558000000001
+  }
+ ]
+}

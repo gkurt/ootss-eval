@@ -1,0 +1,103 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-haiku-5-5",
+ "track": "coding",
+ "level": "heroes2_13",
+ "tier": 1,
+ "reference_length": 17,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 1,
+  "budget": 40,
+  "sandbox": true,
+  "minutes": 30
+ },
+ "started": "2026-10-28T23:15:34.779Z",
+ "seconds": 27.7,
+ "api_seconds": 21.8,
+ "answer": "RRRRRRRDDDLLLLLLU",
+ "result": {
+  "won": true,
+  "wonAt": 17,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 17 moves"
+ },
+ "attempts": [
+  {
+   "moves": "RRRRRRRDDDLLLLLLU",
+   "won": true,
+   "wonAt": 17,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 17 moves",
+   "t": 27.1
+  }
+ ],
+ "tool_calls": 1,
+ "js_runs": 0,
+ "requests": 2,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 4,
+  "output": 4993,
+  "cache_read": 17366,
+  "cache_write": 6026,
+  "thinking": 4776
+ },
+ "cost": 0.0039,
+ "events": [
+  {
+   "t": 25.6,
+   "type": "tool",
+   "id": "toolu_01KAqTUgjD4ft8sahXMxxcXg",
+   "name": "check",
+   "n": 1,
+   "moves": "RRRRRRRDDDLLLLLLU",
+   "output": "WON after 17 moves\n(rule-tool calls left: 39)",
+   "done": 25.6,
+   "check": {
+    "won": true,
+    "failedAt": null,
+    "how": null
+   }
+  },
+  {
+   "t": 27.1,
+   "type": "text",
+   "text": "The level is won in 17 moves. The cleric walks east along row 3 to column 10, south down column 10 to row 6, west along row 6 to column 4, then steps north onto the door at (4,5).\n\nThe cleric can't be killed by goblins or the dragon's breath, so the route only has to avoid walking into crystals and monsters. The check tool confirmed the win.\n\n<moves>RRRRRRRDDDLLLLLLU</moves>"
+  },
+  {
+   "t": 27.1,
+   "type": "answer",
+   "moves": "RRRRRRRDDDLLLLLLU",
+   "line": "WON after 17 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-haiku-5-5",
+  "tools": [
+   "mcp__ootss__check",
+   "mcp__ootss__play",
+   "mcp__ootss__run_js",
+   "mcp__ootss__show",
+   "mcp__ootss__try"
+  ],
+  "mcp": [
+   "ootss:connected"
+  ]
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 26594,
+   "api_ms": 21785,
+   "turns": 2,
+   "cost": 0.00387576
+  }
+ ]
+}

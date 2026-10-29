@@ -1,0 +1,80 @@
+{
+ "level": "dunk_tank_alt",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 2,
+ "heroes": [
+  {
+   "id": 2,
+   "kind": "hero",
+   "role": "wizard",
+   "group": 1,
+   "x": 1,
+   "y": 3,
+   "layer": 0
+  },
+  {
+   "id": 3,
+   "kind": "hero",
+   "role": "thief",
+   "group": 2,
+   "x": 1,
+   "y": 4,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 0,
+   "kind": "dragon",
+   "facing": "south",
+   "x": 12,
+   "y": 5,
+   "layer": 0
+  }
+ ],
+ "gates": [
+  {
+   "x": 6,
+   "y": 2,
+   "layer": -1,
+   "flavor": 2,
+   "inverted": true,
+   "monster_gate": false,
+   "open": true,
+   "closes_toward": "down"
+  },
+  {
+   "x": 13,
+   "y": 5,
+   "layer": -1,
+   "flavor": 3,
+   "inverted": true,
+   "monster_gate": true,
+   "open": true,
+   "closes_toward": "down"
+  }
+ ],
+ "plates": [
+  {
+   "x": 9,
+   "y": 6,
+   "flavor": 2,
+   "pressed": false
+  }
+ ],
+ "doors": [
+  {
+   "x": 17,
+   "y": 4,
+   "occupied": false
+  },
+  {
+   "x": 17,
+   "y": 3,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

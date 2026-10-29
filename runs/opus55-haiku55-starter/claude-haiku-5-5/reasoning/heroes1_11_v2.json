@@ -1,0 +1,80 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-haiku-5-5",
+ "track": "reasoning",
+ "level": "heroes1_11_v2",
+ "tier": 1,
+ "reference_length": 27,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T22:52:27.646Z",
+ "seconds": 196.2,
+ "api_seconds": 194.7,
+ "answer": "URRRCDRRRULLLULLDDCLLLDLLU",
+ "result": {
+  "won": true,
+  "wonAt": 26,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 26 moves"
+ },
+ "attempts": [
+  {
+   "moves": "URRRCDRRRULLLULLDDCLLLDLLU",
+   "won": true,
+   "wonAt": 26,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 26 moves",
+   "t": 195.4
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 2,
+  "output": 45814,
+  "cache_read": 7418,
+  "cache_write": 385,
+  "thinking": 45469
+ },
+ "cost": 0.0231,
+ "events": [
+  {
+   "t": 195.4,
+   "type": "text",
+   "text": "**Plan**\n\n1. The warrior steps onto the top plate (7,3): U, R, R, R.\n2. Press `C` to select the wizard. It walks to the bottom plate (7,7): D, R, R, R. Both plates are now pressed and the gate (7,5) opens.\n3. The wizard beams north through the open gate and swaps with the warrior. The wizard ends on (7,3) and the warrior on (7,7), and both plates stay pressed.\n4. The wizard walks west along row 3, then north and west to (2,2), where it beams south. That swaps it with crystal #6 at (2,3), which moves to (2,2). The wizard then walks south onto the door (2,4).\n5. Press `C` to select the warrior. It walks (7,7) → (4,7) → (4,8) → (2,8), then steps north onto the door (2,7).\n\nThe gate is never needed after the swap, and no hero is ever in the gate cell when it closes.\n\n<moves>URRRCDRRRU LLLULLDD CLLLDLLU</moves>"
+  },
+  {
+   "t": 195.4,
+   "type": "answer",
+   "moves": "URRRCDRRRULLLULLDDCLLLDLLU",
+   "line": "WON after 26 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-haiku-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 195022,
+   "api_ms": 194734,
+   "turns": 1,
+   "cost": 0.02305838
+  }
+ ]
+}

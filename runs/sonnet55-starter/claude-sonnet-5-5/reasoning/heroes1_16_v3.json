@@ -1,0 +1,80 @@
+{
+ "run": "sonnet55-starter",
+ "model": "claude-sonnet-5-5",
+ "track": "reasoning",
+ "level": "heroes1_16_v3",
+ "tier": 2,
+ "reference_length": 80,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T16:38:01.583Z",
+ "seconds": 172.4,
+ "api_seconds": 170.8,
+ "answer": "RURRRDLULLRULDCUCUUUDDCUDCUUCUUURRRRRRRLLLLLLLDCCULLLLLLLCDDCUDCRRRCUUURRRCLLU",
+ "result": {
+  "won": true,
+  "wonAt": 78,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 78 moves"
+ },
+ "attempts": [
+  {
+   "moves": "RURRRDLULLRULDCUCUUUDDCUDCUUCUUURRRRRRRLLLLLLLDCCULLLLLLLCDDCUDCRRRCUUURRRCLLU",
+   "won": true,
+   "wonAt": 78,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 78 moves",
+   "t": 171.5
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 2,
+  "output": 23595,
+  "cache_read": 6800,
+  "cache_write": 1054,
+  "thinking": 22893
+ },
+ "cost": 0.2409,
+ "events": [
+  {
+   "t": 171.5,
+   "type": "text",
+   "text": "This is my worked solution, traced by hand against the rules; I haven't run it through the checker.\n\n**Layout.** The middle room (with door (4,4) and the two plates) is sealed by walls, so the wizard must end on (4,4). The warrior and thief must both reach the top corridor (doors (5,2) and (6,2)). Each of their corridors is blocked by a crystal, and both gates close sideways into a wall, which smashes anything in the gate cell.\n\n**Plan.**\n1. **Wizard holds the plates.** Using swaps, I put a crystal on (5,5) and stand the wizard on (7,5). Both gates are then open. Stepping the wizard off (7,5) closes the gates; stepping back on reopens them.\n2. **First toggle.**\n   - The warrior pushes crystal (10,5) into gate (10,4).\n   - The thief goes up to (2,3), then walks back down, pulling crystal (2,2) into gate (2,4).\n   - The wizard steps off and on. The gates close and smash both crystals, then reopen.\n3. **Clear the corner crystal.**\n   - The warrior goes up to (10,3).\n   - The thief walks along row 2 to (9,2), then back west, pulling crystal (10,2) with it.\n   - The thief ends at (2,2) with the crystal at (3,2), then steps down to (2,3).\n   - The warrior walks west along row 2 and pushes the crystal into the corner (2,2).\n4. **Second toggle.** The thief goes down col 2, pulling that crystal into gate (2,4). The wizard toggles again, smashing the crystal and reopening the gate.\n5. **Finish.**\n   - The warrior walks to (6,2).\n   - The thief goes up and east to (5,2).\n   - The wizard swaps with the plate crystal (landing on (5,5)), then walks to (4,4).\n\n<moves>RURRRDLULLRULD C U C UUUDD C UD C UU C UUURRRRRRRLLLLLLLD CC ULLLLLLL C DD C UD C RRR C UUURRR C LLU</moves>"
+  },
+  {
+   "t": 171.5,
+   "type": "answer",
+   "moves": "RURRRDLULLRULDCUCUUUDDCUDCUUCUUURRRRRRRLLLLLLLDCCULLLLLLLCDDCUDCRRRCUUURRRCLLU",
+   "line": "WON after 78 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-sonnet-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 171087,
+   "api_ms": 170843,
+   "turns": 1,
+   "cost": 0.24085
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-opus-5-5",
+ "track": "reasoning",
+ "level": "mirror_2",
+ "tier": 2,
+ "reference_length": 27,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T22:30:16.148Z",
+ "seconds": 58.2,
+ "api_seconds": 56.9,
+ "answer": "URRDRDLLLLRXDLDDDDRRDRUUUDDDDX",
+ "result": {
+  "won": true,
+  "wonAt": 30,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 30 moves"
+ },
+ "attempts": [
+  {
+   "moves": "URRDRDLLLLRXDLDDDDRRDRUUUDDDDX",
+   "won": true,
+   "wonAt": 30,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 30 moves",
+   "t": 57.7
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 2,
+  "output": 6082,
+  "cache_read": 6800,
+  "cache_write": 2057,
+  "thinking": 5523
+ },
+ "cost": 0.1395,
+ "events": [
+  {
+   "t": 57.7,
+   "type": "text",
+   "text": "The trader starts on the top island and the door is on the east island, so it needs two mirror jumps: first to the south-west island, then to the door.\n\n**Step 1: move mirror #1 into place.**\n- `U R R` walks the trader to (20,9).\n- `D` pushes mirror #1 down to (20,11).\n- `R D` puts the trader at (21,11).\n- `L L L L` pushes the mirror west to (16,11). The trader ends at (17,11).\n- `R` steps the trader to (18,11). The mirror's east face now sees it at distance 2.\n\n**Step 2: first jump.**\n- `X` sends the trader 2 cells south of the mirror, to (16,13) on the south-west island.\n- Mirror #1's south line stops at the back of mirror #3, and mirror #3 sees nothing, so no copy is made.\n\n**Step 3: move mirror #3 into place.**\n- `D L D D D D` walks the trader to (15,18).\n- `R R` pushes mirror #3 from (16,18) to (18,18). The trader ends at (17,18).\n- `D R` puts the trader at (18,19).\n- `U U U` pushes the mirror north to (18,15).\n- `D D D D` walks the trader to (18,20).\n\n**Step 4: second jump.**\n- Mirror #3 at (18,15) now sees the trader on its south face at distance 5.\n- `X` sends the trader 5 cells east of the mirror, to the door at (23,15). The path over the water is clear.\n- Mirror #1 sees nothing at this point, so there is no conflict or copy.\n\n<moves>URRDRDLLLLRX DLDDDDRRDRUUUDDDDX</moves>"
+  },
+  {
+   "t": 57.7,
+   "type": "answer",
+   "moves": "URRDRDLLLLRXDLDDDDRRDRUUUDDDDX",
+   "line": "WON after 30 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-opus-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 56966,
+   "api_ms": 56871,
+   "turns": 1,
+   "cost": 0.13946399999999998
+  }
+ ]
+}

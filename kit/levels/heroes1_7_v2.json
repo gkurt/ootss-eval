@@ -1,0 +1,65 @@
+{
+ "level": "heroes1_7_v2",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 1,
+ "heroes": [
+  {
+   "id": 1,
+   "kind": "hero",
+   "role": "thief",
+   "group": 1,
+   "x": 13,
+   "y": 7,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 0,
+   "kind": "crystal",
+   "x": 11,
+   "y": 2,
+   "layer": 0
+  }
+ ],
+ "gates": [
+  {
+   "x": 17,
+   "y": 6,
+   "layer": 0,
+   "flavor": 0,
+   "inverted": false,
+   "monster_gate": false,
+   "open": false,
+   "closes_toward": "down"
+  },
+  {
+   "x": 14,
+   "y": 3,
+   "layer": 0,
+   "flavor": 0,
+   "inverted": false,
+   "monster_gate": false,
+   "open": false,
+   "closes_toward": "down"
+  }
+ ],
+ "plates": [
+  {
+   "x": 14,
+   "y": 7,
+   "flavor": 0,
+   "pressed": false
+  }
+ ],
+ "doors": [
+  {
+   "x": 16,
+   "y": 4,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

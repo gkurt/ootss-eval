@@ -1,0 +1,49 @@
+24 runs via cli -> runs/frontier
+[1/24] claude-opus-5-5 coding mirror_21: WON · WON after 71 moves · 6m24s · 39078 out tok · $1.1708
+[2/24] claude-opus-5-5 reasoning mirror_21: WON · WON after 73 moves · 8m24s · 52916 out tok · $1.0747
+[3/24] claude-opus-5-5 reasoning worlds_collide_heroes_and_mirrors_v3: WON · WON after 152 moves · 10m18s · 67351 out tok · $1.3671
+[4/24] claude-opus-5-5 coding surrounded: WON · WON after 116 moves · 10m55s · 64438 out tok · $1.938
+[5/24] claude-opus-5-5 reasoning surrounded: WON · WON after 104 moves · 11m45s · 73511 out tok · $1.4844
+[6/24] claude-opus-5-5 reasoning walk_it_over: WON · WON after 207 moves · 11m49s · 74019 out tok · $1.5294
+[7/24] claude-sonnet-5-5 reasoning mirror_21: WON · WON after 73 moves · 4m36s · 36092 out tok · $0.3691
+[8/24] claude-opus-5-5 coding walk_it_over: WON · WON after 293 moves · 9m38s · 61114 out tok · $1.9386
+[9/24] claude-opus-5-5 coding worlds_collide_heroes_and_mirrors_v3: WON · WON after 119 moves · 9m19s · 59779 out tok · $1.7719
+[10/24] claude-sonnet-5-5 coding mirror_21: WON · WON after 73 moves · 5m11s · 40967 out tok · $0.6115
+[11/24] claude-sonnet-5-5 reasoning surrounded: WON · WON after 110 moves · 11m54s · 95589 out tok · $0.9895
+[12/24] claude-sonnet-5-5 coding surrounded: WON · WON after 126 moves · 11m08s · 84145 out tok · $1.2337
+[13/24] claude-sonnet-5-5 reasoning walk_it_over: WON · WON after 217 moves · 17m05s · 107006 out tok · $1.0946
+[14/24] claude-sonnet-5-5 coding walk_it_over: no · NOT WON after 1 moves · 11m33s · 83904 out tok · $1.2025
+[15/24] claude-haiku-5-5 reasoning mirror_21: no · NOT WON after 5 moves · 2m55s · 38168 out tok · $0.0277
+[16/24] claude-haiku-5-5 reasoning walk_it_over: no · NOT WON after 1 moves · 2m12s · 28070 out tok · $0.0213
+[17/24] claude-haiku-5-5 coding mirror_21: WON · WON after 73 moves · 14m25s · 189884 out tok · $0.2289
+[18/24] claude-haiku-5-5 reasoning worlds_collide_heroes_and_mirrors_v3: no · NOT WON after 5 moves · 16m41s · 222067 out tok · $0.2134
+[19/24] claude-haiku-5-5 coding walk_it_over: no · NOT WON after 22 moves · 9m07s · 114687 out tok · $0.2134
+[20/24] claude-sonnet-5-5 coding worlds_collide_heroes_and_mirrors_v3: WON · WON after 146 moves · 35m18s · 236439 out tok · $3.4969
+[21/24] claude-haiku-5-5 coding worlds_collide_heroes_and_mirrors_v3: no · NOT WON after 21 moves · 18m56s · 247436 out tok · $0.1415
+[22/24] claude-haiku-5-5 coding surrounded: no · No <moves> block found in your reply. · 38m21s · 512000 out tok · $0.2593
+[23/24] claude-haiku-5-5 reasoning surrounded: no · NOT WON after 8 moves · 47m43s · 639128 out tok · $0.3324
+[24/24] claude-sonnet-5-5 reasoning worlds_collide_heroes_and_mirrors_v3: no · No <moves> block found in your reply. · 2.0h · 347670 out tok · $3.5077
+
+# Eval run frontier
+
+| Model | Track | Solved | Tier 6 | Moves / ref | Answers | Right first time | Wrong answers | Test plays (failed) | Tool calls | Time / run | Time to solve | Output tok | Input tok | Est. $ |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| claude-haiku-5-5 | reasoning | 0/4 | 0/4 | — | 3 | 0/4 | 12 | — | 0 | 17m23s | — | 927,433 | 515,297 | 0.59 |
+| claude-haiku-5-5 | coding | 1/4 | 1/4 | — | 1 | 1/4 | 3 | 13 (12) | 4.5 | 20m12s | 14m24s | 1,064,007 | 1,823,368 | 0.84 |
+| claude-opus-5-5 | reasoning | 4/4 | 4/4 | — | 1 | 4/4 | 0 | — | 0 | 10m34s | 10m33s | 267,797 | 38,999 | 5.46 |
+| claude-opus-5-5 | coding | 4/4 | 4/4 | — | 1 | 4/4 | 0 | 6 (2) | 1.8 | 9m04s | 9m03s | 224,409 | 1,204,615 | 6.82 |
+| claude-sonnet-5-5 | reasoning | 3/4 | 3/4 | — | 1 | 3/4 | 1 | — | 0 | 38m24s | 11m11s | 586,357 | 57,506 | 5.96 |
+| claude-sonnet-5-5 | coding | 3/4 | 3/4 | — | 1 | 3/4 | 1 | 10 (7) | 4.5 | 15m47s | 17m12s | 445,455 | 2,460,156 | 6.54 |
+
+Per level (✓ k = won after k moves; ✗ refused/lost @k = move k failed; then the run's time):
+
+| Level | Tier | Ref | claude-haiku-5-5 reasoning | claude-haiku-5-5 coding | claude-opus-5-5 reasoning | claude-opus-5-5 coding | claude-sonnet-5-5 reasoning | claude-sonnet-5-5 coding |
+|---|---|---|---|---|---|---|---|---|
+| mirror_21 | 6 | none known | ✗ not won · 2m55s | ✓ 73 · 14m25s | ✓ 73 · 8m24s | ✓ 71 · 6m24s | ✓ 73 · 4m36s | ✓ 73 · 5m11s |
+| surrounded | 6 | none known | ✗ not won · 47m43s | ✗ no answer · 38m21s | ✓ 104 · 11m45s | ✓ 116 · 10m55s | ✓ 110 · 11m54s | ✓ 126 · 11m08s |
+| walk_it_over | 6 | none known | ✗ not won · 2m12s | ✗ not won · 9m07s | ✓ 207 · 11m49s | ✓ 293 · 9m38s | ✓ 217 · 17m05s | ✗ not won · 11m33s |
+| worlds_collide_heroes_and_mirrors_v3 | 6 | none known | ✗ not won · 16m41s | ✗ not won · 18m56s | ✓ 152 · 10m18s | ✓ 119 · 9m19s | ✗ no answer · 2.0h | ✓ 146 · 35m18s |
+
+Moves / ref: winning moves over the reference solution's length (below 1 is shorter). Answers: answers given per run. Right first time: runs whose first answer won. Wrong answers: answers that did not win, over all runs (the coding track gives one). Test plays: play and check calls in the coding track, and in brackets how many of them did not win. Time to solve: from the start of a run to its winning answer, over the solved runs. Est. $: from list prices (Claude Code's estimate for --via cli).
+
+2.2h

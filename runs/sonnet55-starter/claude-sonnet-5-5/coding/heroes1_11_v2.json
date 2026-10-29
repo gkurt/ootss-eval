@@ -1,0 +1,103 @@
+{
+ "run": "sonnet55-starter",
+ "model": "claude-sonnet-5-5",
+ "track": "coding",
+ "level": "heroes1_11_v2",
+ "tier": 1,
+ "reference_length": 27,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 1,
+  "budget": 40,
+  "sandbox": true,
+  "minutes": 30
+ },
+ "started": "2026-10-28T16:52:40.783Z",
+ "seconds": 35.5,
+ "api_seconds": 34.3,
+ "answer": "URRRCDRRRULLLULLDDCLLLDLLU",
+ "result": {
+  "won": true,
+  "wonAt": 26,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 26 moves"
+ },
+ "attempts": [
+  {
+   "moves": "URRRCDRRRULLLULLDDCLLLDLLU",
+   "won": true,
+   "wonAt": 26,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 26 moves",
+   "t": 35
+  }
+ ],
+ "tool_calls": 1,
+ "js_runs": 0,
+ "requests": 2,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 4,
+  "output": 4542,
+  "cache_read": 17290,
+  "cache_write": 5239,
+  "thinking": 4082
+ },
+ "cost": 0.0681,
+ "events": [
+  {
+   "t": 32,
+   "type": "tool",
+   "id": "toolu_01HVqMDDRF2ePNxxmZU6yAw1",
+   "name": "check",
+   "n": 1,
+   "moves": "URRRCDRRRULLLULLDDCLLLDLLU",
+   "output": "WON after 26 moves\n(rule-tool calls left: 39)",
+   "done": 32,
+   "check": {
+    "won": true,
+    "failedAt": null,
+    "how": null
+   }
+  },
+  {
+   "t": 35,
+   "type": "text",
+   "text": "The sequence wins; the checker reports WON after 26 moves.\n\n1. **Warrior to the top plate:** the warrior goes up and right onto the plate at (7,3).\n2. **Wizard to the bottom plate:** the wizard goes down and right onto the plate at (7,7). With both plates pressed, the gate at (7,5) opens.\n3. **Swap through the gate:** the wizard fires north up column 7 and swaps places with the warrior. The wizard is now on the top plate and the warrior on the bottom plate. The gate closes once they move off, but neither needs to cross it again.\n4. **Wizard to the top door:**\n   - It walks left to (4,3), up to (4,2), then left to (2,2).\n   - Fired south, its beam hits the crystal at (2,3) and swaps with it, which clears the door cell.\n   - It then steps down onto the door at (2,4).\n5. **Warrior to the bottom door:** the warrior walks left to (4,7), down to (4,8), left to (2,8), then up onto the door at (2,7).\n\n<moves>URRR C DRRR U LLLULLDD C LLLDLLU</moves>"
+  },
+  {
+   "t": 35,
+   "type": "answer",
+   "moves": "URRRCDRRRULLLULLDDCLLLDLLU",
+   "line": "WON after 26 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-sonnet-5-5",
+  "tools": [
+   "mcp__ootss__check",
+   "mcp__ootss__play",
+   "mcp__ootss__run_js",
+   "mcp__ootss__show",
+   "mcp__ootss__try"
+  ],
+  "mcp": [
+   "ootss:connected"
+  ]
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 34477,
+   "api_ms": 34305,
+   "turns": 2,
+   "cost": 0.06811299999999999
+  }
+ ]
+}

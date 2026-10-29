@@ -1,0 +1,258 @@
+{
+ "level": "heroes3_10",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 2,
+ "heroes": [
+  {
+   "id": 7,
+   "kind": "hero",
+   "role": "thief",
+   "group": 1,
+   "x": 7,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 9,
+   "kind": "hero",
+   "role": "druid",
+   "group": 2,
+   "x": 11,
+   "y": 6,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 0,
+   "kind": "tree",
+   "x": 10,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 1,
+   "kind": "tree",
+   "x": 9,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 2,
+   "kind": "tree",
+   "x": 6,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 3,
+   "kind": "tree",
+   "x": 11,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 4,
+   "kind": "tree",
+   "x": 12,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 8,
+   "kind": "tree",
+   "x": 9,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 10,
+   "kind": "tree",
+   "x": 7,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 11,
+   "kind": "tree",
+   "x": 13,
+   "y": 6,
+   "layer": 0
+  },
+  {
+   "id": 14,
+   "kind": "tree",
+   "x": 11,
+   "y": 8,
+   "layer": 0
+  },
+  {
+   "id": 15,
+   "kind": "tree",
+   "x": 5,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 16,
+   "kind": "tree",
+   "x": 12,
+   "y": 9,
+   "layer": 0
+  },
+  {
+   "id": 17,
+   "kind": "tree",
+   "x": 8,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 18,
+   "kind": "tree",
+   "x": 10,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 19,
+   "kind": "tree",
+   "x": 3,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 20,
+   "kind": "tree",
+   "x": 8,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 21,
+   "kind": "tree",
+   "x": 6,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 22,
+   "kind": "tree",
+   "x": 13,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 23,
+   "kind": "tree",
+   "x": 11,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 24,
+   "kind": "tree",
+   "x": 9,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 25,
+   "kind": "tree",
+   "x": 4,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 26,
+   "kind": "tree",
+   "x": 7,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 27,
+   "kind": "tree",
+   "x": 13,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 28,
+   "kind": "tree",
+   "x": 13,
+   "y": 9,
+   "layer": 0
+  },
+  {
+   "id": 29,
+   "kind": "tree",
+   "x": 3,
+   "y": 5,
+   "layer": 0
+  },
+  {
+   "id": 30,
+   "kind": "tree",
+   "x": 4,
+   "y": 7,
+   "layer": 0
+  },
+  {
+   "id": 31,
+   "kind": "tree",
+   "x": 11,
+   "y": 9,
+   "layer": 0
+  },
+  {
+   "id": 32,
+   "kind": "tree",
+   "x": 13,
+   "y": 8,
+   "layer": 0
+  },
+  {
+   "id": 33,
+   "kind": "tree",
+   "x": 5,
+   "y": 7,
+   "layer": 0
+  }
+ ],
+ "gates": [
+  {
+   "x": 3,
+   "y": 6,
+   "layer": 0,
+   "flavor": 0,
+   "inverted": false,
+   "monster_gate": false,
+   "open": false,
+   "closes_toward": "down"
+  }
+ ],
+ "plates": [
+  {
+   "x": 5,
+   "y": 6,
+   "flavor": 0,
+   "pressed": false
+  }
+ ],
+ "doors": [
+  {
+   "x": 6,
+   "y": 8,
+   "occupied": false
+  },
+  {
+   "x": 8,
+   "y": 8,
+   "occupied": false
+  }
+ ],
+ "won": false
+}

@@ -1,0 +1,80 @@
+{
+ "run": "opus55-haiku55-starter",
+ "model": "claude-haiku-5-5",
+ "track": "reasoning",
+ "level": "heroes2_13",
+ "tier": 1,
+ "reference_length": 17,
+ "via": "cli",
+ "settings": {
+  "effort": "high",
+  "attempts": 3,
+  "budget": null,
+  "sandbox": null,
+  "minutes": 30
+ },
+ "started": "2026-10-28T22:55:14.584Z",
+ "seconds": 21.6,
+ "api_seconds": 20.4,
+ "answer": "RRRRRRRDDDLLLLLLU",
+ "result": {
+  "won": true,
+  "wonAt": 17,
+  "failedAt": null,
+  "how": null,
+  "line": "WON after 17 moves"
+ },
+ "attempts": [
+  {
+   "moves": "RRRRRRRDDDLLLLLLU",
+   "won": true,
+   "wonAt": 17,
+   "failedAt": null,
+   "how": null,
+   "line": "WON after 17 moves",
+   "t": 21
+  }
+ ],
+ "tool_calls": 0,
+ "js_runs": 0,
+ "requests": 1,
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 2,
+  "output": 4939,
+  "cache_read": 6800,
+  "cache_write": 1058,
+  "thinking": 4608
+ },
+ "cost": 0.0027,
+ "events": [
+  {
+   "t": 21,
+   "type": "text",
+   "text": "The cleric is the only hero and the only door is at (4,5), so the goal is to walk the cleric onto it. The door's neighbours are crystals on three sides, so the only entrance is from (4,6) moving north.\n\nThe route goes around the crystals:\n- **R ×7:** along row 3, from (3,3) to (10,3). Row 3 is clear.\n- **D ×3:** down the east column, (10,4), (10,5), (10,6). All are floor.\n- **L ×6:** along row 6, from (10,6) to (4,6). The dragon at (2,6) is west of the path and the cells are clear.\n- **U ×1:** onto the door at (4,5).\n\nThe cleric cannot be killed by goblins or dragons, so the goblins beside row 3 and the dragon's breath are harmless. There is no water or gate in the route, so nothing else can kill the cleric. Monsters never move on their own, so the path stays clear.\n\n<moves>RRRRRRRDDDLLLLLLU</moves>"
+  },
+  {
+   "t": 21,
+   "type": "answer",
+   "moves": "RRRRRRRDDDLLLLLLU",
+   "line": "WON after 17 moves",
+   "won": true
+  }
+ ],
+ "cli": {
+  "version": "2.1.312",
+  "model": "claude-haiku-5-5",
+  "tools": [],
+  "mcp": []
+ },
+ "cli_results": [
+  {
+   "subtype": "success",
+   "is_error": false,
+   "ms": 20575,
+   "api_ms": 20353,
+   "turns": 1,
+   "cost": 0.0027493
+  }
+ ]
+}

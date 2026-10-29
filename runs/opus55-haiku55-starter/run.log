@@ -1,0 +1,79 @@
+48 runs via cli -> runs/opus55-haiku55-starter
+[1/48] claude-opus-5-5 reasoning heroes2_13: WON · WON after 17 moves · 14s · 1468 out tok · $0.039
+[2/48] claude-opus-5-5 reasoning heroes1_11_v2: WON · WON after 27 moves · 56s · 6145 out tok · $0.1273
+[3/48] claude-opus-5-5 reasoning mirror_2: WON · WON after 30 moves · 58s · 6082 out tok · $0.1395
+[4/48] claude-opus-5-5 reasoning heroes1_16_v3: WON · WON after 81 moves · 2m53s · 18757 out tok · $0.5134
+[5/48] claude-opus-5-5 reasoning mirror_7: WON · WON after 38 moves · 1m16s · 7891 out tok · $0.1757
+[6/48] claude-opus-5-5 reasoning one_fire_v2: WON · WON after 85 moves · 3m57s · 25464 out tok · $0.5197
+[7/48] claude-opus-5-5 reasoning mosh_pit_small: WON · WON after 58 moves · 6m14s · 41805 out tok · $0.8472
+[8/48] claude-opus-5-5 reasoning heroes1_18: WON · WON after 89 moves · 3m02s · 19243 out tok · $0.3945
+[9/48] claude-opus-5-5 reasoning mirror_3: WON · WON after 102 moves · 2m40s · 16944 out tok · $0.3607
+[10/48] claude-opus-5-5 coding heroes1_11_v2: WON · WON after 26 moves · 1m10s · 7238 out tok · $0.2052
+[11/48] claude-opus-5-5 coding heroes2_13: WON · WON after 17 moves · 15s · 1215 out tok · $0.0443
+[12/48] claude-opus-5-5 reasoning one_vs_three: WON · WON after 96 moves · 10m32s · 64408 out tok · $1.299
+[13/48] claude-opus-5-5 coding mirror_2: WON · WON after 28 moves · 1m23s · 8177 out tok · $0.2639
+[14/48] claude-opus-5-5 reasoning mirror_factory_v2: WON · WON after 104 moves · 5m45s · 36796 out tok · $0.7532
+[15/48] claude-opus-5-5 coding heroes1_16_v3: WON · WON after 86 moves · 1m25s · 8674 out tok · $0.2729
+[16/48] claude-opus-5-5 coding mosh_pit_small: WON · WON after 64 moves · 6m19s · 41510 out tok · $1.1977
+[17/48] claude-opus-5-5 coding mirror_7: WON · WON after 54 moves · 1m57s · 11920 out tok · $0.3541
+[18/48] claude-opus-5-5 coding one_fire_v2: WON · WON after 82 moves · 4m05s · 25681 out tok · $0.7268
+[19/48] claude-opus-5-5 coding mirror_3: WON · WON after 104 moves · 2m19s · 14606 out tok · $0.4584
+[20/48] claude-opus-5-5 coding heroes1_18: WON · WON after 108 moves · 3m04s · 19870 out tok · $0.5631
+[21/48] claude-opus-5-5 reasoning heroes2_22_v2: WON · WON after 148 moves · 15m57s · 104826 out tok · $2.1081
+[22/48] claude-opus-5-5 coding mirror_factory_v2: WON · WON after 108 moves · 4m40s · 28370 out tok · $0.8134
+[23/48] claude-haiku-5-5 reasoning heroes2_13: WON · WON after 17 moves · 22s · 4939 out tok · $0.0027
+[24/48] claude-haiku-5-5 reasoning heroes1_11_v2: WON · WON after 26 moves · 3m16s · 45814 out tok · $0.0231
+[25/48] claude-haiku-5-5 reasoning mirror_2: WON · WON after 30 moves · 3m07s · 42854 out tok · $0.028
+[26/48] claude-opus-5-5 coding heroes2_22_v2: WON · WON after 130 moves · 12m34s · 81233 out tok · $2.323
+[27/48] claude-opus-5-5 coding one_vs_three: WON · WON after 102 moves · 18m56s · 109725 out tok · $3.1414
+[28/48] claude-haiku-5-5 reasoning heroes1_16_v3: WON · WON after 81 moves · 7m39s · 110957 out tok · $0.0558
+[29/48] claude-haiku-5-5 reasoning one_vs_three: no · NOT WON after 0 moves · 4m40s · 62936 out tok · $0.0449
+[30/48] claude-haiku-5-5 reasoning one_fire_v2: no · NOT WON after 3 moves · 9m57s · 134705 out tok · $0.2286
+[31/48] claude-haiku-5-5 reasoning mirror_7: WON · WON after 44 moves · 6m33s · 90899 out tok · $0.0459
+[32/48] claude-haiku-5-5 reasoning mosh_pit_small: no · FAILED at move 57 (R): refused: blocked: nothing can move that way · 18m12s · 259562 out tok · $0.2917
+[33/48] claude-haiku-5-5 reasoning heroes1_18: WON · WON after 93 moves · 6m42s · 92176 out tok · $0.0539
+[34/48] claude-haiku-5-5 coding heroes1_11_v2: WON · WON after 27 moves · 42s · 9247 out tok · $0.0067
+[35/48] claude-haiku-5-5 coding heroes2_13: WON · WON after 17 moves · 28s · 4993 out tok · $0.0039
+[36/48] claude-haiku-5-5 coding mosh_pit_small: WON · WON after 59 moves · 8m10s · 110941 out tok · $0.109
+[37/48] claude-haiku-5-5 coding mirror_2: WON · WON after 32 moves · 2m39s · 35649 out tok · $0.0299
+[38/48] claude-haiku-5-5 reasoning mirror_3: no · FAILED at move 62 (R): refused: blocked: nothing can move that way · 15m20s · 206136 out tok · $0.1171
+[39/48] claude-haiku-5-5 coding heroes1_16_v3: WON · WON after 83 moves · 4m13s · 59817 out tok · $0.0427
+[40/48] claude-haiku-5-5 reasoning heroes2_22_v2: no · NOT WON after 12 moves · 18m19s · 247814 out tok · $0.2534
+[41/48] claude-haiku-5-5 reasoning mirror_factory_v2: WON · WON after 108 moves · 17m54s · 245368 out tok · $0.1236
+[42/48] claude-haiku-5-5 coding one_fire_v2: WON · WON after 86 moves · 8m05s · 112792 out tok · $0.173
+[43/48] claude-haiku-5-5 coding one_vs_three: no · NOT WON after 0 moves · 7m03s · 89474 out tok · $0.0585
+[44/48] claude-haiku-5-5 coding heroes1_18: WON · WON after 103 moves · 7m34s · 103625 out tok · $0.1656
+[45/48] claude-haiku-5-5 coding mirror_3: WON · WON after 102 moves · 4m33s · 63805 out tok · $0.0465
+[46/48] claude-haiku-5-5 coding mirror_7: WON · WON after 48 moves · 11m17s · 154832 out tok · $0.3729
+[47/48] claude-haiku-5-5 coding mirror_factory_v2: WON · WON after 103 moves · 9m35s · 127421 out tok · $0.1696
+[48/48] claude-haiku-5-5 coding heroes2_22_v2: no · Stopped: the 30-minute limit. · 30m00s · 0 out tok · $0
+
+# Eval run opus55-haiku55-starter
+
+| Model | Track | Solved | Tier 1 | Tier 2 | Tier 3 | Tier 4 | Tier 5 | Moves / ref | Answers | Tool calls | Time / run | Time to solve | Output tok | Input tok | Est. $ |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| claude-haiku-5-5 | reasoning | 7/12 | 2/2 | 2/3 | 1/3 | 1/2 | 1/2 | 0.97 | 2 | 0 | 9m20s | 6m30s | 1,544,160 | 1,288,937 | 1.27 |
+| claude-haiku-5-5 | coding | 10/12 | 2/2 | 3/3 | 2/3 | 2/2 | 1/2 | 1.06 | 0.92 | 3.3 | 7m52s | 5m43s | 872,596 | 3,616,059 | 1.18 |
+| claude-opus-5-5 | reasoning | 12/12 | 2/2 | 3/3 | 3/3 | 2/2 | 2/2 | 1.03 | 1.08 | 0 | 4m32s | 4m31s | 349,829 | 122,924 | 7.28 |
+| claude-opus-5-5 | coding | 12/12 | 2/2 | 3/3 | 3/3 | 2/2 | 2/2 | 1.08 | 1 | 1.7 | 4m51s | 4m50s | 358,219 | 1,012,668 | 10.36 |
+
+Per level (✓ k = won after k moves; ✗ refused/lost @k = move k failed; then the run's time):
+
+| Level | Tier | Ref | claude-haiku-5-5 reasoning | claude-haiku-5-5 coding | claude-opus-5-5 reasoning | claude-opus-5-5 coding |
+|---|---|---|---|---|---|---|
+| heroes1_11_v2 | 1 | 27 | ✓ 26 · 3m16s | ✓ 27 · 42s | ✓ 27 · 56s | ✓ 26 · 1m10s |
+| heroes2_13 | 1 | 17 | ✓ 17 · 22s | ✓ 17 · 28s | ✓ 17 · 14s | ✓ 17 · 15s |
+| heroes1_16_v3 | 2 | 80 | ✓ 81 · 7m39s | ✓ 83 · 4m13s | ✓ 81 (answer 2) · 2m53s | ✓ 86 · 1m25s |
+| mirror_2 | 2 | 27 | ✓ 30 (answer 2) · 3m07s | ✓ 32 · 2m39s | ✓ 30 · 58s | ✓ 28 · 1m23s |
+| mosh_pit_small | 2 | 45 | ✗ refused @57 · 18m12s | ✓ 59 · 8m10s | ✓ 58 · 6m14s | ✓ 64 · 6m19s |
+| mirror_7 | 3 | 36 | ✓ 44 · 6m33s | ✓ 48 · 11m17s | ✓ 38 · 1m16s | ✓ 54 · 1m57s |
+| one_fire_v2 | 3 | 79 | ✗ not won · 9m57s | ✓ 86 · 8m05s | ✓ 85 · 3m57s | ✓ 82 · 4m05s |
+| one_vs_three | 3 | 90 | ✗ not won · 4m40s | ✗ not won · 7m03s | ✓ 96 · 10m32s | ✓ 102 · 18m56s |
+| heroes1_18 | 4 | 86 | ✓ 93 (answer 2) · 6m42s | ✓ 103 · 7m34s | ✓ 89 · 3m02s | ✓ 108 · 3m04s |
+| mirror_3 | 4 | 96 | ✗ refused @62 · 15m20s | ✓ 102 · 4m33s | ✓ 102 · 2m40s | ✓ 104 · 2m19s |
+| heroes2_22_v2 | 5 | 120 | ✗ not won · 18m19s | ✗ no answer · 30m00s | ✓ 148 · 15m57s | ✓ 130 · 12m34s |
+| mirror_factory_v2 | 5 | 281 | ✓ 108 · 17m54s | ✓ 103 · 9m35s | ✓ 104 · 5m45s | ✓ 108 · 4m40s |
+
+Moves / ref: winning moves over the reference solution's length (below 1 is shorter). Answers: answers given per run. Time to solve: from the start of a run to its winning answer, over the solved runs. Est. $: from list prices (Claude Code's estimate for --via cli).
+
+1.6h

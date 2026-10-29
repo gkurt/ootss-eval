@@ -1,0 +1,44 @@
+{
+ "level": "heroes1_1",
+ "moves_played": 0,
+ "failed": null,
+ "selected_group": 1,
+ "groups": 1,
+ "heroes": [
+  {
+   "id": 3,
+   "kind": "hero",
+   "role": "warrior",
+   "group": 1,
+   "x": 3,
+   "y": 3,
+   "layer": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": 1,
+   "kind": "crystal",
+   "x": 5,
+   "y": 4,
+   "layer": 0
+  },
+  {
+   "id": 2,
+   "kind": "crystal",
+   "x": 9,
+   "y": 2,
+   "layer": 0
+  }
+ ],
+ "gates": [],
+ "plates": [],
+ "doors": [
+  {
+   "x": 11,
+   "y": 3,
+   "occupied": false
+  }
+ ],
+ "won": false
+}
